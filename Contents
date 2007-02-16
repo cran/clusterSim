@@ -1,0 +1,133 @@
+Entry: data.Normalization
+Aliases: data.Normalization
+Keywords: cluster
+Description: Normalization of matrix or dataset
+URL: ../../../library/ClusterSim/html/data.Normalization.html
+
+Entry: dist.GDM
+Aliases: dist.GDM,GDM,GDM1,GDM2
+Keywords: cluster
+Description: General Distance Measure
+URL: ../../../library/ClusterSim/html/dist.GDM.html
+
+Entry: dist.BC
+Aliases: dist.BC
+Keywords: cluster
+Description: BC Distance
+URL: ../../../library/ClusterSim/html/dist.BC.html
+
+Entry: dist.SM
+Aliases: dist.SM
+Keywords: cluster
+Description: General Distance Measure
+URL: ../../../library/ClusterSim/html/dist.SM.html
+
+Entry: index.G1
+Aliases: index.G1
+Keywords: cluster
+Description: Calinski - Harabasz Pseudo-F Statistic
+URL: ../../../library/ClusterSim/html/index.G1.html
+
+Entry: index.G2
+Aliases: index.G2
+Keywords: cluster
+Description: Calculates Hubert Levine G2 index
+URL: ../../../library/ClusterSim/html/index.G2.html
+
+Entry: index.G3
+Aliases: index.G3
+Keywords: cluster
+Description: Calculates G3 index
+URL: ../../../library/ClusterSim/html/index.G3.html
+
+Entry: index.H
+Aliases: index.H
+Keywords: cluster
+Description: Calculates Hartigan index
+URL: ../../../library/ClusterSim/html/index.H.html
+
+Entry: index.KL
+Aliases: index.KL
+Keywords: cluster
+Description: Calculates Krzanowski-Lai index
+URL: ../../../library/ClusterSim/html/index.KL.html
+
+Entry: index.S
+Aliases: index.S
+Keywords: cluster
+Description: Calculates Silhouette index
+URL: ../../../library/ClusterSim/html/index.S.html
+
+Entry: cluster.Sim
+Aliases: cluster.Sim
+Keywords: cluster
+Description: Comparing of the quality of classification of eight alghoritms, with 11 normalization procedures and with 4 internal clustering quality indexes .
+URL: ../../../library/ClusterSim/html/cluster.Sim.html
+
+Entry: cluster.Description
+Aliases: cluster.Description
+Keywords: cluster
+Description: Basic statistics for each cluster
+URL: ../../../library/ClusterSim/html/cluster.Description.html
+
+Entry: index.Gap
+Aliases: index.Gap
+Keywords: cluster
+Description: Tibshiranie, Walther and Hastie Gap Index
+URL: ../../../library/ClusterSim/html/index.GAP.html
+
+Entry: HINoV.Mod
+Aliases: HINoV.Mod
+Keywords: cluster
+Description: Modification of Carmone, Kara & Maxwell Heuristic Identification of Noisy Variables (HINoV)
+URL: ../../../library/ClusterSim/html/HINoV.Mod.html
+
+Entry: HINoV.Symbolic
+Aliases: HINoV.Symbolic
+Keywords: cluster
+Description: Modification of Carmone, Kara & Maxwell Heuristic Identification of Noisy Variables (HINoV) for symbolic interval data
+URL: ../../../library/ClusterSim/html/HINoV.Symbolic.html
+
+Entry: replication.Mod
+Aliases: replication.Mod
+Keywords: cluster
+Description: Modification of replication analysis for cluster validation
+URL: ../../../library/ClusterSim/html/replication.Mod.html
+
+Entry: data_ratio
+Aliases: data_ratio
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_ratio.html
+
+Entry: data_binary
+Aliases: data_binary
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_binary.html
+
+Entry: data_symbolic
+Aliases: data_symbolic
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_symbolic.html
+
+Entry: data_interval
+Aliases: data_interval
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_interval.html
+
+Entry: data_ordinal
+Aliases: data_ordinal
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_ordinal.html
+
+
+Entry: data_mixed
+Aliases: data_mixed
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_mixed.html
+

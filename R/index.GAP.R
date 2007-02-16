@@ -1,0 +1,104 @@
+
+index.Gap<-function(x,clall,reference.distribution="unif",B=10,method="pam") {
+GAP<-function(X,cl,referenceDistribution,B,method){
+simgap<-function(Xvec) {
+	ma<-max(Xvec)
+	mi<-min(Xvec)
+	Xout<-runif(length(Xvec),min=mi,max=ma)
+	return(Xout) 
+}
+
+pcsim<-function(X) {
+	Xmm<-apply(X,2,mean)
+	for (k in (1:dim(X)[2])) 
+	{
+		X[,k]<-X[,k]-Xmm[k] 
+	}
+	ss<-svd(X)
+	Xs<-X%*%ss$v
+	Xnew<-apply(Xs,2,simgap)
+	Xt<-Xnew%*%t(ss$v)
+	for (k in (1:dim(X)[2])) 
+	{
+		Xt[,k]<-Xt[,k]+Xmm[k] 
+	}
+	return(Xt) 
+}
+	ClassNr<-max(cl)
+	print(ClassNr)
+	Wk0<-0
+	WkB<-matrix(0,1,B)
+	for (bb in (1:B)) {
+		if (reference.distribution=="unif")
+			Xnew<-apply(X,2,simgap) 
+		else if (reference.distribution=="pc") 
+			Xnew<-pcsim(X) 
+		else
+			stop("Wrong reference distribution type")	
+		if (bb==1) {
+			pp<-cl
+			if (ClassNr==length(cl))
+			pp2<-1:ClassNr
+			else if (method=="pam")
+			pp2<-pam(Xnew,ClassNr)$cluster 
+			else if (method=="k-means")
+			pp2<-kmeans(Xnew,ClassNr,100)$cluster 
+			else if (method=="single" || method=="complete"
+			|| method=="average" || method=="ward"
+			|| method=="mcquity" || method=="median" || method=="centroid")
+				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
+			else	
+				stop ("Wrong clustering method")	
+			if (ClassNr>1) {
+				for (zz in (1:ClassNr)) {
+				Xuse<-X[pp==zz,]
+				Wk0<-Wk0+sum(diag(var(Xuse)))*(length(pp[pp==zz])-1)/(dim(x)[1]-ClassNr)
+				Xuse2<-Xnew[pp2==zz,]			
+				WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*(length(pp2[pp2==zz])-1)/(dim(x)[1]-ClassNr)  
+				} 
+			}
+			if (ClassNr==1) {
+				Wk0<-sum(diag(var(x)))
+				WkB[1,bb]<-sum(diag(var(Xnew))) 
+			} 
+		}
+		if (bb>1) { 
+			if (ClassNr==length(cl))
+			pp2<-1:ClassNr
+			else if (method=="pam")
+				pp2<-pam(Xnew,ClassNr)$cluster 
+			else if (method=="k-means")
+				pp2<-kmeans(Xnew,ClassNr,100)$cluster
+			else if (method=="single" || method=="complete"
+				|| method=="average" || method=="ward"
+				|| method=="mcquity" || method=="median" || method=="centroid")
+				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
+			else	
+				stop ("Wrong clustering method")	
+			if (ClassNr>1) {
+				for (zz in (1:ClassNr)) {
+					Xuse2<-Xnew[pp2==zz,]
+					WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*length(pp2[pp2==zz])/(dim(x)[1]-ClassNr) 
+				} 
+			}
+			if (ClassNr==1) {
+				WkB[1,bb]<-sum(diag(var(Xnew))) 
+			} 
+		} 
+	}
+
+	Sgap<-mean(log(WkB[1,]))-log(Wk0)
+Sdgap<-sqrt(1+1/B)*sqrt(var(log(WkB[1,])))*sqrt((B-1)/B) 
+	resul<-list(Sgap=Sgap,Sdgap=Sdgap) 
+	resul
+}
+
+	print(x)
+	X<-as.matrix(x)
+	gap1<-GAP(X,clall[,1],reference.distribution,B,method)
+	gap<-gap1$Sgap
+	gap2<-GAP(X,clall[,2],reference.distribution,B,method)
+	diffu<-gap-(gap2$Sgap-gap2$Sdgap)
+	resul<-list(gap=gap,diffu=diffu)
+	resul
+}
