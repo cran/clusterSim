@@ -3,8 +3,8 @@
 \title{Modification of replication analysis for cluster validation }
 \description{Modification of replication analysis for cluster validation}
 \usage{
-replication.Mod(x, v="m", u=2, centrotypes="centers", 
-	normalization=NULL, distance=NULL, method="kmeans", S=10)
+replication.Mod(x, v="m", u=2, centrotypes="centroids", 
+	normalization=NULL, distance=NULL, method="kmeans", S=10, fixedAsample=NULL)
 }
 \arguments{
 \item{x}{data matrix}
@@ -13,9 +13,9 @@ replication.Mod(x, v="m", u=2, centrotypes="centers",
 \item{centrotypes}{"centroids" or "medoids"}
 \item{normalization}{optional, normalization formulas for metric data:
 
-for ratio data: "n6" - (x/sd), "n7" - (x/range), "n8" - (x/max), "n9" - (x/mean), "n10" - (x/sum), "n11" - x/sqrt(SSQ)
+for ratio data: "n0" - without normalization, "n6" - (x/sd), "n7" - (x/range), "n8" - (x/max), "n9" - (x/mean), "n10" - (x/sum), "n11" - x/sqrt(SSQ)
 
-for interval or mixed data: "n1" - (x-mean)/sd, "n2" - (x-Me)/MAD, "n3" - (x-mean)/range, "n4" - (x-min)/range, "n5" - (x-mean)/max[abs(x-mean)]}
+for interval or mixed data: "n0" - without normalization, "n1" - (x-mean)/sd, "n2" - (x-Me)/MAD, "n3" - (x-mean)/range, "n4" - (x-min)/range, "n5" - (x-mean)/max[abs(x-mean)]}
 \item{distance}{distance measures
 
 NULL for "kmeans" method (based on data matrix),
@@ -32,19 +32,20 @@ for binary data: "b1" = Jaccard; "b2" = Sokal & Michener; "b3" = Sokal & Sneath 
 }
 \item{method}{clustering method: "kmeans" (default), "single", "complete", "average", "mcquitty", "median", "centroid", "ward", "pam"}
 \item{S}{the number of simulations used to compute mean corrected Rand index}
+\item{fixedAsample}{if NULL \emph{A} sample is generated randomly, otherwise this parameter contains object numbers arbitrarily assigned to \emph{A} sample}
 }
 \details{
 See file \$R\_HOME\\library\\clusterSim\\pdf\\replication.Mod\_details.pdf for further details
 }
 
 \value{
-\item{A}{3-dimensional array of A samples (first dimension represent iteration step, second - object number, third - variable number)}
-\item{B}{3-dimensional array of B samples (first dimension represent iteration step, second - object number, third - variable number)}
-\item{centroid}{Array of matrices of class centroids for sample A (first dimension represent iteration step)}
-\item{medoid}{Array of matrix of observations on u representative objects (medoids) for sample A (first dimension represent iteration step)}
-\item{clusteringA}{Array of \eqn{A=\{A_1,A_2,...,A_u\}} (first dimension represents iteration step, second - cluster number for each object)}
-\item{clusteringB}{Array of \eqn{B=\{B_1,B_2,...,B_u\}} (first dimension represents iteration step, second - cluster number for each object)}
-\item{clusteringBB}{Array of \eqn{BB=\{BB_1,BB_2,...,BB_u\}} (first dimension represents iteration step, second - cluster number for each object)}
+\item{A}{3-dimensional array containing data matrices for A sample of objects in each simulation (first dimension represents simulation number, second - object number, third - variable number)}
+\item{B}{3-dimensional array containing data matrices for B sample of objects in each simulation (first dimension represents simulation number, second - object number, third - variable number)}
+\item{centroid}{3-dimensional array containing centroids of u clusters for A sample of objects in each simulation (first dimension represents simulation number, second - cluster number, third - variable number)}
+\item{medoid}{3-dimensional array containing matrices of observations on u representative objects (medoids) for A sample of objects in each simulation (first dimension represents simulation number, second - cluster number, third - variable number)}
+\item{clusteringA}{2-dimensional array containing cluster numbers for A sample of objects in each simulation (first dimension represents simulation number, second - object number)}
+\item{clusteringB}{2-dimensional array containing cluster numbers for B sample of objects in each simulation (first dimension represents simulation number, second - object number)}
+\item{clusteringBB}{2-dimensional array containing cluster numbers for B sample of objects in each simulation according to 4 step of replication analysis procedure (first dimension represents simulation number, second - object number)}
 \item{cRand}{value of mean corrected Rand index for S simulations}
 }
 \author{
@@ -62,7 +63,8 @@ Hubert, L., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classifi
 
 Milligan, G.W. (1996), \emph{Clustering validation: results and implications for applied analyses}, In P. Arabie, L.J. Hubert, G. de Soete (Eds.), \emph{Clustering and classification}, World Scientific, Singapore, 341-375.
 
-Walesiak, M. (2007), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, Prace Naukowe AE we Wroclawiu (in preparation).
+Walesiak, M. (2007), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, In: J. Pociecha (Ed.), \emph{Modelowanie i prognozowanie zjawisk spoleczno-gospodarczych}, Wydawnictwo AE, Krakow. 
+
 
 }
 \seealso{\code{\link{cluster.Sim}}, \code{\link{hclust}}, \code{\link{kmeans}},  \code{\link{dist}},
@@ -73,6 +75,10 @@ library(clusterSim)
 data(data_ratio)
 w<-replication.Mod(data_ratio,u=5,S=10)
 print(w)
+
+library(clusterSim)
+data(data_binary)
+replication.Mod(data_binary,"b",u=2,"medoids",NULL,"b1","pam",fixedAsample=c(1,3,6,7))
 }
 \keyword{cluster}
 \keyword{multivariate}
