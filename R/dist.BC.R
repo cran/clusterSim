@@ -1,7 +1,7 @@
 dist.BC<-function(x)
 {
 	nr<-nrow(x)
-	wynik<-matrix(nrow=nr,ncol=nr,dimnames=x$names)
+	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
 	for (i in 1:nr)
 	for (j in 1:nr)
 	{

@@ -114,7 +114,7 @@ if (p==1 || p==6 || p==8)
 	if (sum(as.matrix(x)<0)!=0)
 		stop(paste("for path number",p,"all variables in data matrix have to be measured on ratio scale"))
 sciezka=c("Ratio data","Interval or mixed (ratio & interval)","Ordinal data","Nominal data","Binary data","Ratio data without normalization","Interval or mixed (ratio & interval) data without normalization","Ratio data with K-means","Interval or mixed (ratio & interval) data with K-means")
-v_norm=c("n1","n2","n3","n4","n5","n6","n7","n8","n9","n10","n11")    # n1-n5 - piêæ odleg³oœci
+v_norm=c("n1","n2","n3","n4","n5","n6","n7","n8","n9","n10","n11")    # n1-n5 - piec odleglosci
 v_norm=cbind(v_norm,c("n1","n2","n3","n4","n5","","","","","",""))
 v_norm=cbind(v_norm,c("n0","","","","","","","","","",""))
 v_norm=cbind(v_norm,c("n0","","","","","","","","","",""))

@@ -4,7 +4,8 @@
 \description{Modification of replication analysis for cluster validation}
 \usage{
 replication.Mod(x, v="m", u=2, centrotypes="centroids", 
-	normalization=NULL, distance=NULL, method="kmeans", S=10, fixedAsample=NULL)
+	normalization=NULL, distance=NULL, method="kmeans", 
+	S=10, fixedAsample=NULL)
 }
 \arguments{
 \item{x}{data matrix}
@@ -68,7 +69,9 @@ Walesiak, M. (2007), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystani
 
 }
 \seealso{\code{\link{cluster.Sim}}, \code{\link{hclust}}, \code{\link{kmeans}},  \code{\link{dist}},
-\code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{dist.GDM}}, \code{\link{data.Normalization}}
+\code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{dist.GDM}}, 
+
+\code{\link{data.Normalization}}
 }
 \examples{
 library(clusterSim)
@@ -78,7 +81,8 @@ print(w)
 
 library(clusterSim)
 data(data_binary)
-replication.Mod(data_binary,"b",u=2,"medoids",NULL,"b1","pam",fixedAsample=c(1,3,6,7))
+replication.Mod(data_binary,"b",u=2,"medoids",NULL,"b1",
+"pam",fixedAsample=c(1,3,6,7))
 }
 \keyword{cluster}
 \keyword{multivariate}

@@ -15,7 +15,7 @@ dist.GDM<-function(x,method="GDM1")
 	nr=nrow(x)
 	t<-.C("fngdm",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
 	as.integer(method_int),as.double(weights),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik
-	wynik<-matrix(nrow=nr,ncol=nr,dimnames=x$names)
+	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
 	for (i in 1:nr)
 	for (j in 1:nr)
 	{

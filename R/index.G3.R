@@ -14,7 +14,7 @@ index.G3<-function(d,cl)
 			t<-d[cl==i,cl==i]
 			DU=DU+sum(t)/2
 			v_max[i]=max(t)
-			if (sum(t==0)==n)		# nie ma zer poza przek¹tn¹
+			if (sum(t==0)==n)		# nie ma zer poza przekatna
 				v_min[i]<-min(t[t!=0])
 			else
 				v_min[i]<-0

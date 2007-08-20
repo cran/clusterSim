@@ -88,11 +88,35 @@ Keywords: cluster
 Description: Modification of Carmone, Kara & Maxwell Heuristic Identification of Noisy Variables (HINoV) for symbolic interval data
 URL: ../../../library/ClusterSim/html/HINoV.Symbolic.html
 
-Entry: replication.Mod
-Aliases: replication.Mod
+Entry: cluster.Gen
+Aliases: cluster.Gen
 Keywords: cluster
-Description: Modification of replication analysis for cluster validation
-URL: ../../../library/ClusterSim/html/replication.Mod.html
+Description: generation of random clusters
+URL: ../../../library/ClusterSim/html/cluster.Gen.html
+
+Entry: plotNominal
+Aliases: plotNominal
+Keywords: hplot
+Description: plot of nominal data
+URL: ../../../library/ClusterSim/html/plotNominal.html
+
+Entry: plotNominal3d
+Aliases: plotNominal3d
+Keywords: hplot
+Description: plot of nominal data in three+dimensional space
+URL: ../../../library/ClusterSim/html/plotNominal3d.html
+
+Entry: plotIntervals
+Aliases: plotIntervals
+Keywords: hplot
+Description: plot of symbolic interval  data
+URL: ../../../library/ClusterSim/html/plotIntervals.html
+
+Entry: dist.Symbolic
+Aliases: dist.Symbolic
+Keywords: cluster
+Description: Several distance measures for symbolic interval data
+URL: ../../../library/ClusterSim/html/dist.Symbolic.html
 
 Entry: data_ratio
 Aliases: data_ratio

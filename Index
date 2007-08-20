@@ -34,3 +34,8 @@ initial.Centers         Calculation of initial clusters centers for
                         k-means like alghoritms
 replication.Mod         Modification of replication analysis for
                         cluster validation
+cluster.Gen				Random cluster generation with known structure of clusters
+plotNominal				hplot
+plotNominal3D			hplot
+plotIntervals			hplot
+dist.Symbolic			distance on symbolic data

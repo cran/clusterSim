@@ -1,1 +1,2 @@
-.Last.lib <- function(lib, pkg){library.dynam.unload("clusterSim", pkg, lib)} 
+.Last.lib <- function(libpath){library.dynam.unload("clusterSim", libpath)}
+.onUnload <- function(libpath){library.dynam.unload("clusterSim", libpath)} 
