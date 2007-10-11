@@ -1,11 +1,20 @@
 plotCategorial<-function(x, pairsofVar=NULL, cl=NULL, clColors=NULL,...)
 {
 
-pary<-function (x, labels, panel = points, ..., lower.panel = panel, 
-    upper.panel = panel, diag.panel = NULL, text.panel = textPanel, 
+pary<-function (x, labels, panel = points,  lower.panel = panel, 
+    upper.panel = panel, diag.panel = NULL, ..., text.panel = textPanel, 
     label.pos = 0.5 + has.diag/3, cex.labels = NULL, font.labels = 1, 
     row1attop = TRUE, gap = 1) 
 {
+	innyDol<-innaGora<-TRUE
+	if (identical(lower.panel,panel))
+	{
+		innyDol<-FALSE
+	}
+	if (identical(upper.panel,panel))
+	{
+		innaGora<-FALSE
+	}
     textPanel <- function(x = 0.5, y = 0.5, txt, cex, font) text(x, 
         y, txt, cex = cex, font = font)
     localAxis1 <- function(side, x, y, xpd, bg, col = NULL, main, 
@@ -23,6 +32,10 @@ pary<-function (x, labels, panel = points, ..., lower.panel = panel,
     localPlot <- function(..., main, oma, font.main, cex.main) plot(...)
     localLowerPanel <- function(..., main, oma, font.main, cex.main) lower.panel(...)
     localUpperPanel <- function(..., main, oma, font.main, cex.main) upper.panel(...)
+	lower.panel1<-lower.panel
+	upper.panel1<-upper.panel
+    localLowerPanel1 <- function(..., main, oma, font.main, cex.main) lower.panel1(...)
+    localUpperPanel1 <- function(..., main, oma, font.main, cex.main) upper.panel1(...)
     dots <- list(...)
     nmdots <- names(dots)
     if (!is.matrix(x)) {
@@ -115,10 +128,29 @@ pary<-function (x, labels, panel = points, ..., lower.panel = panel,
                         }
                         rozmiary<-rozmiary/max(rozmiary)*12/ncol(x)
             
-             if (i < j) 
-                localLowerPanel(as.vector(x[, j]), as.vector(x[,i]), cex=rozmiary,...)
+             if (i > j)
+             { 
+                if(innyDol)
+                {
+					localLowerPanel1(x[, c(j,i)],...)
+				}
+				else
+				{
+					points(as.vector(x[, j]), as.vector(x[,i]), cex=rozmiary,...)
+				}
+             }
             else 
-                                localUpperPanel(as.vector(x[, j]), as.vector(x[,i]), cex=rozmiary,...)
+            {
+            
+								if(innaGora)
+								{
+                                localUpperPanel1(x[, c(j,i)],...)
+                                }
+                                else
+                                {
+                                points(as.vector(x[, j]), as.vector(x[,i]),cex=rozmiary,...)
+                                }
+                                }
                         }
             if (any(par("mfg") != mfg)) 
                 stop("the 'panel' function made a new plot")
@@ -142,7 +174,7 @@ pary<-function (x, labels, panel = points, ..., lower.panel = panel,
 	{
 		data<-data[,pairsofVar]
 	}
-	plot(0., 0., xlim = c(0, max(data[,1])+1), ylim = c(0,max(data[,2])+1),axes = FALSE, xlab = "", ylab = "",type="n",...)
+	plot(0., 0., xlim = c(0, max(data[,1])+1), ylim = c(0,max(data[,2])+1),axes = FALSE, xlab = "", ylab = "",type="n")
 	clusters<-cl
 	if(!is.null(cl))
 	{
@@ -167,11 +199,11 @@ pary<-function (x, labels, panel = points, ..., lower.panel = panel,
 		{
 			colorsnames<-rainbow(max(cl)+1)
 		}		
-		pary(data,col=(colorsnames[clusters]),pch=16)
+		pary(data,col=(colorsnames[clusters]),pch=16,...)
 	}
 	else
 	{
-		pary(data,col=rainbow(10)[sample(1:10,1)],pch=16)
+		pary(data,col=rainbow(10)[sample(1:10,1)],pch=16,...)
 	}
 }
 

@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for optimal clustering procedure for a data set 
-Version: 0.32-3
-Date: 2007-08-20
+Version: 0.33-1
+Date: 2007-10-11
 Author: Marek Walesiak <Marek.Walesiak@ae.jgora.pl> Andrzej Dudek <Andrzej.Dudek@ae.jgora.pl>
 Maintainer: Andrzej Dudek <Andrzej.Dudek@ae.jgora.pl>
 Depends: ade4, cluster, R2HTML, e1071, rgl, MASS
@@ -25,4 +25,4 @@ Description: GDM Distance,
 License: GPL version 2 or later
 URL: http://www.ae.jgora.pl/keii/clusterSim
 Encoding: UTF-8
-Packaged: Tue Sep 25 09:48:37 2007; Andrzej
+Packaged: Thu Oct 11 23:28:43 2007; Andrzej
