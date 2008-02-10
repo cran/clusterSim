@@ -15,8 +15,8 @@ H - Hausdorff distance
 
 S - sum of distances between all corresponding vertices of hyperrectangles given by symbolic objects with interval-valued variables
 }
-\item{gamma}{parameter for calculating Ichino and Yaguchi distance - see file \$R\_HOME\\library\\clusterSim\\pdf\\distSymbolic\_details.pdf }
-\item{power}{parameter (q) for calculating Ichino and Yaguchi distance - see file \$R\_HOME\\library\\clusterSim\\pdf\\distSymbolic\_details.pdf }
+\item{gamma}{parameter for calculating Ichino and Yaguchi distance}
+\item{power}{parameter (q) for calculating Ichino and Yaguchi distance}
 }
 \details{
 See file \$R\_HOME\\library\\clusterSim\\pdf\\distSymbolic\_details.pdf for further details

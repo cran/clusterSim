@@ -270,7 +270,7 @@ cluster.Gen<-function(numObjects=50,means=NULL,cov=NULL, fixedCov=TRUE, model=1,
 	else
 	{
 		gM<-NULL
-		for(i in 1:noisyVar)
+		for(i in 1:numNoisyVar)
 		{
 		 gM<-cbind(gM,runif(objects,min=0,max=1))
 		}

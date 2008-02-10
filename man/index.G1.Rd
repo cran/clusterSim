@@ -33,7 +33,7 @@ Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of deter
 }
 \seealso{
 \code{\link{index.G2}},\code{\link{index.G3}},\code{\link{index.S}}, 
-\code{\link{index.H}},\code{\link{index.KL}},\code{\link{index.Gap}}
+\code{\link{index.H}},\code{\link{index.KL}},\code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
 library(clusterSim)

@@ -29,7 +29,7 @@ Tibshirani, R., Walther, G., Hastie, T. (2001), \emph{Estimating the number of c
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
-\code{\link{index.S}}, \code{\link{index.H}}, \code{\link{index.Gap}}
+\code{\link{index.S}}, \code{\link{index.H}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
 library(clusterSim)

@@ -28,7 +28,8 @@ Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
 }
 \seealso{
-\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, \code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{index.Gap}}
+\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
+\code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
 library(clusterSim)

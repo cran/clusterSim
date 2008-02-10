@@ -30,6 +30,8 @@ index.H                 Calculates Hartigan index
 index.KL                Calculates Krzanowski-Lai index
 index.S                 Calculates Rousseeuw's Silhouette internal
                         cluster quality index
+index.DB                Calculates Davies-Bouldin's internal
+                        cluster quality index
 initial.Centers         Calculation of initial clusters centers for
                         k-means like alghoritms
 replication.Mod         Modification of replication analysis for

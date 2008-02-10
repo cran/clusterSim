@@ -25,7 +25,7 @@ pcsim<-function(X) {
 	return(Xt) 
 }
 	ClassNr<-max(cl)
-	print(ClassNr)
+	#print(ClassNr)
 	Wk0<-0
 	WkB<-matrix(0,1,B)
 	for (bb in (1:B)) {
@@ -93,7 +93,7 @@ Sdgap<-sqrt(1+1/B)*sqrt(var(log(WkB[1,])))*sqrt((B-1)/B)
 	resul
 }
 
-	print(x)
+	#print(x)
 	X<-as.matrix(x)
 	gap1<-GAP(X,clall[,1],reference.distribution,B,method)
 	gap<-gap1$Sgap

@@ -28,7 +28,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.S}}, 
-\code{\link{index.H}}, \code{\link{index.KL}}, \code{\link{index.Gap}}
+\code{\link{index.H}}, \code{\link{index.KL}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
 library(clusterSim)

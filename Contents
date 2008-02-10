@@ -73,8 +73,14 @@ URL: ../../../library/ClusterSim/html/cluster.Description.html
 Entry: index.Gap
 Aliases: index.Gap
 Keywords: cluster
-Description: Tibshiranie, Walther and Hastie Gap Index
+Description: Tibshiranie, Walther and Hastie Gap index
 URL: ../../../library/ClusterSim/html/index.GAP.html
+
+Entry: index.DB
+Aliases: index.DB
+Keywords: cluster
+Description: Davies-Bouldin's index
+URL: ../../../library/ClusterSim/html/index.DB.html
 
 Entry: HINoV.Mod
 Aliases: HINoV.Mod

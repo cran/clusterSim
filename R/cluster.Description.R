@@ -13,7 +13,7 @@ modalValue<-function(t)
 		{
 			if (as.double(t[ii])==as.double(aggregated[kk,1]))
 			{
-				found<-T
+				found<-TRUE
 				aggregated[kk,2]<-aggregated[kk,2]+1
 			}
 		}

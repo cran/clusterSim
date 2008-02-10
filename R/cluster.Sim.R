@@ -240,7 +240,7 @@ if(!missing(methods))
 	for (i in 1:length(methods))
 	{
 	if (sum(v_method[,p]==short2LongName(methods[i]))!=1)
-		stop (paste("Optional parameter \"methods\" for path",p,"(",sciezka[p],")","must be a vector containing only values from the following list: \n",methods_str))
+		stop (paste("Optional parameter \"methods\" for path",p,"(",sciezka[p],")","must be a vector containing only values from the following list: \n",method_str))
 	if (sum(methods==methods[i])>1)
 		stop (paste("Optional parameter \"methods\" for path",p,"(",sciezka[p],")","contains doubled values (",methods[i],")"))
 
@@ -272,6 +272,9 @@ for (i_norm in 1 : l_norm)
 	if(v_norm[i_norm,p]!="")
 	{
 	z<-data.Normalization(x, v_norm[i_norm,p])
+	if(sum(is.nan(z))!=0 || sum(is.na(z))!=0 || sum(is.infinite(z))!=0){
+    stop(paste("Na/NaN/Infinite after \"", v_norm[i_norm,p] , "\" normalization \nPlease exclude this normalization from simulation \nexplicitly use normalizations = c(...)",sep=""))
+	}
 	z<-as.data.frame(z)
 	for (i_dist in 1:l_dist)
 	{
@@ -337,8 +340,11 @@ for (i_norm in 1 : l_norm)
 			print(d)
 			stop()
 		}	
-		d[is.infinite(d)]<-maxint
-		d[is.nan(d)]<-maxint
+		#d[is.infinite(d)]<-maxint
+		#d[is.nan(d)]<-maxint
+		if(sum(is.na(d))!=0 || sum(is.nan(d))!=0 || sum(is.infinite(d))!=0 ){
+      stop(paste("Na/NaN/Infinite in distance \"", s_dist[i_dist,p] , "\" calculation\nPlease exclude this distance from simulation \nexplicitly use distances = c(...)",sep="")) 
+    }
 		for (i_method in 1:lmax_method)
 		{		
 			if(v_method[i_method,p]!="")
@@ -507,7 +513,7 @@ for (i_norm in 1 : l_norm)
 				for (liczba_klas in minClusterNo:maxClusterNo)
 				{
 					c<-kmeans(y,y[initial.Centers(y,liczba_klas),],100)	# pomyslec o seeds
-					t<-G2(d,c$cluster)
+					t<-index.G2(d,c$cluster)
 					if(t>wynik_global)
 					{
 						wynik_global=t

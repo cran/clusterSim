@@ -26,7 +26,7 @@ Kaufman, L., Rousseeuw, P.J. (1990), \emph{Finding groups in data: an introducti
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
-\code{\link{index.KL}}, \code{\link{index.H}}, \code{\link{index.Gap}}
+\code{\link{index.KL}}, \code{\link{index.H}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
 library(clusterSim)
