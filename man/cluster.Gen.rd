@@ -40,7 +40,7 @@ and if
 
 \code{fixedCov=FALSE} each cluster is generated from different covariance matrix - see \code{model}}
 \item{dataType}{"m" - metric (ratio, interval), "o" -  ordinal, "s" - symbolic interval}
-\item{numCategories}{number of categories (for ordinal data only). Positive integer value or vector with the same size as \emph{nrow(means)}}
+\item{numCategories}{number of categories (for ordinal data only). Positive integer value or vector with the same size as \emph{ncol(means)} plus number of noisy variables.}
 \item{numNoisyVar}{number of noisy variables. For \code{model=1} it means number of variables}
 \item{numOutliers}{number of outliers (for metric and symbolic interval data only). If a positive integer - number of outliers, if value from <0,1> - percentage of outliers in whole data set}
 \item{rangeOutliers}{range for outliers (for metric and symbolic interval data only). The default range is [1, 10].The outliers are generated independently for each variable for the whole data set from uniform distribution. The generated values are randomly added to maximum of \emph{j}-th variable or subtracted from minimum of \emph{j}-th variable} 

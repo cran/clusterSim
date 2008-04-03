@@ -3,6 +3,9 @@ index.G1<-function(x,cl)
    	   	
         n <- length(cl)
         k <- max(cl)
+        if(is.null(dim(x))){
+          dim(x)<-c(length(x),1)
+        }
 	   centers<-matrix(nrow=k,ncol=ncol(x))
 	   for(i in 1:k)
 	   {

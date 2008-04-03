@@ -49,6 +49,9 @@ if (type=="b")
 }
 l2SN
 }
+	if(is.null(dim(x))){
+    stop("Number of variables have to be greater than one")
+	}
 	z<-x
 	if (is.null(u) && (type!="nonmetric")) stop ("for metric and mixed data number of classes must be set")
 	if(!require("cluster")) stop ("Please install cluster package")
@@ -157,105 +160,26 @@ l2SN
 		posortowane[2,i]<-sum(wynik[i,])-1
 	}
 	topri<-posortowane
-	for (i in 1:liczba_zmiennych)
-	for (j in 1:(liczba_zmiennych-1))
-	{
-		if(posortowane[2,j]<posortowane[2,j+1])
-		{
-			p1<-posortowane[1,j+1]
-			p2<-posortowane[2,j+1]
-			posortowane[1,j+1]<-posortowane[1,j]
-			posortowane[2,j+1]<-posortowane[2,j]
-			posortowane[1,j]<-p1
-			posortowane[2,j]<-p2
-		}
-	}
+	if(liczba_zmiennych>1){
+    for (i in 1:liczba_zmiennych)
+    for (j in 1:(liczba_zmiennych-1))
+    {
+      if(posortowane[2,j]<posortowane[2,j+1])
+      {
+        p1<-posortowane[1,j+1]
+        p2<-posortowane[2,j+1]
+        posortowane[1,j+1]<-posortowane[1,j]
+        posortowane[2,j+1]<-posortowane[2,j]
+        posortowane[1,j]<-p1
+        posortowane[2,j]<-p2
+      }
+    }
+  }
 	resul<-list(parim=wynik,topri=t(topri),stopri=t(posortowane))
 	resul
 }
 
 
-HINoV.Symbolic<-function(x, u=NULL, distance="H", method = "pam", Index = "cRAND")
-{
-	z<-x
-	if (is.null(u)) stop ("for symbolic data number of classes must be set")
-	if(!require("cluster")) stop ("Please install cluster package")
-	if(!require("e1071")) stop ("Please install e1071 package")
-	if(!require("ade4")) stop ("Please install ade4 package")
-	if (is.null(distance)) stop("For hierarchical methods parameter distance cannot be NULL")
-	if (Index != "RAND" && Index!="cRAND") stop("Wrong index type, only RAND or cRAND are allowed")
-	if (!is.null(distance))
-	{
-		if (sum(c("U_2","M","H","S")==distance)==0)
-			stop("wrong distance")
-	}
-	liczba_klas=u
-	klasyfikacje<-NULL
-	cl<-NULL
-	for(i in 1:dim(z)[2])
-	{
-		x<-(z[,i,])
-		#print(i)
-		#print(x)
-		dim(x)<-c(dim(z)[1],1,2)
-		d <- dist.Symbolic(x, type=distance)	
-		#print("po dist.symbolic")
-		if(method=="pam")
-		{
-			cl<-pam(d,u,diss=TRUE)$clustering
-		}
-		else
-		{
-			cl<-cutree(hclust(d,method=method),u)
-		}
-		klasyfikacje<-cbind(klasyfikacje,cl)
-	}
-	liczba_zmiennych=ncol(z)
-	wynik<-array(0,c(liczba_zmiennych,liczba_zmiennych))
-	for (i in 1:liczba_zmiennych)
-	for (j in 1:liczba_zmiennych)
-	{
-		#print(paste(1,j))
-		if(i==j)
-		{
-			wynik[i,j]=1
-		}
-		else
-		{
-	#print("DEBUG: A8")
-			#print(klasyfikacje[,i])
-			#print(klasyfikacje[,j])
-			tk=table(klasyfikacje[,i],klasyfikacje[,j])
-	#print("DEBUG: A9")
-			w<-classAgreement(tk)
-			#print(w)
-			if (Index=="cRAND")
-			wynik[i,j]<-w$crand
-			else
-			wynik[i,j]<-w$rand
-		}
-	}
-	#print("DEBUG: A10")
-	posortowane<-array(0,c(2,liczba_zmiennych))
-	for (i in 1:liczba_zmiennych)
-	{
-		posortowane[1,i]<-i
-		posortowane[2,i]<-sum(wynik[i,])-1
-	}
-	topri<-posortowane
-	for (i in 1:liczba_zmiennych)
-	for (j in 1:(liczba_zmiennych-1))
-	{
-		if(posortowane[2,j]<posortowane[2,j+1])
-		{
-			p1<-posortowane[1,j+1]
-			p2<-posortowane[2,j+1]
-			posortowane[1,j+1]<-posortowane[1,j]
-			posortowane[2,j+1]<-posortowane[2,j]
-			posortowane[1,j]<-p1
-			posortowane[2,j]<-p2
-		}
-	}
-	resul<-list(parim=wynik,topri=t(topri),stopri=t(posortowane))
-	resul
-}
+
+
+

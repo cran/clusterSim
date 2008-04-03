@@ -1,4 +1,7 @@
 index.DB<-function(x,cl,centrotypes="centroids",p=2,q=2){
+   if(is.null(dim(x))){
+          dim(x)<-c(length(x),1)
+        }
   x<-as.matrix(x)
   n <- length(cl)
   k <- max(cl)
@@ -12,7 +15,7 @@ index.DB<-function(x,cl,centrotypes="centroids",p=2,q=2){
          centers[i,j]<-mean(x[cl==i,j])
       }
     }
-   }
+  }
   else if (centrotypes=="medoids"){
     for (i in 1:k){
       clAi<-dAm[cl==i,cl==i]

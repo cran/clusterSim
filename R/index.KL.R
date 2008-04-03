@@ -21,8 +21,10 @@ wgss<-function(x,cl)
         sum(withins)
 }
 
+  if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+  }
 	m<-ncol(x)   	   	
 	g<-k <- max(clall[,2])
 	abs((g-1)^(2/m)*wgss(x,clall[,1])-g^(2/m)*wgss(x,clall[,2]))/abs((g)^(2/m)*wgss(x,clall[,2])-(g+1)^(2/m)*wgss(x,clall[,3]))
 }
-

@@ -9,6 +9,9 @@ index.G2 <- function(d,cl){
   di <- list()
   for (i in 1:cn){
     cluster.size[i] <- sum(cl==i)
+    #print(i)
+    #print(cl==i)
+    #print(dmat[cl==i,cl==i])
     di <- as.dist(dmat[cl==i,cl==i])
     within.dist <- c(within.dist,di)
     #diameter[i] <- max(di)

@@ -12,6 +12,7 @@ dist.GDM<-function(x,method="GDM1")
 			"GDM1"=1,
 			"GDM2"=2,
 			"GDM3"=3)
+
 	nr=nrow(x)
 	t<-.C("fngdm",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
 	as.integer(method_int),as.double(weights),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik

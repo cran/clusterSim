@@ -20,6 +20,8 @@ or
 }
 \details{
 See file \$R\_HOME\\library\\clusterSim\\pdf\\indexGap\_details.pdf for further details
+
+Thanks to dr Michael P. Fay from National Institute of Allergy and Infectious Diseases for finding "one column error".
 }
 \author{
 Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
@@ -35,6 +37,7 @@ Tibshirani, R., Walther, G., Hastie, T. (2001),
 \code{\link{index.S}}, \code{\link{index.H}}, \code{\link{index.KL}}, \code{\link{index.DB}}
 }
 \examples{
+# Example 1
 library(clusterSim)
 data(data_ratio)
 cl1<-pam(data_ratio,4)
@@ -43,6 +46,48 @@ clall<-cbind(cl1$clustering,cl2$clustering)
 g<-index.Gap(data_ratio, clall, reference.distribution="unif", B=10,
    method="pam")
 print(g)
+
+# Example 2
+library(clusterSim)
+means <- matrix(c(0,2,4,0,3,6), 3, 2)
+cov <- matrix(c(1,-0.9,-0.9,1), 2, 2)
+x <- cluster.Gen(numObjects=40, means=means, cov=cov, model=2)
+x <- x$data
+d <- dist(x, method="euclidean")^2
+min_class_no <- 1
+max_class_no <- 15
+min <- 0
+clopt<-NULL
+res<-NULL
+results <- array(0, c(max_class_no-min_class_no+1,2))
+results[,1] <- min_class_no:max_class_no
+found <- FALSE
+for (class_no in min_class_no:max_class_no){
+  cl1 <- pam(d, class_no, diss=TRUE)
+  cl2 <- pam(d, class_no+1, diss=TRUE)
+  clall <- cbind(cl1$clustering, cl2$clustering)
+  Gap <- index.Gap(x, clall, reference.distribution="pc", B=20, method="pam")
+  results[class_no - min_class_no+1,2] <- diffu <- Gap$diffu
+  if ((results[class_no - min_class_no+1,2]>=0) && (!found)){
+    lk <- class_no
+    min <- diffu
+    clopt <- cl1$cluster
+    res <- cl1$clusinfo
+    found <- TRUE
+  }
+}
+if (found){
+  print(paste("Minimal number of clusters where diffu>=0 is ", lk, "for diffu=", round(min, 4)), quote=FALSE)
+}else{
+  print("I have not found clustering with diffu>=0", quote=FALSE)
+}
+write.table(results, file="diffu.csv", sep=";", dec=",", row.names=TRUE, col.names=FALSE)
+write.table(clopt, file="clustering.csv", sep=";", dec=",", row.names=TRUE, col.names=FALSE)
+write.table(res, file="clusinfo.csv", sep=";", dec=",", row.names=TRUE, col.names=TRUE)
+options(OutDec=",")
+plot(results, type="p", pch=0, xlab="Liczba klas", ylab="diffu", xaxt="n")
+abline(h=0, untf=FALSE)
+axis(1, c(min_class_no:max_class_no))
 }
 \keyword{cluster}
 

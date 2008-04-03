@@ -41,6 +41,9 @@ modalValue<-function(t)
 }
 	if (sdType!="sample" && sdType!="population")
 		stop("sdType parameter should be one of two values: sample or population")
+	if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+	}
 	m<-ncol(x)
 	n<-length(cl)
 	k<-max(cl)
@@ -82,4 +85,5 @@ modalValue<-function(t)
 	}
 	result
 }
+
 

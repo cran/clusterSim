@@ -2,6 +2,9 @@ dist.SM<-function(x)
 {
 
 	if(is.data.frame(x)) x<-as.matrix(x)
+	if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+	}
 	nr=nrow(x)
 	t<-.C("fng3",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik
 	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
@@ -13,5 +16,3 @@ dist.SM<-function(x)
 	}
 	as.dist(wynik)
 }
-
-

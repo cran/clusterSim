@@ -29,4 +29,3 @@ index.G3<-function(d,cl)
 		result<-(DU-r*Dmin)/(Dmax*r-Dmin*r)
 	result		
 }
-

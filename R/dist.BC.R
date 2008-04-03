@@ -1,5 +1,8 @@
 dist.BC<-function(x)
 {
+	if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+	}
 	nr<-nrow(x)
 	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
 	for (i in 1:nr)

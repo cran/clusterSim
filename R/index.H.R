@@ -20,7 +20,9 @@ wgss<-function(x,cl)
 	   }
         sum(withins)
 }
- 	   	
+        if(is.null(dim(x))){
+          dim(x)<-c(length(x),1)
+        }
         n <- nrow(x)
         g <- max(clall[,1])
         (wgss(x,clall[,1])/wgss(x,clall[,2])-1)*(n-g+1)

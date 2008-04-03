@@ -1,4 +1,3 @@
-
 index.Gap<-function(x,clall,reference.distribution="unif",B=10,method="pam") {
 GAP<-function(X,cl,referenceDistribution,B,method){
 simgap<-function(Xvec) {
@@ -24,6 +23,9 @@ pcsim<-function(X) {
 	}
 	return(Xt) 
 }
+  if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+  }
 	ClassNr<-max(cl)
 	#print(ClassNr)
 	Wk0<-0
@@ -52,13 +54,13 @@ pcsim<-function(X) {
 			if (ClassNr>1) {
 				for (zz in (1:ClassNr)) {
 				Xuse<-X[pp==zz,]
-				Wk0<-Wk0+sum(diag(var(Xuse)))*(length(pp[pp==zz])-1)/(dim(x)[1]-ClassNr)
+				Wk0<-Wk0+sum(diag(var(Xuse)))*(length(pp[pp==zz])-1)/(dim(X)[1]-ClassNr)
 				Xuse2<-Xnew[pp2==zz,]			
-				WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*(length(pp2[pp2==zz])-1)/(dim(x)[1]-ClassNr)  
+				WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*(length(pp2[pp2==zz])-1)/(dim(X)[1]-ClassNr)  
 				} 
 			}
 			if (ClassNr==1) {
-				Wk0<-sum(diag(var(x)))
+				Wk0<-sum(diag(var(X)))
 				WkB[1,bb]<-sum(diag(var(Xnew))) 
 			} 
 		}
@@ -78,7 +80,7 @@ pcsim<-function(X) {
 			if (ClassNr>1) {
 				for (zz in (1:ClassNr)) {
 					Xuse2<-Xnew[pp2==zz,]
-					WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*length(pp2[pp2==zz])/(dim(x)[1]-ClassNr) 
+					WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*length(pp2[pp2==zz])/(dim(X)[1]-ClassNr) 
 				} 
 			}
 			if (ClassNr==1) {

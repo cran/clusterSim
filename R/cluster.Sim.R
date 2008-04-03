@@ -96,6 +96,11 @@ if (type=="b")
 }
 l2SN
 }
+
+
+if(is.null(dim(x))){
+  dim(x)<-c(length(x),1)
+}
 maxint=100000
 if(!require("cluster")) stop ("Please install cluster")
 if(!require("ade4")) stop ("Please install ade4")

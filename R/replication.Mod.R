@@ -41,6 +41,10 @@ if (type=="b")
 }
 l2SN
 }
+	if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+	}
+
    types=c("r","i","m","o","n","b")
    if (sum(types==v)==0)
       stop("parameter v should be one of: ",types)
@@ -121,7 +125,13 @@ l2SN
 			}
       }
       A<-x[sort(Sample),]
+      if(is.null(dim(A))){
+        dim(A)<-c(length(A),1)
+      }
       B<-x[-Sample,]
+      if(is.null(dim(B))){
+        dim(B)<-c(length(B),1)
+      }
       #print("debug 1a")
       #print(nrow(A))
       #print(ncol(A))
@@ -375,11 +385,4 @@ l2SN
    resul<-list(A=a_A,B=a_B,centroids=resulCentroids,medoids=resulMedoids,clusteringA=a_clA,clusteringB=a_clB,clusteringBB=a_clBB,cRand=resulcRand)
    resul
 }
-
-
-
-
-
-
-
 

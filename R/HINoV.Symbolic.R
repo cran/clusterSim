@@ -1,5 +1,3 @@
-
-
 HINoV.Symbolic<-function(x, u=NULL, distance="H", method = "pam", Index = "cRAND")
 {
 dist.Symbolic<-function(dane,type="U_2",gamma=0.5,power=2){
@@ -149,19 +147,28 @@ resul
 		posortowane[2,i]<-sum(wynik[i,])-1
 	}
 	topri<-posortowane
-	for (i in 1:liczba_zmiennych)
-	for (j in 1:(liczba_zmiennych-1))
+	if(liczba_zmiennych!=1)
 	{
-		if(posortowane[2,j]<posortowane[2,j+1])
-		{
-			p1<-posortowane[1,j+1]
-			p2<-posortowane[2,j+1]
-			posortowane[1,j+1]<-posortowane[1,j]
-			posortowane[2,j+1]<-posortowane[2,j]
-			posortowane[1,j]<-p1
-			posortowane[2,j]<-p2
-		}
-	}
+    for (i in 1:liczba_zmiennych)
+    for (j in 1:(liczba_zmiennych-1))
+    {
+      if(posortowane[2,j]<posortowane[2,j+1])
+      {
+        p1<-posortowane[1,j+1]
+        p2<-posortowane[2,j+1]
+        posortowane[1,j+1]<-posortowane[1,j]
+        posortowane[2,j+1]<-posortowane[2,j]
+        posortowane[1,j]<-p1
+        posortowane[2,j]<-p2
+      }
+    }
+  }
 	resul<-list(parim=wynik,topri=t(topri),stopri=t(posortowane))
 	resul
 }
+
+
+
+
+
+
