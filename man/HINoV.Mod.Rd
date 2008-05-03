@@ -44,37 +44,40 @@ Hubert, L.J., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classi
 
 Rand, W.M. (1971), \emph{Objective criteria for the evaluation of clustering methods}, "Journal of the American Statistical Association", no. 336, 846-850.
 
-Walesiak, M. (2007), \emph{Wybor zmiennych w zagadnieniu klasyfikacji - podejscia, problemy, metody}, A., Zelias  (Ed.), Wklad statystyki i ekonometrii w rozwoj badan ekonomicznych, KSiE PAN, Krakow (in press).
+Walesiak, M. (2005), \emph{Variable selection for cluster analysis - approaches, problems, methods}, Plenary Session of the Committee on Statistics and Econometrics of the Polish Academy of Sciences, 15 March, Wroclaw.
 }
 \seealso{
 \code{\link{hclust}}, \code{\link{kmeans}}, \code{\link{dist}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, 
 \code{\link{cluster.Sim}}
 }
 \examples{
-#for metric data
+# for metric data
 library(clusterSim)
 data(data_ratio)
 r1<- HINoV.Mod(data_ratio, type="metric", s=1, 4, method="kmeans",
      Index="cRAND")
 print(r1$stopri)
-plot(r1$stopri[,2],xlab="Variable number", ylab="topri", xaxt="n")
+plot(r1$stopri[,2],xlab="Variable number", ylab="topri",
+xaxt="n", type="b")
 axis(1,at=c(1:max(r1$stopri[,1])),labels=r1$stopri[,1])
 
-#for nonmetric data
+# for nonmetric data
 library(clusterSim)
 data(data_nominal)
 r2<- HINoV.Mod (data_nominal, type="nonmetric", Index = "cRAND")
 print(r2$stopri)
-plot(r2$stopri[,2], xlab="Variable number", ylab="topri", xaxt="n")
+plot(r2$stopri[,2], xlab="Variable number", ylab="topri",
+xaxt="n", type="b")
 axis(1,at=c(1:max(r2$stopri[,1])),labels=r2$stopri[,1])
 
-#for mixed data
+# for mixed data
 library(clusterSim)
 data(data_mixed)
 r3<- HINoV.Mod(data_mixed, type=c("m","n","m","n"), s=2, 3, distance="d1",
      method="complete", Index="cRAND")
 print(r3$stopri)
-plot(r3$stopri[,2], xlab="Variable number", ylab="topri", xaxt="n")
+plot(r3$stopri[,2], xlab="Variable number", ylab="topri",
+xaxt="n", type="b")
 axis(1,at=c(1:max(r3$stopri[,1])),labels=r3$stopri[,1])
 
 }

@@ -49,9 +49,8 @@ Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York.
 #Example 1 (numbers of objects choosen as initial cluster centers)
 library(clusterSim)
 data(data_ratio)
-ic<- initial.Centers(data_ratio, 10)
+ic <- initial.Centers(data_ratio, 10)
 print(ic)
-
 
 #Example 2 (application with kmeans algorithm)
 library(clusterSim)

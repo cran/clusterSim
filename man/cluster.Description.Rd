@@ -3,7 +3,7 @@
 \title{Descriptive statistics calculated separately for each cluster and variable}
 \description{Descriptive statistics calculated separately for each cluster and variable: arithmetic mean and standard deviation, median and median absolute deviation, mode }
 \usage{
-cluster.Description(x, cl,sdType="sample")
+cluster.Description(x, cl, sdType="sample")
 }
 \arguments{
 \item{x}{matrix or dataset}
@@ -52,8 +52,8 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 \examples{
 library(clusterSim)
 data(data_ratio)
-cl<-pam(data_ratio,5)
-desc<-cluster.Description(data_ratio,cl$cluster)
+cl <- pam(data_ratio,5)
+desc <- cluster.Description(data_ratio,cl$cluster)
 print(desc)
 }
 \keyword{cluster}

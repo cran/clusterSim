@@ -1,11 +1,22 @@
-index.DB<-function(x,cl,centrotypes="centroids",p=2,q=2){
+index.DB<-function(x,cl,d=NULL,centrotypes="centroids",p=2,q=2){
+   	 if(sum(c("centroids","medoids")==centrotypes)==0)
+      stop("Wrong centrotypes argument")
+   	 if("medoids"==centrotypes && is.null(d))
+      stop("For argument centrotypes = 'medoids' d cannot be null")
+     if(!is.null(d)){
+      if(!is.matrix(d)){
+        d<-as.matrix(d)
+      }
+     row.names(d)<-row.names(x)
+     }
    if(is.null(dim(x))){
           dim(x)<-c(length(x),1)
         }
   x<-as.matrix(x)
   n <- length(cl)
   k <- max(cl)
-  dAm<-as.matrix(dist(x,p=p))
+  #print(n)
+  dAm<-d
   centers<-matrix(nrow=k,ncol=ncol(x))
   if (centrotypes=="centroids"){
     for(i in 1:k)
@@ -17,36 +28,23 @@ index.DB<-function(x,cl,centrotypes="centroids",p=2,q=2){
     }
   }
   else if (centrotypes=="medoids"){
+    #print("start")
+    #print(dAm)
     for (i in 1:k){
       clAi<-dAm[cl==i,cl==i]
       if (is.null(clAi)){
         centers[i,]<-NULL
       }
       else{
-        minj<-0
-        minsumdist<-sum(dAm)
-        if (is.null(dim(clAi)))
-        {
-           dim(clAi)<-c(1,1)
-        }
-        for(j in 1:nrow(clAi))
-        {
-           if (sum(clAi[j,])<minsumdist)      
-           {
-              minj<-row.names(clAi)[j]
-              if(is.null(minj)){
-                minj<-i
-              }
-            else{
-              if (minj==0)
-                minj<-i
-            }
-            minsumdist<-sum(clAi[j,])
-           }
-        }
-        centers[i,]<-x[minj,]
+        #print("przed centers")
+        #print(x[cl==i,])
+        #print(clAi)
+        centers[i,]<-.medoid(x[cl==i,],dAm[cl==i,cl==i])
+        #print("po centers")
+        #print(centers[i])
       }
     }   
+    #print("stop")
   }
   else{
     stop("wrong centrotypes argument")

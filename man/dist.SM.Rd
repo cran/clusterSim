@@ -30,6 +30,6 @@ Kaufman, L., Rousseeuw, P.J. (1990), \emph{Finding groups in data: an introducti
 \examples{
 library(clusterSim)
 data(data_nominal)
-d<-dist.SM(data_nominal)
+d <- dist.SM(data_nominal)
 }
 \keyword{cluster}

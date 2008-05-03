@@ -9,11 +9,12 @@
 
 U\_2 - Ichino and Yaguchi distance
 
-M - distance between points given by means of intervals (for interval-values variables)
+M - distance between points given by means of intervals (for interval-values variables), 
 
-H - Hausdorff distance 
+H - Hausdorff distance, 
 
-S - sum of distances between all corresponding vertices of hyperrectangles given by symbolic objects with interval-valued variables
+S - sum of distances between all corresponding vertices of hyperrectangles 
+given by symbolic objects with interval-valued variables)
 }
 \item{gamma}{parameter for calculating Ichino and Yaguchi distance}
 \item{power}{parameter (q) for calculating Ichino and Yaguchi distance}
@@ -28,12 +29,15 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \references{
 
-Billard, L., Diday, E. (2006): \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester.
+Billard, L., Diday, E. (2006), \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester.
 
 }
 \seealso{
 \code{\link{dist.SM}}
 }
 \examples{
+library(clusterSim)
+dataSymbolic<-cluster.Gen(numObjects=10,model=5,dataType="s")$data
+print(dist.Symbolic(dataSymbolic))
 }
 \keyword{cluster}

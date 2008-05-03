@@ -43,11 +43,11 @@ Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
 }
 \references{
-Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, pp. 35-38.
+Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, 35-38.
 
-Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under different measurement scales}, In: R. Decker, W. Gaul (Eds.), Classification and information processing at the turn of the millennium, Springer-Verlag, Berlin, Heidelberg, pp. 105-112.
+Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under different measurement scales}, In: R. Decker, W. Gaul (Eds.), Classification and information processing at the turn of the millennium, Springer-Verlag, Berlin, Heidelberg, 105-112.
 
-Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, pp. 181-204.
+Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204.
 }
 \seealso{
 \code{\link{cluster.Sim}}
@@ -55,9 +55,8 @@ Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variabl
 \examples{
 library(clusterSim)
 data(data_ratio)
-z1<-data.Normalization(data_ratio,"n1")
-z2<-data.Normalization(data_ratio,type="n2")
-z8<-data.Normalization(data_ratio,type="n8")
+z1 <- data.Normalization(data_ratio, "n1")
+z2 <- data.Normalization(data_ratio, type="n2")
+z8 <- data.Normalization(data_ratio, type="n8")
 }
 \keyword{cluster}
-

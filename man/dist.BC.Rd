@@ -14,7 +14,7 @@ object with calculated distance
 }
 \references{
 
-Cormack, R.M. (1971), \emph{A review of classification (with discussion)}, "Journal of the Royal Statistical Society", ser. A, part 3, pp. 321-367.
+Cormack, R.M. (1971), \emph{A review of classification (with discussion)}, "Journal of the Royal Statistical Society", ser. A, part 3, 321-367.
 
 Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, p. 41.
 }
@@ -28,8 +28,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \examples{
 library(clusterSim)
-sampleData<-cbind(c(2,3,5),c(4,5,6),c(5,3,4))
-d<-dist.BC(sampleData)
+sampleData <- cbind(c(2,3,5),c(4,5,6),c(5,3,4))
+d <- dist.BC(sampleData)
 }
 \keyword{cluster}
-

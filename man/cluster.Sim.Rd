@@ -84,13 +84,13 @@ Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielo
 
 Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London.
 
-Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, pp. 159-179.
+Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179.
 
-Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, pp. 181-204. 
+Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. 
 
 Walesiak, M., Dudek, A. (2006), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - oprogramowanie komputerowe i wyniki badan}, Prace Naukowe AE we Wroclawiu, 1126, 120-129.
 
-Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego (in press). 
+Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego nr 450, 635-646. 
 }
 \seealso{\code{\link{data.Normalization}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{index.G1}}, \code{\link{index.G2}}, 
 

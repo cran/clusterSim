@@ -8,7 +8,7 @@
 \examples{
 library(clusterSim)
 data(data_ratio)
-c<- pam(data_ratio,10)
-index.G1(data_ratio,c$clustering)
+c <- pam(data_ratio,10)
+index.G1(data_ratio, c$clustering)
 }
 \keyword{datasets}

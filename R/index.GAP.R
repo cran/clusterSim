@@ -1,5 +1,5 @@
-index.Gap<-function(x,clall,reference.distribution="unif",B=10,method="pam") {
-GAP<-function(X,cl,referenceDistribution,B,method){
+index.Gap<-function(x,clall,reference.distribution="unif",B=10,method="pam",d=NULL,centrotypes="centroids") {
+GAP<-function(X,cl,referenceDistribution,B,method,d,centrotypes){
 simgap<-function(Xvec) {
 	ma<-max(Xvec)
 	mi<-min(Xvec)
@@ -7,8 +7,13 @@ simgap<-function(Xvec) {
 	return(Xout) 
 }
 
-pcsim<-function(X) {
-	Xmm<-apply(X,2,mean)
+pcsim<-function(X,d,centrotypes) {
+  if(centrotypes=="centroids"){
+    Xmm<-apply(X,2,mean)
+  }
+  else{
+    Xmm<-.medoid(x,d)
+  }
 	for (k in (1:dim(X)[2])) 
 	{
 		X[,k]<-X[,k]-Xmm[k] 
@@ -34,7 +39,7 @@ pcsim<-function(X) {
 		if (reference.distribution=="unif")
 			Xnew<-apply(X,2,simgap) 
 		else if (reference.distribution=="pc") 
-			Xnew<-pcsim(X) 
+			Xnew<-pcsim(X,d,centrotypes) 
 		else
 			stop("Wrong reference distribution type")	
 		if (bb==1) {
@@ -95,11 +100,21 @@ Sdgap<-sqrt(1+1/B)*sqrt(var(log(WkB[1,])))*sqrt((B-1)/B)
 	resul
 }
 
+  if(sum(c("centroids","medoids")==centrotypes)==0)
+  stop("Wrong centrotypes argument")
+  if("medoids"==centrotypes && is.null(d))
+  stop("For argument centrotypes = 'medoids' d cannot be null")
+  if(!is.null(d)){
+  if(!is.matrix(d)){
+    d<-as.matrix(d)
+  }
+  row.names(d)<-row.names(x)
+  }
 	#print(x)
 	X<-as.matrix(x)
-	gap1<-GAP(X,clall[,1],reference.distribution,B,method)
+	gap1<-GAP(X,clall[,1],reference.distribution,B,method,d,centrotypes)
 	gap<-gap1$Sgap
-	gap2<-GAP(X,clall[,2],reference.distribution,B,method)
+	gap2<-GAP(X,clall[,2],reference.distribution,B,method,d,centrotypes)
 	diffu<-gap-(gap2$Sgap-gap2$Sdgap)
 	resul<-list(gap=gap,diffu=diffu)
 	resul

@@ -32,7 +32,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \references{
 
-Jajuga, K., Walesiak, M., Bak, A. (2003), \emph{On the general distance measure}, In: M. Schwaiger, O. Opitz (Eds.), Exploratory data analysis in empirical research, Springer-Verlag, Berlin, Heidelberg, pp. 104-109.
+Jajuga, K., Walesiak, M., Bak, A. (2003), \emph{On the general distance measure}, In: M. Schwaiger, O. Opitz (Eds.), Exploratory data analysis in empirical research, Springer-Verlag, Berlin, Heidelberg, 104-109.
 
 Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw.
 
@@ -43,11 +43,10 @@ Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie 
 \examples{
 library(clusterSim)
 data(data_ratio)
-d1<-GDM(data_ratio,method="GDM1")
+d1 <- GDM(data_ratio, method="GDM1")
 data(data_ordinal)
-d2<-GDM(data_ordinal,method="GDM2")
-d3<-GDM1(data_ratio)
-d4<-GDM2(data_ordinal)
+d2 <- GDM(data_ordinal, method="GDM2")
+d3 <- GDM1(data_ratio)
+d4 <- GDM2(data_ordinal)
 }
 \keyword{cluster}
-

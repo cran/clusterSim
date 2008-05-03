@@ -3,7 +3,7 @@
 \title{Calculates Tibshirani, Walther and Hastie gap index}
 \description{Calculates Tibshirani, Walther and Hastie gap index}
 \usage{index.Gap (x, clall, reference.distribution="unif", B=10, 
-	method="pam")}
+	method="pam",d=NULL,centrotypes="centroids")}
 \arguments{
 \item{x}{data}
 \item{clall}{Two vectors of integers indicating the cluster to which each object is allocated in partition of n objects into u, and u+1 clusters}
@@ -13,6 +13,8 @@ or
 }
 \item{B}{the number of simulations used to compute the gap statistic}
 \item{method}{the cluster analysis method to be used. This should be one of: "ward", "single", "complete", "average", "mcquitty", "median", "centroid", "pam", "k-means"}
+\item{d}{optional distance matrix, used for calculations if centrotypes="medoids"}
+\item{centrotypes}{"centroids" or "medoids"}
 }
 \value{
 \item{Gap}{Tibshirani, Walther and Hastie gap index for u clusters}
@@ -53,41 +55,72 @@ means <- matrix(c(0,2,4,0,3,6), 3, 2)
 cov <- matrix(c(1,-0.9,-0.9,1), 2, 2)
 x <- cluster.Gen(numObjects=40, means=means, cov=cov, model=2)
 x <- x$data
-d <- dist(x, method="euclidean")^2
-min_class_no <- 1
-max_class_no <- 15
+md <- dist(x, method="euclidean")^2
+# nc - number_of_clusters
+min_nc=1
+max_nc=15
 min <- 0
-clopt<-NULL
-res<-NULL
-results <- array(0, c(max_class_no-min_class_no+1,2))
-results[,1] <- min_class_no:max_class_no
+clopt <- NULL
+res <- array(0, c(max_nc-min_nc+1, 2))
+res[,1] <- min_nc:max_nc
 found <- FALSE
-for (class_no in min_class_no:max_class_no){
-  cl1 <- pam(d, class_no, diss=TRUE)
-  cl2 <- pam(d, class_no+1, diss=TRUE)
+for (nc in min_nc:max_nc){
+  cl1 <- pam(md, nc, diss=TRUE)
+  cl2 <- pam(md, nc+1, diss=TRUE)
   clall <- cbind(cl1$clustering, cl2$clustering)
-  Gap <- index.Gap(x, clall, reference.distribution="pc", B=20, method="pam")
-  results[class_no - min_class_no+1,2] <- diffu <- Gap$diffu
-  if ((results[class_no - min_class_no+1,2]>=0) && (!found)){
-    lk <- class_no
+  gap <- index.Gap(x,clall,B=20,method="pam",centrotypes="centroids")
+  res[nc-min_nc+1, 2] <- diffu <- gap$diffu
+  if ((res[nc-min_nc+1, 2] >=0) && (!found)){
+    nc1 <- nc
     min <- diffu
     clopt <- cl1$cluster
-    res <- cl1$clusinfo
     found <- TRUE
   }
 }
 if (found){
-  print(paste("Minimal number of clusters where diffu>=0 is ", lk, "for diffu=", round(min, 4)), quote=FALSE)
+print(paste("Minimal nc where diffu>=0 is",nc1,"for diffu=",round(min,4)),quote=FALSE)
 }else{
-  print("I have not found clustering with diffu>=0", quote=FALSE)
+print("I have not found clustering with diffu>=0", quote=FALSE)
 }
-write.table(results, file="diffu.csv", sep=";", dec=",", row.names=TRUE, col.names=FALSE)
-write.table(clopt, file="clustering.csv", sep=";", dec=",", row.names=TRUE, col.names=FALSE)
-write.table(res, file="clusinfo.csv", sep=";", dec=",", row.names=TRUE, col.names=TRUE)
-options(OutDec=",")
-plot(results, type="p", pch=0, xlab="Liczba klas", ylab="diffu", xaxt="n")
+plot(res,type="p",pch=0,xlab="Number of clusters",ylab="diffu",xaxt="n")
 abline(h=0, untf=FALSE)
-axis(1, c(min_class_no:max_class_no))
+axis(1, c(min_nc:max_nc))
+
+# Example 3
+library(clusterSim)
+means <- matrix(c(0,2,4,0,3,6), 3, 2)
+cov <- matrix(c(1,-0.9,-0.9,1), 2, 2)
+x <- cluster.Gen(numObjects=40, means=means, cov=cov, model=2)
+x <- x$data
+md <- dist(x, method="euclidean")^2
+# nc - number_of_clusters
+min_nc=1
+max_nc=15
+min <- 0
+clopt <- NULL
+res <- array(0, c(max_nc-min_nc+1, 2))
+res[,1] <- min_nc:max_nc
+found <- FALSE
+for (nc in min_nc:max_nc){
+  cl1 <- pam(md, nc, diss=TRUE)
+  cl2 <- pam(md, nc+1, diss=TRUE)
+  clall <- cbind(cl1$clustering, cl2$clustering)
+  gap <- index.Gap(x,clall,B=20,method="pam",d=md,centrotypes="medoids")
+  res[nc-min_nc+1, 2] <- diffu <- gap$diffu
+  if ((res[nc-min_nc+1, 2] >=0) && (!found)){
+    nc1 <- nc
+    min <- diffu
+    clopt <- cl1$cluster
+    found <- TRUE
+  }
+}
+if (found){
+print(paste("Minimal nc where diffu>=0 is",nc1,"for diffu=",round(min,4)),quote=FALSE)
+}else{
+print("I have not found clustering with diffu>=0",quote=FALSE)
+}
+plot(res, type="p", pch=0, xlab="Number of clusters", ylab="diffu", xaxt="n")
+abline(h=0, untf=FALSE)
+axis(1, c(min_nc:max_nc))
 }
 \keyword{cluster}
-

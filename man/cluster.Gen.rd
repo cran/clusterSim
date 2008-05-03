@@ -104,7 +104,7 @@ library(clusterSim)
 grnd<-cluster.Gen(50,model=4,dataType="o",numCategories=7, numNoisyVar=2)
 plotCategorial(grnd$data,,grnd$clusters,ask=TRUE)
 
-# Example 4, 1 nonnoisy variable and 2 noisy variables, 3 clusters
+# Example 4 (1 nonnoisy variable and 2 noisy variables, 3 clusters)
 library(clusterSim)
 grnd <- cluster.Gen(c(40,60,20), model=2, means=c(2,14,25),
 cov=c(1.5,1.5,1.5),numNoisyVar=2)
@@ -120,7 +120,7 @@ colornames <- c("red","blue","green","brown","black")
 grnd$clusters[grnd$clusters==0]<-length(colornames)
 plot(grnd$data,col=colornames[grnd$clusters],ask=TRUE)
 
-# Example 6, this example needs files means_24.csv 
+# Example 6 (this example needs files means_24.csv) 
 # and cov_24.csv to be placed in working directory
 # library(clusterSim)
 # grnd<-cluster.Gen(c(50,80,20),model=24,dataType="m",numNoisyVar=1, 
@@ -131,7 +131,7 @@ plot(grnd$data,col=colornames[grnd$clusters],ask=TRUE)
 # grnd$clusters[grnd$clusters==0]<-length(colornames)
 # plot(data,col=colornames[grnd$clusters],ask=TRUE)
 
-# Example 7, this example needs files means_25.csv and cov_25_1.csv, 
+# Example 7 (this example needs files means_25.csv and cov_25_1.csv) 
 # cov_25_2.csv, cov_25_3.csv, cov_25_4.csv, cov_25_5.csv
 # to be placed in working directory
 # library(clusterSim)
@@ -139,7 +139,6 @@ plot(grnd$data,col=colornames[grnd$clusters],ask=TRUE)
 # data <- as.data.frame(grnd$data)
 # colornames<-c("red","blue","green","magenta","brown")
 # plot(data,col=colornames[grnd$clusters],ask=TRUE)
-
 }
 \keyword{cluster}
 \keyword{data}
