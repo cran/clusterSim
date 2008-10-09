@@ -42,9 +42,9 @@ desc[1,,] - all statistics for all dimensions (variables) of first cluster
 desc[,,3] - medians of all dimensions (variables) for each cluster
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \seealso{
 \code{\link{cluster.Sim}}, \code{\link{mean}}, \code{\link{sd}}, \code{\link{median}}, \code{\link{mad}}

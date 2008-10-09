@@ -66,9 +66,9 @@ for symbolic interval data three-dimensional structure: first dimension represen
  second - variable number and third dimension contains lower- and upper-bounds of intervals}
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
 Billard, L., Diday, E. (2006): \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester.
@@ -77,7 +77,7 @@ Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degr
 
 Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250.
 
-Walesiak, M., Dudek, A. (2007), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: Data Analysis, Machine Learning, and Applications, Springer-Verlag, Berlin, Heidelberg (in press).
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
 }
 \examples{
 

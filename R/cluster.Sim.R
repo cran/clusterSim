@@ -177,6 +177,7 @@ max_norm=0
 max_dist=0
 max_method=0
 max_classes=0
+max_cl=NULL
 result<-array(0,c(400*(maxClusterNo-minClusterNo+1),7))
 i_result<-0
 norms_str<-""
@@ -370,6 +371,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$clustering
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -394,6 +396,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$clustering
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -421,6 +424,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_classes=liczba_klas
 						max_method=i_method
+						max_cl<-c$clustering
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -445,6 +449,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$clustering
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -471,6 +476,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c2$clustering
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -502,6 +508,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$cluster
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -526,6 +533,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$cluster
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -552,6 +560,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$cluster
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -576,6 +585,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c$cluster
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -608,6 +618,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c2$cluster
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -635,6 +646,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c
 					}
 					if(v_dist[i_dist,p]=="bc")
 					{
@@ -664,6 +676,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -690,6 +703,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -714,6 +728,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -742,6 +757,7 @@ for (i_norm in 1 : l_norm)
 						max_dist=i_dist
 						max_method=i_method
 						max_classes=liczba_klas
+						max_cl<-c2
 					}
 					i_result<-i_result+1
 					result[i_result,1]<-i_result
@@ -831,6 +847,6 @@ if (outputCsv!="")
 if (outputCsv2!="")
 {	write.table(result,paste(outputCsv2,".csv",sep=""),dec=",",sep=";",row.names=FALSE)
 }
-resul<-list(path=p,result=wynik_global,normalization=v_norm[max_norm,p],distance=v_distDesc[max_dist,p],method=v_method[max_method,p],classes=as.vector(sorted[1,3]),time<-(czas2-czas1))
+resul<-list(path=p,result=wynik_global,normalization=v_norm[max_norm,p],distance=v_distDesc[max_dist,p],method=v_method[max_method,p],classes=as.vector(sorted[1,3]),optClustering=max_cl,optClusteringDescription=cluster.Description(as.matrix(x),max_cl),time<-(czas2-czas1))
 resul
 }

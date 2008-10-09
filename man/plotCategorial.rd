@@ -11,9 +11,9 @@
 \item{...}{Arguments to be passed to methods, such as graphical parameters (see \code{\link{par}}).} 
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \seealso{
 \code{\link{plotCategorial3d}}, \code{\link{colors}}, \code{\link{pairs}}

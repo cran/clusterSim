@@ -31,7 +31,7 @@ for multi-state nominal: "d9" - Sokal & Michener
 
 for binary data: "b1" = Jaccard; "b2" = Sokal & Michener; "b3" = Sokal & Sneath (1); "b4" = Rogers & Tanimoto; "b5" = Czekanowski; "b6" = Gower & Legendre (1); "b7" = Ochiai; "b8" = Sokal & Sneath (2); "b9" = Phi of Pearson; "b10" = Gower & Legendre (2)
 }
-\item{method}{clustering method: "kmeans" (default), "single", "complete", "average", "mcquitty", "median", "centroid", "ward", "pam"}
+\item{method}{clustering method: "kmeans" (default), "single", "complete", "average", "mcquitty", "median", "centroid", "ward", "pam", "diana"}
 \item{S}{the number of simulations used to compute mean corrected Rand index}
 \item{fixedAsample}{if NULL \emph{A} sample is generated randomly, otherwise this parameter contains object numbers arbitrarily assigned to \emph{A} sample}
 }
@@ -50,9 +50,9 @@ See file \$R\_HOME\\library\\clusterSim\\pdf\\replication.Mod\_details.pdf for f
 \item{cRand}{value of mean corrected Rand index for S simulations}
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
 

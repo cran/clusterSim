@@ -3,7 +3,7 @@ replication.Mod<-function(x, v="m", u=2, centrotypes="centroids",
 {
 short2LongName <-function(value,fullName=FALSE)
 {
-longMethods<- c("single","complete","average","mcquitty","pam","ward","centroid","median","k-means")
+longMethods<- c("single","complete","average","mcquitty","pam","ward","centroid","median","k-means","diana")
 longDistances<-c("manhattan","minkowski","maximum","euclidean","gdm1","canberra","bc","gdm2","sm")
 fullDistances <-c("Manhattan","Euclidean","Chebyschev","Squared Euclidean","GDM1","Canberra","Bray-Curtis","GDM2","Sokal-Michener")
 
@@ -223,6 +223,11 @@ l2SN
             clA<-pam(dA,u,diss=TRUE)$clustering
             clB<-pam(dB,u,diss=TRUE)$clustering
          }
+      }
+      else if(method=="diana"){
+                  clA<-cutree(as.hclust(diana(dA)),k=u)
+                  clB<-cutree(as.hclust(diana(dB)),k=u)
+
       }
       else
       {

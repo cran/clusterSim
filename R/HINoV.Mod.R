@@ -11,7 +11,7 @@ HINoV.Mod<-function(x, type="metric", s = 2, u=NULL, distance=NULL, method = "km
 {
 short2LongName <-function(value,fullName=FALSE)
 {
-longMethods<- c("single","complete","average","mcquitty","pam","ward","centroid","median","k-means")
+longMethods<- c("single","complete","average","mcquitty","pam","ward","centroid","median","k-means","diana")
 longDistances<-c("manhattan","minkowski","maximum","euclidean","gdm1","canberra","bc","gdm2","sm")
 fullDistances <-c("Manhattan","Euclidean","Chebyschev","Squared Euclidean","GDM1","Canberra","Bray-Curtis","GDM2","Sokal-Michener")
 
@@ -57,7 +57,7 @@ l2SN
 	if(!require("cluster")) stop ("Please install cluster package")
 	if(!require("e1071")) stop ("Please install e1071 package")
 	if(!require("ade4")) stop ("Please install ade4 package")
-	if (is.null(distance) && method != "kmeans" && method!="pam") stop("For hierarchical methods parameter distance cannot be NULL")
+	if (is.null(distance) && method != "kmeans" && method!="pam" && method != "diana") stop("For hierarchical methods parameter distance cannot be NULL")
 	if (Index != "RAND" && Index!="cRAND") stop("Wrong index type, only RAND or cRAND are allowed")
 	if((length(type)>1) && (length(type)< ncol(z))) stop ("Wrong length of type parameter, must be equal to number of variables")
 	if (!is.null(distance))
@@ -117,6 +117,10 @@ l2SN
 					cl<-pam(d,u,diss=TRUE)$clustering
 				}
 			}
+      else if(method=="diana"){
+          cl<-cutree(as.hclust(diana(d)),k=u)
+
+      }
 			else
 			{
 				cl<-cutree(hclust(d,method=method),u)

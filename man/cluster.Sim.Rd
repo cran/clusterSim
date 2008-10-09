@@ -70,12 +70,14 @@ See file \$R\_HOME\\library\\clusterSim\\pdf\\clusterSim\_details.pdf for furthe
 \item{distance}{distance measure used to obtain optimal value of icq}
 \item{method}{clustering method used to obtain optimal value of icq}
 \item{classes}{number of clusters for optimal value of icq}
+\item{optClustering}{clustering vector for optimal value of icq}
+\item{optClusteringDescription}{description of clusters for optimal value of icq (see \code{\link{cluster.Description}})}
 \item{time}{time of all calculations for path}
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
 Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London.

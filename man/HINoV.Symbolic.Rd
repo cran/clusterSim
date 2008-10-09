@@ -22,9 +22,9 @@ See file \$R\_HOME\\library\\clusterSim\\pdf\\HINoVSymbolic\_details.pdf for fur
 \item{stopri}{ranked values of \code{topri} in decreasing order}
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
 Carmone, F.J., Kara, A., Maxwell, S. (1999), \emph{HINoV: a new method to improve market segment definition by identifying noisy variables}, "Journal of Marketing Research", November, vol. 36, 501-509.
@@ -33,7 +33,7 @@ Hubert, L.J., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classi
 
 Rand, W.M. (1971), \emph{Objective criteria for the evaluation of clustering methods}, "Journal of the American Statistical Association", no. 336, 846-850.
 
-Walesiak, M., Dudek, A. (2007), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, 31st Annual Conference of the German Classification Society (GfKl): Data Analysis, Machine Learning, and Applications (Freiburg, March, 7-9).
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
 }
 \seealso{
 \code{\link{hclust}}, \code{\link{kmeans}}, \code{\link{cluster.Sim}}

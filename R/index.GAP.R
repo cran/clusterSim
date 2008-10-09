@@ -50,9 +50,11 @@ pcsim<-function(X,d,centrotypes) {
 			pp2<-pam(Xnew,ClassNr)$cluster 
 			else if (method=="k-means")
 			pp2<-kmeans(Xnew,ClassNr,100)$cluster 
+			else if(method=="diana")
+			pp2<-cutree(as.hclust(diana(dist(Xnew))),k=ClassNr)
 			else if (method=="single" || method=="complete"
 			|| method=="average" || method=="ward"
-			|| method=="mcquity" || method=="median" || method=="centroid")
+			|| method=="mcquitty" || method=="median" || method=="centroid")
 				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
 			else	
 				stop ("Wrong clustering method")	
@@ -76,9 +78,11 @@ pcsim<-function(X,d,centrotypes) {
 				pp2<-pam(Xnew,ClassNr)$cluster 
 			else if (method=="k-means")
 				pp2<-kmeans(Xnew,ClassNr,100)$cluster
+      else if (method=="diana")
+        pp2<-cutree(as.hclust(diana(dist(Xnew))),k=ClassNr)
 			else if (method=="single" || method=="complete"
 				|| method=="average" || method=="ward"
-				|| method=="mcquity" || method=="median" || method=="centroid")
+				|| method=="mcquitty" || method=="median" || method=="centroid")
 				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
 			else	
 				stop ("Wrong clustering method")	

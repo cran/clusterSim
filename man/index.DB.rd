@@ -24,9 +24,9 @@ See file \$R\_HOME\\library\\clusterSim\\pdf\\indexDB\_details.pdf for further d
 \item{centers}{coordinates of centroids or medoids for all clusters}
 }
 \author{
-Marek Walesiak \email{Marek.Walesiak@ae.jgora.pl}, Andrzej Dudek \email{Andrzej.Dudek@ae.jgora.pl} 
+Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://www.ae.jgora.pl/keii}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
 Davies, D.L., Bouldin, D.W. (1979), \emph{A cluster separation measure}, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 1, no. 2, 224-227.
