@@ -2,14 +2,16 @@
 {
   minj<-0
   minsumdist<-sum(d)
-  #print(d)
-  if(is.null(dim(x))){
+  if(is.null(dim(x)) && is.null(dim(d))){
      dim(x)<-c(1,length(x))
      x
   }
   else{
     if(is.null(dim(d))){
           dim(d)<-c(1,1)
+    }
+    if(is.null(dim(x))){
+      dim(x)<-c(length(x),1)
     }
     for(j in 1:nrow(d)){
       if (sum(d[j,])<=minsumdist){
@@ -46,7 +48,12 @@ index.G1<-function(x,cl,d=NULL,centrotypes="centroids")
       for(i in 1:k)
 	   {
        if(centrotypes=="centroids"){
+        if(ncol(x)==1){
+        centers[i,]<-mean(x[cl==i,])
+        }
+        else{
         centers[i,]<-apply(x[cl==i,],2,mean)
+        }
        }
        else{
         centers[i,]<-.medoid(x[cl==i,],d[cl==i,cl==i])
@@ -74,3 +81,4 @@ index.G1<-function(x,cl,d=NULL,centrotypes="centroids")
         (bgss/(k-1))/(wgss/(n-k))
 
 }
+

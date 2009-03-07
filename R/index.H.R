@@ -4,11 +4,23 @@ wgss<-function(x,cl,d,centroids)
 {
         n <- length(cl)
         k <- max(cl)
-
+  if(is.null(dim(x))){
+    dim(x)<-c(length(x),1)
+  }
 	centers<-matrix(nrow=k,ncol=ncol(x))
   for(i in 1:k){
     if(centrotypes=="centroids"){
-      centers[i,]<-apply(x[cl==i,],2,mean)
+      if(ncol(x)==1){
+      centers[i,]<-mean(x[cl==i,])
+      }
+      else{
+        if(is.null(dim(x[cl==i,]))){
+          centers[i,]<-x[cl==i]
+        }
+        else{
+          centers[i,]<-apply(x[cl==i,],2,mean)
+        }
+      }
     }
     else{
       centers[i,]<-.medoid(x[cl==i,],d[cl==i,cl==i])
@@ -38,3 +50,4 @@ wgss<-function(x,cl,d,centroids)
         g <- max(clall[,1])
         (wgss(x,clall[,1],d,centrotypes)/wgss(x,clall[,2],d,centrotypes)-1)*(n-g+1)
 }
+
