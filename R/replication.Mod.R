@@ -1,3 +1,4 @@
+
 replication.Mod<-function(x, v="m", u=2, centrotypes="centroids",
                 normalization=NULL, distance=NULL, method="kmeans", S=10,fixedAsample=NULL)
 {
@@ -251,10 +252,16 @@ l2SN
          for (i in 1:max(clA))
          {
             dAm<-as.matrix(dA)
+            names(dAm)<-names(A)
+            row.names(dAm)<-row.names(A)
             clAi<-dAm[clA==i,clA==i]
 			if (is.null(clAi))
 			{
 				centroA[i,]<-A[i,]
+			}
+			else{
+			if(sum(clA==i)==1){
+        centroA[i,]<-A[clA[clA==i],]
 			}
 			else
 			{
@@ -283,11 +290,13 @@ l2SN
 					  minsumdist<-sum(clAi[j,])
 				   }
 				}
+				#print(minj)
 				centroA[i,]<-x[minj,]
 				dim(centroA)<-c(max(clA),ncol(x))
             }
          }   
 
+      }
       }
       #print(centroA)
       #print(u)
@@ -390,4 +399,3 @@ l2SN
    resul<-list(A=a_A,B=a_B,centroids=resulCentroids,medoids=resulMedoids,clusteringA=a_clA,clusteringB=a_clB,clusteringBB=a_clBB,cRand=resulcRand)
    resul
 }
-
