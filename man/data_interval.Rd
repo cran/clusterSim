@@ -8,7 +8,6 @@
 \examples{
 library(clusterSim)
 data(data_interval)
-cluster.Sim(data_interval, 2, 2, 15, "G1", 
-outputHtml="results2")
+cluster.Sim(data_interval, 2, 2, 3, "G1", outputHtml="results2")
 }
 \keyword{datasets}

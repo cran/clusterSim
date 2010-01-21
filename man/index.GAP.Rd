@@ -58,7 +58,7 @@ x <- x$data
 md <- dist(x, method="euclidean")^2
 # nc - number_of_clusters
 min_nc=1
-max_nc=15
+max_nc=5
 min <- 0
 clopt <- NULL
 res <- array(0, c(max_nc-min_nc+1, 2))
@@ -95,7 +95,7 @@ x <- x$data
 md <- dist(x, method="euclidean")^2
 # nc - number_of_clusters
 min_nc=1
-max_nc=15
+max_nc=5
 min <- 0
 clopt <- NULL
 res <- array(0, c(max_nc-min_nc+1, 2))

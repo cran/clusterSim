@@ -11,13 +11,14 @@ extern "C" void  fngdm(double  * x,int *  rows, int * cols, int * type, double *
 {
 int i,j,k,l;
 double l1,m1,m2,a,b;
-double mianownik[(*rows)+1];
+double *mianownik;
 
 int wiersze,kolumny,typ;
 
 	wiersze=*rows;
 	kolumny=*cols;
 	typ=*type;
+	mianownik=new double[(*rows)+1];
 
 	if (typ==typ_nominalny)
 	{    
