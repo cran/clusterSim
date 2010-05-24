@@ -4,12 +4,14 @@ cluster.Gen             Random cluster generation with known structure
                         of clusters
 cluster.Sim             Determination of optimal clustering procedure
                         for a data set
+pattern.GDM2            Linear ranking with GDM2 distance
 data.Normalization      Types of variable normalization formulas
 data_binary             Binary data
 data_interval           Interval data
 data_mixed              Mixed data
 data_nominal            Nominal data
 data_ordinal            Ordinal data
+data_patternGDM2        Ordinal data for pattern.GDM2 function
 data_ratio              Ratio data
 data_symbolic           Symbolic interval data
 dist.BC                 Calculates Bray-Curtis distance measure for

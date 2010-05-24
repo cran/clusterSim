@@ -18,6 +18,7 @@ data.Normalization<-function(x, type="n0")
 				n11=x/(sum(x^2)^0.5)
 				)                               
                           else warning("Data not numeric, normalization not applicable")
+				names(resul)<-names(x)
 	}	
 	else if(is.data.frame(x)) 
 	{
@@ -48,6 +49,7 @@ data.Normalization<-function(x, type="n0")
 		}
 		resul <- data.frame(resul)
 		names(resul) <- names(x)
+		row.names(resul) <- row.names(x)
 	}
 	else if(is.matrix(x)) 
 	{ 		
@@ -70,26 +72,28 @@ data.Normalization<-function(x, type="n0")
 				n11=cbind(resul, (x[, i])/(sum(x[, i]^2)^0.5))
 				)
 		}
-	                else warning("Data not numeric, normalization not applicable")
+	  else warning("Data not numeric, normalization not applicable")
+    dimnames(resul) <- dimnames(x)
 	}			
 	else if(is.list(x)) 
 	{
 		resul <- list(length(x))
+		xx<-as.numeric(x)
 		for(i in 1:length(x))
           	if(is.numeric(resul[[i]]<-x[[i]]))
 				resul[[i]] <- switch(type,
 				n0=x[[i]],
-				n1=(x[[i]] - mean(x[[i]]))/sd(x[[i]]),
-				n2=(x[[i]] - median(x[[i]]))/mad(x[[i]]),
-				n3=(x[[i]] - mean(x[[i]]))/(max(x[[i]]) - min(x[[i]])),
-				n4=(x[[i]] - min(x[[i]]))/(max(x[[i]]) - min(x[[i]])),
-				n5=(x[[i]] - mean(x[[i]]))/(max(abs(x[[i]]) - mean(x[[i]]))),
-				n6=x[[i]]/ sd(x[[i]]),
-				n7=x[[i]]/(max(x[[i]]) - min(x[[i]])),
-				n8=x[[i]]/(max(x[[i]])),
-				n9=x[[i]]/(mean(x[[i]])),
-				n10=x[[i]]/(sum(x[[i]])),
-				n11=x[[i]]/(sum(x[[i]]^2)^0.5)
+				n1=(x[[i]] - mean(xx))/sd(xx),
+				n2=(x[[i]] - median(xx))/mad(xx),
+				n3=(x[[i]] - mean(xx))/(max(xx) - min(xx)),
+				n4=(x[[i]] - min(xx))/(max(xx) - min(xx)),
+				n5=(x[[i]] - mean(xx))/(max(abs(xx) - mean(xx))),
+				n6=x[[i]]/ sd(xx),
+				n7=x[[i]]/(max(xx) - min(xx)),
+				n8=x[[i]]/(max(xx)),
+				n9=x[[i]]/(mean(xx)),
+				n10=x[[i]]/(sum(xx)),
+				n11=x[[i]]/(sum(xx^2)^0.5)
 				)                               
                 else warning("Data not numeric, normalization not applicable")
 	}

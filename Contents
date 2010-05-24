@@ -70,6 +70,12 @@ Keywords: cluster
 Description: Basic statistics for each cluster
 URL: ../../../library/ClusterSim/html/cluster.Description.html
 
+Entry: pattern.GDM2
+Aliases: pattern.GDM2
+Keywords: cluster
+Description: Linear ranking with GDM2 distance
+URL: ../../../library/ClusterSim/html/pattern.GDM2.html
+
 Entry: index.Gap
 Aliases: index.Gap
 Keywords: cluster
@@ -160,4 +166,10 @@ Aliases: data_mixed
 Keywords: dataset
 Description: Sample data
 URL: ../../../library/ClusterSim/html/data_mixed.html
+Entry: data_mixed
+
+Aliases: data_patternGDM2
+Keywords: dataset
+Description: Sample data
+URL: ../../../library/ClusterSim/html/data_patternGDM2.html
 
