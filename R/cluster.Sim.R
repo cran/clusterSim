@@ -334,6 +334,9 @@ for (i_norm in 1 : l_norm)
 			else
 			{
 				d <- dist(z, method=v_dist[i_dist,p])			
+				if (v_dist[i_dist,p]=="euclidean"){
+          d<-d^2
+				}
 			}
 		}
 		if(v_dist[i_dist,p]=="euclidean")

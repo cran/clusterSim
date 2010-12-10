@@ -1,6 +1,6 @@
 \name{data_patternGDM2}
 \alias{data_patternGDM2}
-\docType{data_patternGDM2}
+\docType{data}
 \title{Ordinal data with 27 objects and 6 variables (3 stimulant variables, 2 destimulant variables and 1 nominant variable)}
 \description{Ordinal data with 27 objects and 6 variables (3 stimulant variables, 2 destimulant variables and 1 nominant variable)
 

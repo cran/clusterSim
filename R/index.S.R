@@ -1,11 +1,11 @@
-index.S<-function(d,cl)
+index.S<-function(d,cl,singleObject=0)
 {
 	d<-as.matrix(d)
 	Si<-0
 	for(k in 1:max(cl))
 	{
 		if ((sum(cl==k))<=1)
-			Sil<-1
+			Sil<-singleObject
 		else
 		{
 			Sil<-0

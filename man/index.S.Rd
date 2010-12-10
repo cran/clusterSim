@@ -2,10 +2,11 @@
 \alias{index.S}
 \title{Calculates Rousseeuw's Silhouette internal cluster quality index}
 \description{Calculates Rousseeuw's Silhouette internal cluster quality index}
-\usage{index.S(d,cl)}
+\usage{index.S(d,cl,singleObject=0)}
 \arguments{
 \item{d}{'dist' object}
 \item{cl}{A vector of integers indicating the cluster to which each object is allocated}
+\item{singleObject}{0 - s(i)=0 or 1 - s(i)=1. When cluster contains a single object, it is unclear how a(i) of Silhouette index should be defined (see Kaufman & Rousseeuw (1990), p. 85).}
 }
 \details{
 See file \$R\_HOME\\library\\clusterSim\\pdf\\indexS\_details.pdf for further details

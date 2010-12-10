@@ -1,6 +1,6 @@
 \name{data_patternGDM1}
 \alias{data_patternGDM1}
-\docType{data_patternGDM1}
+\docType{data}
 \title{Metric data with 17 objects and 10 variables (8 stimulant variables, 2 destimulant variables)}
 \description{Metric data with 17 objects and 10 variables (8 stimulant variables, 2 destimulant variables)
 

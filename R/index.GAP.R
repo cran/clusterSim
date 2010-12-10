@@ -7,6 +7,18 @@ simgap<-function(Xvec) {
 	return(Xout) 
 }
 
+
+
+# Thanks to Chuen Seng for this fix
+diagvar<-function(X){
+X<-as.matrix(X)
+D<-matrix(1,nrow=nrow(X),ncol=1)
+res0 = X - (D %*% solve(t(D) %*% D) %*% t(D)) %*% X
+return(colSums(res0^2)/(nrow(X)-1))
+}
+
+
+
 pcsim<-function(X,d,centrotypes) {
   if(centrotypes=="centroids"){
     Xmm<-apply(X,2,mean)
@@ -61,14 +73,14 @@ pcsim<-function(X,d,centrotypes) {
 			if (ClassNr>1) {
 				for (zz in (1:ClassNr)) {
 				Xuse<-X[pp==zz,]
-				Wk0<-Wk0+sum(diag(var(Xuse)))*(length(pp[pp==zz])-1)/(dim(X)[1]-ClassNr)
+				Wk0<-Wk0+sum(diagvar(Xuse))*(length(pp[pp==zz])-1)/(dim(X)[1]-ClassNr)
 				Xuse2<-Xnew[pp2==zz,]			
-				WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*(length(pp2[pp2==zz])-1)/(dim(X)[1]-ClassNr)  
+				WkB[1,bb]<-WkB[1,bb]+sum(diagvar(Xuse2))*(length(pp2[pp2==zz])-1)/(dim(X)[1]-ClassNr)  
 				} 
 			}
 			if (ClassNr==1) {
-				Wk0<-sum(diag(var(X)))
-				WkB[1,bb]<-sum(diag(var(Xnew))) 
+				Wk0<-sum(diagvar(X))
+				WkB[1,bb]<-sum(diagvar(Xnew)) 
 			} 
 		}
 		if (bb>1) { 
@@ -89,11 +101,11 @@ pcsim<-function(X,d,centrotypes) {
 			if (ClassNr>1) {
 				for (zz in (1:ClassNr)) {
 					Xuse2<-Xnew[pp2==zz,]
-					WkB[1,bb]<-WkB[1,bb]+sum(diag(var(Xuse2)))*length(pp2[pp2==zz])/(dim(X)[1]-ClassNr) 
+					WkB[1,bb]<-WkB[1,bb]+sum(diagvar(Xuse2))*length(pp2[pp2==zz])/(dim(X)[1]-ClassNr) 
 				} 
 			}
 			if (ClassNr==1) {
-				WkB[1,bb]<-sum(diag(var(Xnew))) 
+				WkB[1,bb]<-sum(diagvar(Xnew)) 
 			} 
 		} 
 	}
