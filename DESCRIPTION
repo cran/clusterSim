@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for optimal clustering procedure for a data set
-Version: 0.38-2
-Date: 2010-12-10
+Version: 0.39-2
+Date: 2011-02-01
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl> Andrzej Dudek
         <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
@@ -13,10 +13,10 @@ Description: GDM Distance, Sokal-Michener Distance, Bray-Curtis
         analysis for cluster validation, Clustering with several
         algorithms, distances, normalizations and icq indices, Symbolic
         interval distances, Plot functions, Random cluster generation
-        Linear ranking
+        Linear ranking Nowak partition agreement index
 License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
-Packaged: 2010-12-10 10:12:41 UTC; andrzej
+Packaged: 2011-02-01 13:58:32 UTC; andrzej
 Repository: CRAN
-Date/Publication: 2010-12-10 15:02:42
+Date/Publication: 2011-02-01 16:46:42
