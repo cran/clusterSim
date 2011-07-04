@@ -377,6 +377,11 @@ plotInterval<-function(x, pairsofsVar=NULL, cl=NULL, clColors=NULL,...)
 					lines(c(x[kk,i],xprim[kk,i]),c(xprim[kk,j],xprim[kk,j]),col=colors[kk])
 					lines(c(xprim[kk,i],xprim[kk,i]),c(xprim[kk,j],x[kk,j]),col=colors[kk])
 					lines(c(xprim[kk,i],x[kk,i]),c(x[kk,j],x[kk,j]),col=colors[kk])
+					args<-list(...)
+					if(!is.null(args$ann) && args$ann==TRUE){
+					print(kk)
+					text(x[kk,i],x[kk,j],kk,cex=0.6)
+					}
 					}
 				}
 				if (any(par("mfg") != mfg)) 
@@ -393,7 +398,7 @@ plotInterval<-function(x, pairsofsVar=NULL, cl=NULL, clColors=NULL,...)
 			else par("cex.main")
 			mtext(main, 3, 3, TRUE, 0.5, cex = cex.main, font = font.main)
 		}
-		invisible(NULL)
+		#invisible(NULL)
 	}
 	
 
@@ -428,12 +433,136 @@ plotInterval<-function(x, pairsofsVar=NULL, cl=NULL, clColors=NULL,...)
 		{
 			colorsnames<-rainbow(max(cl)+1)
 		}
-		paryPrzedzialy(data,colors=(colorsnames[cl]),pch=16,scale=NULL)
+		paryPrzedzialy(data,colors=(colorsnames[cl]),pch=16,scale=NULL,...)
 	}
 	else
 	{
-		paryPrzedzialy(data,colors=rep(rainbow(10)[sample(1:10,1)],dim(x)[1]),pch=16,scale=NULL)
-		
+		paryPrzedzialy(data,colors=rep(rainbow(10)[sample(1:10,1)],dim(x)[1]),pch=16,scale=NULL,...)
 	}
 
 } 
+
+
+.SLetter<-function(points=200,width=100,height=200,tol=0.05){
+  toReturn<-array(0,c(points,2))
+  r<-height/4
+  for(i in  1:(points/2)){
+    alpha<-runif(1,0,3*pi/2)
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x0<-width/2
+    y0<-height/4
+    r<-height/4
+    x<-(x0+r*sin(alpha))+tolx
+    y<-(y0+r*cos(alpha))+toly
+    toReturn[i,1]<-x
+    toReturn[i,2]<-y
+
+    alpha<-runif(1,pi,5*pi/2)
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x0<-width/2
+    y0<-3*height/4
+    r<-height/4
+    x<-(x0+r*sin(alpha))+tolx
+    y<-(y0+r*cos(alpha))+toly
+    toReturn[points/2+i,1]<-x
+    toReturn[points/2+i,2]<-y
+  }
+  toReturn
+}
+
+.KLetter<-function(points=200,width=100,height=200,tol=0.05){
+  toReturn<-array(0,c(points,2))
+  for(i in  1:(points/2)){
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-tolx
+    y<-runif(1,0,height)
+    toReturn[i,1]<-x
+    toReturn[i,2]<-y
+
+  }
+  for(i in  1:(points/4)){
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-runif(1,0,width)+tolx
+    y<-height/2+x+toly
+    toReturn[points/2+i,1]<-x
+    toReturn[points/2+i,2]<-y
+
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-runif(1,0,width)+tolx
+    y<-height/2-x+toly
+    toReturn[3*points/4+i,1]<-x
+    toReturn[3*points/4+i,2]<-y
+
+  }
+  toReturn
+}
+
+.ALetter<-function(points=200,width=100,height=200,tol=0.05){
+  toReturn<-array(0,c(points,2))
+  for(i in  1:(2*points/5)){
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-runif(1,0,width/2)+tolx
+    y<-4*x+toly
+    toReturn[i,1]<-x
+    toReturn[i,2]<-y
+
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-runif(1,width/2,width)+tolx
+    y<-height-4*(x-width/2)+toly
+    toReturn[2*points/5+i,1]<-x
+    toReturn[2*points/5+i,2]<-y
+
+  }
+  for(i in  (4*points/5+1):points){
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-runif(1,width/4,3*width/4)+tolx
+    y<-height/2+toly
+    toReturn[i,1]<-x
+    toReturn[i,2]<-y
+  }
+  toReturn
+}
+
+
+.DLetter<-function(points=200,width=100,height=200,tol=0.05){
+  toReturn<-array(0,c(points,2))
+  for(i in  1:(points/2)){
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x<-tolx
+    y<-runif(1,0,height)
+    toReturn[i,1]<-x
+    toReturn[i,2]<-y
+
+
+    alpha<-runif(1,0,pi)
+    tolx<-runif(1,-width*tol,width*tol)
+    toly<-runif(1,-height*tol,height*tol)
+    x0<-0
+    y0<-height/2
+    r<-height/2
+    x<-(x0+r*sin(alpha))+tolx
+    y<-(y0+r*cos(alpha))+toly
+    toReturn[points/2+i,1]<-x*0.7
+    toReturn[points/2+i,2]<-y
+
+  }
+  toReturn
+}
+
+
+
+#postscript(file="Rys_1_10.eps",encoding="CP1250",onefile=FALSE)
+#library(symbolicDA)
+#library(clusterSim)
+#f<-parse.SO("auta10zm")
+#plotInterval(f$indivIC,pairsofsVar=c(1,8,9,10),cl=NULL,clColors=NULL)
+#dev.off()
