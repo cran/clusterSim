@@ -278,7 +278,12 @@ for (i_norm in 1 : l_norm)
 	if(v_norm[i_norm,p]!="")
 	{
 	z<-data.Normalization(x, v_norm[i_norm,p])
+	if(as.numeric(R.Version()$major)>=2 && as.numeric(R.Version()$minor)>=14){
 	zz<-as.matrix(z)
+	}
+	else{
+	zz<-z
+	}
 	if(sum(is.nan(zz))!=0 || sum(is.na(zz))!=0 || sum(is.infinite(zz))!=0){
     stop(paste("Na/NaN/Infinite after \"", v_norm[i_norm,p] , "\" normalization \nPlease exclude this normalization from simulation \nexplicitly use normalizations = c(...)",sep=""))
 	}
