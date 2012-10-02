@@ -54,6 +54,7 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
   globalOk<-FALSE
   silDebug=TRUE
   badSigma<-NULL
+  tries<-0
   while(!globalOk){
   step<-0
   sigWithinss<--1
@@ -110,11 +111,11 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
         ei<-NULL
         tf<-function(l,nc){eigen(l,symmetric=TRUE)$vectors[,1:nc]}
         ei<-try(tf(l,nc),silent=silDebug)
-        bbootstrap<<-bootstrap
-        dd<<-d
-        kka<<-ka
-        ll<<-l
-        ssigma<<-sigma
+        #bbootstrap<<-bootstrap
+        #dd<<-d
+        #kka<<-ka
+        #ll<<-l
+        #ssigma<<-sigma
         ##print(class(ei))
         if(class(ei)!="try-error"){
           if(!is.null(ei)  && is.numeric(ei)){
@@ -141,8 +142,8 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
             #stop("BAD EIGEN")
         }
       }
-      ssig<<-sig
-      ooldsigma<<-oldsigma
+      #ssig<<-sig
+      #ooldsigma<<-oldsigma
       if(is.null(sig) || (!is.null(oldsigma) && oldsigma==sig)){
         lstart<-lstart/R
         lend<-lend/R
@@ -176,27 +177,31 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
   
   globalOk<-TRUE
   if(distance=="GDM1" || distance=="GDM2"){
-    km<-.GDMKernel(as.matrix(dist.GDM(x,method=distance)),sig)
+    scdist<-dist.GDM(x,method=distance)
+    km<-.GDMKernel(as.matrix(scdist),sig)
   }
   else if(distance=="BC"){
-    km<-.GausKernel(as.matrix(dist.BC(x)),sig)
+    scdist<-dist.BC(x)
+    km<-.GausKernel(as.matrix(scdist),sig)
   }
   else if(distance=="SM"){
-    km<-.GausKernel(as.matrix(dist.SM(x)),sig)
+    scdist<-dist.SM(x)
+    km<-.GausKernel(as.matrix(scdist),sig)
   }
   else if(distance=="sEuclidean"){
-    km<-.GausKernel(as.matrix(dist(x))^2,sig)
+    scdist<-dist(x)^2
+    km<-.GausKernel(as.matrix(scdist),sig)
   }
   else{
-        dd<-try(dist(x,method=distance),silent=silDebug)
+        scdist<-try(dist(x,method=distance),silent=silDebug)
         if(class(dd)=="try-error"){
-          dd<-try(dist.binary(x,method=distance),silent=silDebug)
+          scdist<-try(dist.binary(x,method=distance),silent=silDebug)
         }
-        if(class(dd)=="try-error"){
+        if(class(scdist)=="try-error"){
           stop(paste("unknown distance method ",distance))
           globalOk<-FALSE
         }
-        km<-.GausKernel(as.matrix(dd),sig)
+        km<-.GausKernel(as.matrix(scdist),sig)
   }
   
   diag(km)<-0
@@ -216,10 +221,13 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
     }
   }
   if(globalOk && class(res)=="try-error"){
-    yyi<<-yi
+    #yyi<<-yi
     #print("bad clustering")
-    if(!all.equal(na.action,na.omit)){    
-      stop(paste("Not possible to do clustering, try with other distance type - ",distance))
+    if(is.character(all.equal(na.action,na.omit))){     # if all.equals not returns true it returns string"
+      tries<-tries+1
+      if(tries<5){
+        stop(paste("Not possible to do clustering, try with other distance type - ",distance))
+      }
     }
     globalOk<-FALSE
   }
@@ -227,7 +235,7 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
     badSigma<-c(badSigma,sig)}
     #print(paste("Bad sigma",badSigma))
   }
-  return(list(clusters = res$cluster, size = res$size,withinss=res$withins,sigma=sig,Ematrix=ei,Ymatrix=yi))
+  return(list(clusters = res$cluster, size = res$size,withinss=res$withins,sigma=sig,Ematrix=ei,Ymatrix=yi,scdist=scdist))
 }
 
 #data(data_binary)
@@ -241,3 +249,4 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
 ##print(res2$sigma)
 #cRand<-comparing.Partitions(grnd2$clusters,res2$clusters,type="crand")
 ##print(cRand)
+

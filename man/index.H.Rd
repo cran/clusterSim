@@ -13,7 +13,7 @@
 Hartigan index
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexH\_details.pdf for further details
+See file \url{../doc/indexH_details.pdf} for further details
 }
 \references{
 

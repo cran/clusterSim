@@ -26,7 +26,7 @@ dimensions (variables) given in \code{numNoisyVar} argument;
  
 \code{model=3,4,...,20} - see file 
 
-\$R\_HOME\\library\\clusterSim\\pdf\\clusterGen\_details.pdf; 
+\url{../doc/clusterGen_details.pdf}; 
 
 \code{model=21,22,...} - if \code{fixedCov=TRUE} \code{means} should be read from \emph{means\_<modelNumber>.csv} 
 and  covariance matrix for all clusters should be read from \emph{cov\_<modelNumber>.csv} 
@@ -55,7 +55,7 @@ and if
 \item{outputRowNames}{\code{outputRowNames=TRUE} indicates that output file (given by \code{outputCsv} and \code{outputCsv2} parameters) contains a vector of row names}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\clusterGen\_details.pdf for further details
+See file \url{../doc/clusterGen_details.pdf} for further details
 }
 \value{
 \item{clusters}{cluster number for each object, for \code{model=1} each 

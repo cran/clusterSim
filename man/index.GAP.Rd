@@ -21,7 +21,7 @@ or
 \item{diffu}{necessary value for choosing correct number of clusters via gap statistic Gap(u)-[Gap(u+1)-s(u+1)]}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexGap\_details.pdf for further details
+See file \url{../doc/indexGap_details.pdf} for further details
 
 Thanks to dr Michael P. Fay from National Institute of Allergy and Infectious Diseases for finding "one column error".
 }

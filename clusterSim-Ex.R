@@ -197,16 +197,17 @@ flush(stderr()); flush(stdout())
 ### ** Examples
 
 library(clusterSim)
-data(data_ratio)
-cluster.Sim(data_ratio, 1, 2, 3, "G1", outputCsv="results1")
-data(data_interval)
-cluster.Sim(data_interval, 2, 2, 4, "G1", outputHtml="results2")
-data(data_ordinal)
-cluster.Sim(data_ordinal, 3, 2, 4,"G2", outputCsv2="results3")
-data(data_nominal)
-cluster.Sim(data_nominal, p=4, 2, 4, icq="G3", outputHtml="results4", methods=c("m2","m3","m5"))
-data(data_binary)
-cluster.Sim(data_binary, p=5, 2, 4, icq="S", outputHtml="results5", distances=c("b1","b3","b6"))
+# Commented due to long execution time
+#data(data_ratio)
+#cluster.Sim(data_ratio, 1, 2, 3, "G1", outputCsv="results1")
+#data(data_interval)
+#cluster.Sim(data_interval, 2, 2, 4, "G1", outputHtml="results2")
+#data(data_ordinal)
+#cluster.Sim(data_ordinal, 3, 2, 4,"G2", outputCsv2="results3")
+#data(data_nominal)
+#cluster.Sim(data_nominal, p=4, 2, 4, icq="G3", outputHtml="results4", methods=c("m2","m3","m5"))
+#data(data_binary)
+#cluster.Sim(data_binary, p=5, 2, 4, icq="S", outputHtml="results5", distances=c("b1","b3","b6"))
 data(data_ratio)
 cluster.Sim(data_ratio, 1, 2, 4,"G1", outputCsv="results6",normalizations=c("n1","n3"),
 distances=c("d2","d5"),methods=c("m5","m3","m1"))
@@ -718,29 +719,6 @@ for (nc in min_nc:max_nc)
 {
 cl2 <- pam(md, nc, diss=TRUE)
 res[nc-min_nc+1,2] <- G1 <- index.G1(data_ratio,cl2$cluster,centrotypes="centroids")
-clusters <- rbind(clusters, cl2$cluster)
-}
-print(paste("max G1 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
-print("clustering for max G1")
-print(clusters[which.max(res[,2]),])
-write.table(res,file="G1_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
-plot(res, type="p", pch=0, xlab="Number of clusters", ylab="G1", xaxt="n")
-axis(1, c(min_nc:max_nc))
-
-# Example 3
-library(clusterSim)
-data(data_ratio)
-md <- dist(data_ratio, method="euclidean")
-# nc - number_of_clusters
-min_nc=2
-max_nc=20
-res <- array(0,c(max_nc-min_nc+1, 2))
-res[,1] <- min_nc:max_nc
-clusters <- NULL
-for (nc in min_nc:max_nc)
-{
-cl2 <- pam(md, nc, diss=TRUE)
-res[nc-min_nc+1,2] <- G1 <- index.G1(data_ratio,cl2$cluster,d=md,centrotypes="medoids")
 clusters <- rbind(clusters, cl2$cluster)
 }
 print(paste("max G1 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
@@ -1463,47 +1441,48 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
+# Commented due to long execution time
 # Example 1
-library(clusterSim)
-library(mlbench)
-data<-mlbench.spirals(100,1,0.03)
-plot(data)
-x<-data$x
-res1<-speccl(x,nc=2,distance="GDM1",sigma="automatic",
-sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
-clas1<-res1$cluster
-print(data$classes)
-print(clas1)
-cRand<-classAgreement(table(as.numeric(as.vector(data$classes)),
-res1$clusters))$crand
-print(res1$sigma)
-print(cRand)
+#library(clusterSim)
+#library(mlbench)
+#data<-mlbench.spirals(100,1,0.03)
+#plot(data)
+#x<-data$x
+#res1<-speccl(x,nc=2,distance="GDM1",sigma="automatic",
+#sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
+#clas1<-res1$cluster
+#print(data$classes)
+#print(clas1)
+#cRand<-classAgreement(table(as.numeric(as.vector(data$classes)),
+#res1$clusters))$crand
+#print(res1$sigma)
+#print(cRand)
 
 # Example 2
-library(clusterSim)
-grnd2<-cluster.Gen(50,model=4,dataType="m",numNoisyVar=1)
-data<-as.matrix(grnd2$data)
-colornames<-c("red","blue","green")
-grnd2$clusters[grnd2$clusters==0]<-length(colornames)
-plot(grnd2$data,col=colornames[grnd2$clusters])
-us<-nrow(data)*nrow(data)/2
-res2<-speccl(data,nc=3,distance="sEuclidean",sigma="automatic",
-sigma.interval=us,mod.sample=0.75,R=10,iterations=3)
-cRand<-comparing.Partitions(grnd2$clusters,res2$clusters,type="crand")
-print(res2$sigma)
-print(cRand)
+#library(clusterSim)
+#grnd2<-cluster.Gen(50,model=4,dataType="m",numNoisyVar=1)
+#data<-as.matrix(grnd2$data)
+#colornames<-c("red","blue","green")
+#grnd2$clusters[grnd2$clusters==0]<-length(colornames)
+#plot(grnd2$data,col=colornames[grnd2$clusters])
+#us<-nrow(data)*nrow(data)/2
+#res2<-speccl(data,nc=3,distance="sEuclidean",sigma="automatic",
+#sigma.interval=us,mod.sample=0.75,R=10,iterations=3)
+#cRand<-comparing.Partitions(grnd2$clusters,res2$clusters,type="crand")
+#print(res2$sigma)
+#print(cRand)
 
 # Example 3
-library(clusterSim)
-grnd3<-cluster.Gen(40,model=4,dataType="o",numCategories=7)
-data<-as.matrix(grnd3$data)
-plotCategorial(grnd3$data,pairsofVar=NULL,cl=grnd3$clusters,
-clColors=c("red","blue","green"))
-res3<-speccl(data,nc=3,distance="GDM2",sigma="automatic",
-sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
-cRand<-comparing.Partitions(grnd3$clusters,res3$clusters,type="crand")
-print(res3$sigma)
-print(cRand)
+#library(clusterSim)
+#grnd3<-cluster.Gen(40,model=4,dataType="o",numCategories=7)
+#data<-as.matrix(grnd3$data)
+#plotCategorial(grnd3$data,pairsofVar=NULL,cl=grnd3$clusters,
+#clColors=c("red","blue","green"))
+#res3<-speccl(data,nc=3,distance="GDM2",sigma="automatic",
+#sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
+#cRand<-comparing.Partitions(grnd3$clusters,res3$clusters,type="crand")
+#print(res3$sigma)
+#print(cRand)
 
 # Example 4
 library(clusterSim)

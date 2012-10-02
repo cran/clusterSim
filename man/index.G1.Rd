@@ -10,7 +10,7 @@
 \item{centrotypes}{"centroids" or "medoids"}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexG1\_details.pdf for further details
+See file \url{../doc/indexG1_details.pdf} for further details
 }
 \value{
 Calinski-Harabasz pseudo F-statistic
@@ -22,7 +22,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \references{
 
-Calinski, R.B., Harabasz, J. (1974), \emph{A dendrite method for cluster analysis}, "Communications in Statistics", vol. 3, 1-27.
+Calinski, T., Harabasz, J. (1974), \emph{A dendrite method for cluster analysis}, "Communications in Statistics", vol. 3, 1-27.
 
 Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London, p. 103.
 
@@ -58,29 +58,6 @@ for (nc in min_nc:max_nc)
 {
 cl2 <- pam(md, nc, diss=TRUE)
 res[nc-min_nc+1,2] <- G1 <- index.G1(data_ratio,cl2$cluster,centrotypes="centroids")
-clusters <- rbind(clusters, cl2$cluster)
-}
-print(paste("max G1 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
-print("clustering for max G1")
-print(clusters[which.max(res[,2]),])
-write.table(res,file="G1_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
-plot(res, type="p", pch=0, xlab="Number of clusters", ylab="G1", xaxt="n")
-axis(1, c(min_nc:max_nc))
-
-# Example 3
-library(clusterSim)
-data(data_ratio)
-md <- dist(data_ratio, method="euclidean")
-# nc - number_of_clusters
-min_nc=2
-max_nc=20
-res <- array(0,c(max_nc-min_nc+1, 2))
-res[,1] <- min_nc:max_nc
-clusters <- NULL
-for (nc in min_nc:max_nc)
-{
-cl2 <- pam(md, nc, diss=TRUE)
-res[nc-min_nc+1,2] <- G1 <- index.G1(data_ratio,cl2$cluster,d=md,centrotypes="medoids")
 clusters <- rbind(clusters, cl2$cluster)
 }
 print(paste("max G1 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))

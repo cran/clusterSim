@@ -25,7 +25,7 @@ clustering method: "kmeans" (default) , "single", "ward", "complete", "average",
 \item{Index}{"cRAND" - corrected Rand index (default); "RAND" - Rand index}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\HINoVMod\_details.pdf for further details
+See file \url{../doc/HINoVMod_details.pdf} for further details
 }
 \value{
 \item{parim}{\emph{m} x \emph{m} symmetric matrix (\emph{m} - number of variables). Matrix contains pairwise corrected Rand (Rand) indices for partitions formed by the \emph{j}-th variable with partitions formed by the \emph{l}-th variable}
@@ -45,6 +45,8 @@ Hubert, L.J., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classi
 Rand, W.M. (1971), \emph{Objective criteria for the evaluation of clustering methods}, "Journal of the American Statistical Association", no. 336, 846-850.
 
 Walesiak, M. (2005), \emph{Variable selection for cluster analysis - approaches, problems, methods}, Plenary Session of the Committee on Statistics and Econometrics of the Polish Academy of Sciences, 15 March, Wroclaw.
+
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
 }
 \seealso{
 \code{\link{hclust}}, \code{\link{kmeans}}, \code{\link{dist}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, 

@@ -14,7 +14,7 @@ HINoV.Symbolic(x, u=NULL, distance="H", method = "pam",
 \item{Index}{"cRAND" - corrected Rand index (default); "RAND" - Rand index}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\HINoVSymbolic\_details.pdf for further details
+See file \url{../doc/HINoVSymbolic_details.pdf} for further details
 }
 \value{
 \item{parim}{\emph{m} x \emph{m} symmetric matrix (\emph{m} - number of variables). Matrix contains pairwise corrected Rand (Rand) indices for partitions formed by the \emph{j}-th variable with partitions formed by the \emph{l}-th variable}

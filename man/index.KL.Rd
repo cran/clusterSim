@@ -10,7 +10,7 @@
 \item{centrotypes}{"centroids" or "medoids"}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexKL\_details.pdf for further details
+See file \url{../doc/indexKL_details.pdf} for further details
 }
 \value{
 Krzanowski-Lai index

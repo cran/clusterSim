@@ -30,7 +30,7 @@ GDM2(x, weightsType="equal", weights=NULL)
 \item{weights}{vector of weights}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\distGDM\_details.pdf for further details
+See file \url{../doc/distGDM_details.pdf} for further details
 }
 \value{
 object with calculated distance

@@ -22,3 +22,4 @@ dist.BC<-function(x)
 	}
 	as.dist(wynik)
 }
+

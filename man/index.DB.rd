@@ -13,7 +13,7 @@
 of the r-th cluster; q=2 - the standard deviation of the distance of objects in the r-th cluster to the centroid or medoid of the r-th cluster}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexDB\_details.pdf for further details
+See file \url{../doc/indexDB_details.pdf} for further details
 }
 \value{
 \item{DB}{Davies-Bouldin's index}

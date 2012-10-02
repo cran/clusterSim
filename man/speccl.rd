@@ -19,19 +19,20 @@ in lower triangle of distance matrix for other distances; sigma.interval=1000 - 
 \item{mod.sample}{proportion of data to use when estimating sigma (default: 0.75)}
 \item{R}{the number of intervals examined in each step of searching optimal value of sigma parameter algorithm 
 
-(See \$R\_HOME\\library\\clusterSim\\pdf\\speccl\_details.pdf)}
+(See \url{../doc/speccl_details.pdf})}
 \item{iterations}{the maximum number of iterations (rounds) allowed in algorithm of searching optimal value of sigma parameter}
 \item{na.action}{the action to perform on NA}
 \item{...}{arguments passed to kmeans procedure}
 
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\speccl\_details.pdf for further details
+See file \url{../doc/speccl_details.pdf} for further details
 }
 \value{
+\item{scdist}{returns the lower triangle of the distance matrix} 
 \item{clusters}{a vector of integers indicating the cluster to which each object is allocated} 
 \item{size}{the number of objects in each cluster}
-\item{withinss}{the within-cluster sum of distances for each cluster}
+\item{withinss}{the within-cluster sum of squared distances for each cluster}
 \item{Ematrix}{data matrix n x u (n - the number of objects, u - the number of eigenvectors)}
 \item{Ymatrix}{normalized data matrix n x u (n - the number of objects, u - the number of eigenvectors)}
 \item{sigma}{the value of scale parameter given by searching algorithm}
@@ -49,54 +50,55 @@ Ng, A., Jordan, M., Weiss, Y. (2002), \emph{On spectral clustering: analysis and
 
 Walesiak, M. (2011), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure in multivariate statistical analysis with R]}, Wydawnictwo UE, Wroclaw.
 
-Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review) (in press).
+Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31.
 }
 
 \seealso{
 \code{\link{dist.GDM}},\code{\link{kmeans}},\code{\link{dist}},\code{\link{dist.binary}},\code{\link{dist.SM}},\code{\link{dist.BC}}
 }
 \examples{
+# Commented due to long execution time
 # Example 1
-library(clusterSim)
-library(mlbench)
-data<-mlbench.spirals(100,1,0.03)
-plot(data)
-x<-data$x
-res1<-speccl(x,nc=2,distance="GDM1",sigma="automatic",
-sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
-clas1<-res1$cluster
-print(data$classes)
-print(clas1)
-cRand<-classAgreement(table(as.numeric(as.vector(data$classes)),
-res1$clusters))$crand
-print(res1$sigma)
-print(cRand)
+#library(clusterSim)
+#library(mlbench)
+#data<-mlbench.spirals(100,1,0.03)
+#plot(data)
+#x<-data$x
+#res1<-speccl(x,nc=2,distance="GDM1",sigma="automatic",
+#sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
+#clas1<-res1$cluster
+#print(data$classes)
+#print(clas1)
+#cRand<-classAgreement(table(as.numeric(as.vector(data$classes)),
+#res1$clusters))$crand
+#print(res1$sigma)
+#print(cRand)
 
 # Example 2
-library(clusterSim)
-grnd2<-cluster.Gen(50,model=4,dataType="m",numNoisyVar=1)
-data<-as.matrix(grnd2$data)
-colornames<-c("red","blue","green")
-grnd2$clusters[grnd2$clusters==0]<-length(colornames)
-plot(grnd2$data,col=colornames[grnd2$clusters])
-us<-nrow(data)*nrow(data)/2
-res2<-speccl(data,nc=3,distance="sEuclidean",sigma="automatic",
-sigma.interval=us,mod.sample=0.75,R=10,iterations=3)
-cRand<-comparing.Partitions(grnd2$clusters,res2$clusters,type="crand")
-print(res2$sigma)
-print(cRand)
+#library(clusterSim)
+#grnd2<-cluster.Gen(50,model=4,dataType="m",numNoisyVar=1)
+#data<-as.matrix(grnd2$data)
+#colornames<-c("red","blue","green")
+#grnd2$clusters[grnd2$clusters==0]<-length(colornames)
+#plot(grnd2$data,col=colornames[grnd2$clusters])
+#us<-nrow(data)*nrow(data)/2
+#res2<-speccl(data,nc=3,distance="sEuclidean",sigma="automatic",
+#sigma.interval=us,mod.sample=0.75,R=10,iterations=3)
+#cRand<-comparing.Partitions(grnd2$clusters,res2$clusters,type="crand")
+#print(res2$sigma)
+#print(cRand)
 
 # Example 3
-library(clusterSim)
-grnd3<-cluster.Gen(40,model=4,dataType="o",numCategories=7)
-data<-as.matrix(grnd3$data)
-plotCategorial(grnd3$data,pairsofVar=NULL,cl=grnd3$clusters,
-clColors=c("red","blue","green"))
-res3<-speccl(data,nc=3,distance="GDM2",sigma="automatic",
-sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
-cRand<-comparing.Partitions(grnd3$clusters,res3$clusters,type="crand")
-print(res3$sigma)
-print(cRand)
+#library(clusterSim)
+#grnd3<-cluster.Gen(40,model=4,dataType="o",numCategories=7)
+#data<-as.matrix(grnd3$data)
+#plotCategorial(grnd3$data,pairsofVar=NULL,cl=grnd3$clusters,
+#clColors=c("red","blue","green"))
+#res3<-speccl(data,nc=3,distance="GDM2",sigma="automatic",
+#sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
+#cRand<-comparing.Partitions(grnd3$clusters,res3$clusters,type="crand")
+#print(res3$sigma)
+#print(cRand)
 
 # Example 4
 library(clusterSim)

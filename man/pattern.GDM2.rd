@@ -56,7 +56,7 @@ real numbers
 }
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\patternGDM2\_details.pdf for further details
+See file \url{../doc/patternGDM2_details.pdf} for further details
 }
 \value{
 \item{pdata}{raw (primary) data matrix}
@@ -78,6 +78,8 @@ Walesiak, M. (1993), \emph{Statystyczna analiza wielowymiarowa w badaniach marke
 Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173.
 
 Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw.
+
+Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo UE, Wroclaw.
 }
 
 \seealso{

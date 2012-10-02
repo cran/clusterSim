@@ -35,7 +35,7 @@ n11 - quotient transformation (x/sqrt(SSQ))
 Normalized data
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\dataNormalization\_details.pdf for further details
+See file \url{../doc/dataNormalization_details.pdf} for further details
 }
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 

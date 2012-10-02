@@ -36,7 +36,7 @@ for binary data: "b1" = Jaccard; "b2" = Sokal & Michener; "b3" = Sokal & Sneath 
 \item{fixedAsample}{if NULL \emph{A} sample is generated randomly, otherwise this parameter contains object numbers arbitrarily assigned to \emph{A} sample}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\replication.Mod\_details.pdf for further details
+See file \url{../doc/replication.Mod_details.pdf} for further details
 }
 
 \value{
