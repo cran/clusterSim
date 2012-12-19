@@ -278,7 +278,7 @@ for (i_norm in 1 : l_norm)
 	if(v_norm[i_norm,p]!="")
 	{
 	z<-data.Normalization(x, v_norm[i_norm,p])
-	if(as.numeric(R.Version()$major)>=2 && as.numeric(R.Version()$minor)>=14){
+	if(getRversion() >= '2.14'){
 	zz<-as.matrix(z)
 	}
 	else{
