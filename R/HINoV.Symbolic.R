@@ -83,9 +83,9 @@ resul
 
 	z<-x
 	if (is.null(u)) stop ("for symbolic data number of classes must be set")
-	if(!require("cluster")) stop ("Please install cluster package")
-	if(!require("e1071")) stop ("Please install e1071 package")
-	if(!require("ade4")) stop ("Please install ade4 package")
+	#if(!require("cluster")) stop ("Please install cluster package")
+	#if(!require("e1071")) stop ("Please install e1071 package")
+	#if(!require("ade4")) stop ("Please install ade4 package")
 	if (is.null(distance)) stop("For hierarchical methods parameter distance cannot be NULL")
 	if (Index != "RAND" && Index!="cRAND") stop("Wrong index type, only RAND or cRAND are allowed")
 	if (!is.null(distance))

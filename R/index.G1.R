@@ -47,15 +47,21 @@ index.G1<-function(x,cl,d=NULL,centrotypes="centroids")
 	   centers<-matrix(nrow=k,ncol=ncol(x))
       for(i in 1:k)
 	   {
-       if(centrotypes=="centroids"){
-        if(ncol(x)==1){
-        centers[i,]<-mean(x[cl==i,])
+    x.k = x[cl==i,]
+    if(centrotypes=="centroids"){
+      if(ncol(x)==1){
+        centers[i,]<-mean(x.k)
+      }
+      else{
+        if (is.vector(x.k)){
+          centers[i,]<-x.k
         }
         else{
-        centers[i,]<-apply(x[cl==i,],2,mean)
+          centers[i,]<-apply(x.k,2,mean)
         }
-       }
-       else{
+      }
+    }
+    else{
         centers[i,]<-.medoid(x[cl==i,],d[cl==i,cl==i])
         #print(apply(x[cl==i,],2,mean))
         #print(centers[i,])

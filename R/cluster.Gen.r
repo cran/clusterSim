@@ -1,6 +1,6 @@
 cluster.Gen<-function(numObjects=50,means=NULL,cov=NULL, fixedCov=TRUE, model=1,dataType="m", numCategories=NULL, numNoisyVar=0, numOutliers=0, rangeOutliers=c(1,10) ,inputType="csv2", inputHeader=TRUE, inputRowNames=TRUE, outputCsv="", outputCsv2="", outputColNames=TRUE, outputRowNames=TRUE)
 {
-	require(MASS)
+	#require(MASS)
 	gM<-NULL
 	gM1<-NULL
 	objects<-numObjects

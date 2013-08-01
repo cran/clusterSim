@@ -209,7 +209,7 @@ pary<-function (x, labels, panel = points,  lower.panel = panel,
 
 plotCategorial3d<-function(x, tripleofVar=c(1,2,3), cl=NULL, clColors=NULL,...)
 {
-	require("rgl")
+	#require("rgl")
 	rozmiary<-x[,1]
 	klasy<-cl
 	x<-x[,tripleofVar]

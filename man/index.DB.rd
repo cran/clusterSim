@@ -14,6 +14,8 @@ of the r-th cluster; q=2 - the standard deviation of the distance of objects in 
 }
 \details{
 See file \url{../doc/indexDB_details.pdf} for further details
+
+Thanks to prof. Christian Hennig \email{c.hennig@ucl.ac.uk} for finding and fixing the "immutable p" error  
 }
 \value{
 \item{DB}{Davies-Bouldin's index}

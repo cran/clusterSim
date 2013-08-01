@@ -56,6 +56,9 @@ initial.Centers<-function(x,k)
 
 cluster.Sim<-function(x,p=1,minClusterNo,maxClusterNo,icq="S",outputHtml="",outputCsv="",outputCsv2="",normalizations=NULL,distances=NULL,methods=NULL)
 {
+#require("R2HTML")
+#require("e1071")
+#require("ade4")
 short2LongName <-function(value,fullName=FALSE)
 {
 longMethods<- c("single","complete","average","mcquitty","pam","ward","centroid","median","k-means")
@@ -102,9 +105,9 @@ if(is.null(dim(x))){
   dim(x)<-c(length(x),1)
 }
 maxint=100000
-if(!require("cluster")) stop ("Please install cluster")
-if(!require("ade4")) stop ("Please install ade4")
-if(!require("R2HTML")) stop ("Please install R2HTML")
+#if(!require("cluster")) stop ("Please install cluster")
+#if(!require("ade4")) stop ("Please install ade4")
+#if(!require("R2HTML")) stop ("Please install R2HTML")
 if ((p<1) || (p>9))  stop ("Path must be one of the values:\n 1-ratio data, 2-interval or mixed (ratio & interval), 3-ordinal data,\n 4-nominal data, 5-binary data, 6-ratio data without normalization \n7 - interval or mixed (ratio & interval) data without normalization,\n8 - ratio data with k-means,\n9 - interval or mixed (ratio & interval) data with k-means")
 if(icq=="G1" && p>=3 && p<=5) stop ("Calinski Pseudo F statistic may be used only with metric data")
 if (minClusterNo<2 || minClusterNo>nrow(x)-1) stop (paste("Number of classes must be in <2 ,",nrow(x)-1,">" ))

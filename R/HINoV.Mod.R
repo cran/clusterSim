@@ -54,9 +54,9 @@ l2SN
 	}
 	z<-x
 	if (is.null(u) && (type!="nonmetric")) stop ("for metric and mixed data number of classes must be set")
-	if(!require("cluster")) stop ("Please install cluster package")
-	if(!require("e1071")) stop ("Please install e1071 package")
-	if(!require("ade4")) stop ("Please install ade4 package")
+	#if(!require("cluster")) stop ("Please install cluster package")
+	#if(!require("e1071")) stop ("Please install e1071 package")
+	#if(!require("ade4")) stop ("Please install ade4 package")
 	if (is.null(distance) && method != "kmeans" && method!="pam" && method != "diana") stop("For hierarchical methods parameter distance cannot be NULL")
 	if (Index != "RAND" && Index!="cRAND") stop("Wrong index type, only RAND or cRAND are allowed")
 	if((length(type)>1) && (length(type)< ncol(z))) stop ("Wrong length of type parameter, must be equal to number of variables")

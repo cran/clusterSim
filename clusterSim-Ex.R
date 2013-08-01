@@ -4,7 +4,7 @@ options(warn = 1)
 options(pager = "console")
 library('clusterSim')
 
-assign(".oldSearch", search(), pos = 'CheckExEnv')
+base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
 cleanEx()
 nameEx("HINoV.Mod")
 ### * HINoV.Mod
@@ -1178,6 +1178,34 @@ kmeans(data_ratio,data_ratio[initial.Centers(data_ratio, 10),])
 
 
 cleanEx()
+nameEx("ordinalToMetric")
+### * ordinalToMetric
+
+flush(stderr()); flush(stdout())
+
+### Name: ordinalToMetric
+### Title: Reinforcing measurement scale for ordinal data
+### Aliases: ordinalToMetric
+### Keywords: ordinal scale, GDM distance, reinforcing measurement scale,
+###   multivariate statistical analysis
+
+### ** Examples
+
+# Example 1
+library(clusterSim)
+data(data_patternGDM2)
+res1<-ordinalToMetric(data_patternGDM2,scaleType="o",patternCoordinates=c(5,4,3,1,1,3))
+print(res1)
+
+# Example 2
+library(clusterSim)
+data(data_patternGDM2)
+res2<-ordinalToMetric(data_patternGDM2,scaleType="o",patternCoordinates=c(5,4,3,4,2,4))
+print(res2)
+
+
+
+cleanEx()
 nameEx("pattern.GDM1")
 ### * pattern.GDM1
 
@@ -1496,7 +1524,8 @@ print(res4)
 
 ### * <FOOTER>
 ###
-cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
+options(digits = 7L)
+base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
 grDevices::dev.off()
 ###
 ### Local variables: ***

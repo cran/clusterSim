@@ -1,7 +1,25 @@
-//#include "stdafx.h"
 #include "clusterSim.h"
 #include "math.h"
 #include "stdio.h"
+/*#include "windows.h"
+#include "string.h";
+#include "time.h";*/
+
+/*void printTab (double * x,int r,int c,int rToPrint){
+		printf("\n*************************** ZACZYNAM DRUKOWAC TABELE **************************\n");
+		for(int i=0;i<rToPrint;i++){
+		for(int j=0;j<c;j++){
+			printf(" %3.5e ",x[r*j+i]);
+		}
+		printf("\n");
+	}
+
+}*/
+/*
+void printTab (double * x,int r,int c){
+	printTab (x,r,c,r);
+}*/
+
 
 #ifdef WIN32
 extern "C" void GDM_API  fngdm(double  * x,int *  rows, int * cols, int * type, double * weights, double * wynik)
@@ -85,6 +103,7 @@ int wiersze,kolumny,typ;
 			}	
 		}
 	}
+	//printTab(wynik,*rows,4,4);
 	return;
 }
 
@@ -174,3 +193,4 @@ double mr;
 	}
 	return;
 }
+

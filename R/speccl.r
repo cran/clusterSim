@@ -207,7 +207,12 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
   diag(km)<-0
   d<-1/sqrt(rowSums(km))
   l<-d * km %*% diag(d)
+  if(getRversion() >= '3.0'){
+  ei<-try(eigen(l,symmetric=T)$vectors[, 1:nc],silent=silDebug)
+  }
+  else{
   ei<-try(eigen(l)$vectors[, 1:nc],silent=silDebug)
+  }
   if(class(ei)=="try-error"){
     #stop(paste("Not possible to calculate eigenvalues, try with other distance type - ",distance))
     globalOk<-FALSE
