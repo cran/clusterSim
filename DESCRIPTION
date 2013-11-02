@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for optimal clustering procedure for a data set
-Version: 0.42-1
-Date: 2013-08-01
+Version: 0.43-1
+Date: 2013-11-02
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl> Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: cluster, MASS
@@ -28,11 +28,12 @@ Description: GDM Distance,
   Linear ordering methods, 
   Comparing partitions, 
   Spectral clustering,
-  Ordinal to metric scale transformation.
+  Ordinal to metric scale transformation,
+  Untypical data generation.
 License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
-Packaged: 2013-08-02 14:07:26 UTC; andrzej
+Packaged: 2013-11-02 19:06:37 UTC; andrzej
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2013-08-02 16:31:01
+Date/Publication: 2013-11-02 22:16:15

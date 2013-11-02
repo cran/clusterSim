@@ -10,7 +10,7 @@ n0 - without normalization
 
 n1 - standardization ((x-mean)/sd)
 
-n2 - Weber standardization ((x-Me)/MAD)
+n2 - positional standardization ((x-Me)/MAD)
 
 n3 - unitization ((x-mean)/range)
 

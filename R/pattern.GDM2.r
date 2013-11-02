@@ -40,10 +40,11 @@ if(sum(performanceVariable=="n")==0){
 #print("zmienilem")
 nominalTransfMethod<-rep("symmetrical",ncol(data))
 }
+if(is.null(nominalTransfMethod))nominalTransfMethod=rep("none",ncol(data))
 if(length(nominalTransfMethod)==1)nominalTransfMethod=rep(nominalTransfMethod,ncol(data))
 if(length(nominalTransfMethod)!=ncol(data))stop("vector of transfer methods for nominant variables should have the size equal to numberof variables")
 for(v in nominalTransfMethod){
-  if(sum(v==c("symmetrical","database"))==0) stop("transfer methods should be one of the following: s-symmetrical,d-database")
+  if(sum(v==c("symmetrical","database","none"))==0) stop("transfer methods should be one of the following: s-symmetrical,d-database")
 }
 
 #ZNALEZIENIE WZORCA
@@ -82,6 +83,7 @@ for(i in 1:length(vTypes)){
         pattern[i]<-nomOptValues[i]
       }
       if(vTypes[i]=="a"){
+        if(nominalTransfMethod[i]!="none"){
         if(nominalTransfMethod[i]=="symmetrical" ){
           #print("symmetrical")
           t<-c(nomOptValues[i],data[,i])
@@ -108,6 +110,7 @@ for(i in 1:length(vTypes)){
           }
           dd<-d
           nomOptValues[i]<-0
+       }
        }
      }
 }
