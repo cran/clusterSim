@@ -1,8 +1,8 @@
 \name{data.Normalization}
 \alias{data.Normalization}
-\title{Types of variable normalization formulas}
-\description{Types of variable normalization formulas}
-\usage{data.Normalization (x,type="n0")}
+\title{Types of variable (column) and object (row) normalization formulas}
+\description{Types of variable (column) and object (row) normalization formulas}
+\usage{data.Normalization (x,type="n0",normalization="column")}
 \arguments{
 \item{x}{vector, matrix or dataset}
 \item{type}{type of normalization:}
@@ -10,15 +10,21 @@ n0 - without normalization
 
 n1 - standardization ((x-mean)/sd)
 
-n2 - positional standardization ((x-Me)/MAD)
+n2 - positional standardization ((x-median)/mad)
 
 n3 - unitization ((x-mean)/range)
+
+n3a - positional unitization ((x-median)/range)
 
 n4 - unitization with zero minimum ((x-min)/range)
 
 n5 - normalization in range <-1,1> ((x-mean)/max(abs(x-mean)))
 
+n5a - positional normalization in range <-1,1> ((x-median)/max(abs(x-median)))
+
 n6 - quotient transformation (x/sd)
+
+n6a - positional quotient transformation (x/mad)
 
 n7 - quotient transformation (x/range)
 
@@ -26,9 +32,13 @@ n8 - quotient transformation (x/max)
 
 n9 - quotient transformation (x/mean)
 
+n9a - positional quotient transformation (x/median)
+
 n10 - quotient transformation (x/sum)
 
 n11 - quotient transformation (x/sqrt(SSQ))
+
+\item{normalization}{"column" - normalization by variable, "row" - normalization by object}
 
 }
 \value{
@@ -43,11 +53,15 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
+Anderberg, M.R. (1973), \emph{Cluster analysis for applications}, Academic Press, New York, San Francisco, London.
+
 Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, 35-38.
 
 Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under different measurement scales}, In: R. Decker, W. Gaul (Eds.), Classification and information processing at the turn of the millennium, Springer-Verlag, Berlin, Heidelberg, 105-112.
 
 Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204.
+
+Mlodak, A. (2006), \emph{Analiza taksonomiczna w statystyce regionalnej}, Difin, Warszawa.
 }
 \seealso{
 \code{\link{cluster.Sim}}
@@ -55,8 +69,7 @@ Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variabl
 \examples{
 library(clusterSim)
 data(data_ratio)
-z1 <- data.Normalization(data_ratio, "n1")
-z2 <- data.Normalization(data_ratio, type="n2")
-z8 <- data.Normalization(data_ratio, type="n8")
+z1 <- data.Normalization(data_ratio,type="n1",normalization="column")
+z2 <- data.Normalization(data_ratio,type="n10",normalization="row")
 }
 \keyword{cluster}
