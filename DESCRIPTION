@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for optimal clustering procedure for a data set
-Version: 0.43-3
-Date: 2014-01-08
+Version: 0.43-4
+Date: 2014-02-27
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl> Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: cluster, MASS
@@ -33,7 +33,7 @@ Description: GDM Distance,
 License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
-Packaged: 2014-01-08 15:01:33 UTC; andrzej
+Packaged: 2014-02-27 21:41:51 UTC; andrzej
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2014-01-09 11:15:30
+Date/Publication: 2014-02-27 23:27:38

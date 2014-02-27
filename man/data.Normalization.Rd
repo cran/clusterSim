@@ -38,6 +38,10 @@ n10 - quotient transformation (x/sum)
 
 n11 - quotient transformation (x/sqrt(SSQ))
 
+n12 - normalization ((x-mean)/sqrt(sum((x-mean)^2)))
+
+n12a - positional normalization ((x-median)/sqrt(sum((x-median)^2)))
+
 \item{normalization}{"column" - normalization by variable, "row" - normalization by object}
 
 }
@@ -62,6 +66,8 @@ Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under differe
 Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204.
 
 Mlodak, A. (2006), \emph{Analiza taksonomiczna w statystyce regionalnej}, Difin, Warszawa.
+
+Walesiak, M. (2014), \emph{Przeglad formul normalizacyjnych wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, W: K. Jajuga, M. Walesiak (Eds.), Klasyfikacja i analiza danych – teoria i zastosowania, Taksonomia, Prace Naukowe UE we Wroclawiu (w redakcji).
 }
 \seealso{
 \code{\link{cluster.Sim}}

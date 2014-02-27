@@ -1,4 +1,4 @@
-6f3fc55e61639b7c5e65646cd6f50598 *DESCRIPTION
+d8841b9bbc36a3b561a849a949842855 *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 52e86cdaa77ea46c1d0b6a18200f2848 *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -9,7 +9,7 @@ dd6a3997973fbcf85dd727aaf4cd6254 *R/Last.Lib.r
 ad2c0e261081b29f2e4da99743a6f44c *R/cluster.Gen.r
 cd37ff292b79dc05d4d4b25749c60b13 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
-ce6231fa5ae2af9649d79bc73fbd7f9b *R/data.Normalization.r
+a4f8afe1e6721b661ea015dec956e313 *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
 3aacb76111209294e82301664ad95b6f *R/dist.GDM.r
 e7fbf99ccaf6f22515517cee1013d6bb *R/dist.SM.r
@@ -24,9 +24,9 @@ ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
 aa36304f71439adc9f863824e299f965 *R/index.KL.r
 c76b0445fb1e7c96cc32d19b0c2c14db *R/index.S.r
 d7675724015c95dcde7b7f4b035d7071 *R/ordinalToMetric.r
-de793cb84e6b563cae4cb8b743ca1d10 *R/pattern.GDM1.r
+bd2d1de8c40d4b28a18bf28ebbeac44c *R/pattern.GDM1.r
 a371fd01af3e13cec2f9a59d2c8e52cf *R/pattern.GDM2.r
-5b1c7f1c6ea3eef046b49908f81dec84 *R/replication.Mod.r
+5d2541f772b8222ebe09a36bb1203769 *R/replication.Mod.r
 5eb2ebf4c01f66c5641c1428aafa6465 *R/reszta.r
 064090e876a567d91b51417cac48040a *R/shapes.r
 8035e436226d4d350a5252884d843804 *R/speccl.r
@@ -46,7 +46,7 @@ dece74da8ef10a442efd785575659188 *inst/doc/HINoVMod_details.pdf
 bf793ff79de5f0776a01f711cae2f978 *inst/doc/clusterGen_details.pdf
 9339b051bc7c0e7fdbdab9db8993c204 *inst/doc/clusterSim_details.pdf
 19c7ab45ab5a7bfe18b10db05a8a478f *inst/doc/comparingPartitions_details.pdf
-51eeea380c5ed4a5b4182b911fd34405 *inst/doc/dataNormalization_details.pdf
+b51a0d6929db31f907b710bb1c026ea4 *inst/doc/dataNormalization_details.pdf
 bc74454f03677872a6dcf25cd26d36cb *inst/doc/distBC_details.pdf
 3cc882fed7883d46a8adb8d23047023a *inst/doc/distGDM_details.pdf
 4992b6cddfe4f22b5411a38c558188d6 *inst/doc/distSM_details.pdf
@@ -59,7 +59,7 @@ d0261326feb9fc7d5ea279f5d0fed012 *inst/doc/indexG2_details.pdf
 15b8ab6e8d420654c74d5bfe8fe4e935 *inst/doc/indexKL_details.pdf
 959e6a0ac04c5659d853bd41064d2414 *inst/doc/indexS_details.pdf
 a70013aa728e5011dccd8c6d79fd0016 *inst/doc/ordinalToMetric_details.pdf
-e0dc71e109347bc1ffbd5c4a87c13b8e *inst/doc/patternGDM1_details.pdf
+5bed91a667dc8d7c09651ee7be1259e4 *inst/doc/patternGDM1_details.pdf
 e6560b44ae6a216f83f07ea30aa847bc *inst/doc/patternGDM2_details.pdf
 09e1d54014243b78cbc934f7299f6411 *inst/doc/replicationMod_details.pdf
 580f8b1c962b5a83b59d95e95017a92e *inst/doc/speccl_details.pdf
@@ -69,7 +69,7 @@ a51e1016982a139c36a3bd101aa5eab1 *man/HINoV.Symbolic.rd
 7bdcf623487083355dd305722e78608e *man/cluster.Gen.rd
 59fb62346fac166938072f1a02edff36 *man/cluster.Sim.rd
 b20c0b435be667bd59976585eb3526b9 *man/comparing.Partitions.rd
-a383f0927da98773a7bbe8da3625d986 *man/data.Normalization.rd
+702967be3f09bee8e4b5cf83fb2e8c8b *man/data.Normalization.rd
 2040220436f6d5d9b3a9358fddbe202d *man/data_binary.rd
 d24462f6e31b59186b12ddc2ee23a022 *man/data_interval.rd
 3a3bac047f93a466319f1f3dec2dde7d *man/data_mixed.rd
@@ -93,12 +93,12 @@ bd26257ebbb40dc403fb1f8f3a450101 *man/index.G3.rd
 5ce42a75d732a1e6a7e53c99e7a71683 *man/index.S.rd
 9dc2598bb9768492963bf32a8a02d1e9 *man/initial.Centers.rd
 d7b8d61dbcdaf051ca686ed37e24d362 *man/ordinalToMetric.rd
-03fd29c424808a406e32d679ca4f663a *man/pattern.GDM1.rd
+8150125373eafbf3811e59dbc9b22cbe *man/pattern.GDM1.rd
 a12bec9d6f2fda0ecb57ac93842d35a6 *man/pattern.GDM2.rd
 5d87c09a00f19867f966361d4bb9b0db *man/plotCategorial.rd
 2554f5fd7d76aa636fca87b3161ad931 *man/plotCategorial3d.rd
 af0e6ed3771683b399181362e8542bbf *man/plotInterval.rd
-5577f29a2628499f1203ac1b4c1daaf5 *man/replication.Mod.rd
+ba9ed1481c679a9c3b261f5c4b42c127 *man/replication.Mod.rd
 fe303e18cef906ed9cd5a9702da65ec8 *man/shapes.blocks3d.rd
 4d2fe14ea8e6a759b02e60283d970c43 *man/shapes.circles2.rd
 bc468c0485ce42cb679d80174b59be5b *man/shapes.circles3.rd

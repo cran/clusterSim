@@ -12,11 +12,15 @@ replication.Mod(x, v="m", u=2, centrotypes="centroids",
 \item{v}{type of data: metric ("r" - ratio, "i" - interval, "m" - mixed), nonmetric ("o" - ordinal, "n" - multi-state nominal, "b" - binary)}
 \item{u}{number of clusters given arbitrary}
 \item{centrotypes}{"centroids" or "medoids"}
-\item{normalization}{optional, normalization formulas for metric data:
+\item{normalization}{optional, normalization formulas for metric data (normalization by variable):
 
-for ratio data: "n0" - without normalization, "n6" - (x/sd), "n7" - (x/range), "n8" - (x/max), "n9" - (x/mean), "n10" - (x/sum), "n11" - x/sqrt(SSQ)
+for ratio data: "n0" - without normalization, "n6" - (x/sd), "n6a" - (x/mad), "n7" - (x/range), "n8" - (x/max), "n9" - (x/mean),
+"n9a" - (x/median), "n10" - (x/sum), "n11" - x/sqrt(SSQ)
 
-for interval or mixed data: "n0" - without normalization, "n1" - (x-mean)/sd, "n2" - (x-Me)/MAD, "n3" - (x-mean)/range, "n4" - (x-min)/range, "n5" - (x-mean)/max[abs(x-mean)]}
+for interval or mixed data: "n0" - without normalization, "n1" - (x-mean)/sd, "n2" - (x-median)/mad, "n3" - (x-mean)/range, "n3a" - positional unitization (x-median)/range,
+"n4" - (x-min)/range, "n5" - (x-mean)/max[abs(x-mean)], "n5a" - (x-median)/max[abs(x-median)], "n12" - normalization (x - mean)/(sum(x - mean)^2)^0.5,
+"n12a" - positional normalization (x - median)/(sum(x - median)^2)^0.5
+}
 \item{distance}{distance measures
 
 NULL for "kmeans" method (based on data matrix),
@@ -81,8 +85,7 @@ print(w)
 
 library(clusterSim)
 data(data_binary)
-replication.Mod(data_binary,"b", u=2, "medoids", NULL,"b1",
-"pam", fixedAsample=c(1,3,6,7))
+replication.Mod(data_binary,"b", u=2, "medoids", NULL,"b1", "pam", fixedAsample=c(1,3,6,7))
 }
 \keyword{cluster}
 \keyword{multivariate}

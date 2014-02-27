@@ -29,7 +29,7 @@ nominalTransfMethod=NULL)
  
 "different2" - vector of different weights should satisfy conditions: each weight takes value from interval [0; m] and sum of weights equals m (m - the number of variables)
 }
-\item{normalization}{normalization method "n0" - "n11" as in \code{data.Normalization} function}
+\item{normalization}{normalization formulas as in \code{data.Normalization} function}
 \item{weights}{vector of weights}
 \item{patternType}{"upper" - ideal point co-ordinates consists of the best variables' values
 
