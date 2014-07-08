@@ -42,6 +42,8 @@ n12 - normalization ((x-mean)/sqrt(sum((x-mean)^2)))
 
 n12a - positional normalization ((x-median)/sqrt(sum((x-median)^2)))
 
+n13 - normalization with zero being the central point ((x-midrange)/(range/2))
+
 \item{normalization}{"column" - normalization by variable, "row" - normalization by object}
 
 }

@@ -1,4 +1,4 @@
-d8841b9bbc36a3b561a849a949842855 *DESCRIPTION
+f7eeb3e52c0bc7f3e6a4c394bd065bdf *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 52e86cdaa77ea46c1d0b6a18200f2848 *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -9,7 +9,7 @@ dd6a3997973fbcf85dd727aaf4cd6254 *R/Last.Lib.r
 ad2c0e261081b29f2e4da99743a6f44c *R/cluster.Gen.r
 cd37ff292b79dc05d4d4b25749c60b13 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
-a4f8afe1e6721b661ea015dec956e313 *R/data.Normalization.r
+215dca7fe109b3bc013ef2997ba3759e *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
 3aacb76111209294e82301664ad95b6f *R/dist.GDM.r
 e7fbf99ccaf6f22515517cee1013d6bb *R/dist.SM.r
@@ -30,14 +30,14 @@ a371fd01af3e13cec2f9a59d2c8e52cf *R/pattern.GDM2.r
 5eb2ebf4c01f66c5641c1428aafa6465 *R/reszta.r
 064090e876a567d91b51417cac48040a *R/shapes.r
 8035e436226d4d350a5252884d843804 *R/speccl.r
-29d7edc27200664b8bfe560a800d85f3 *data/data_binary.rda
-1e94e29c61a5586e002cb4f16a0d2431 *data/data_interval.rda
-845f709b02d35456380c6ab07ba54ed3 *data/data_mixed.rda
-cadb0ee8a09f59062c54279e876a4af3 *data/data_nominal.rda
-93b6a4c3221e669aacc7c16c99553b59 *data/data_ordinal.rda
+f930c11e41e2fc1d5e8df3cf507eec5f *data/data_binary.rda
+d16256db1beaea25810b67fa802de069 *data/data_interval.rda
+47c64372fcbe6a78630e764242221e5d *data/data_mixed.rda
+1dc248c77e9d7124681a3f56d864c3b8 *data/data_nominal.rda
+b0e2c3f1195a55d79e613002fbd3f555 *data/data_ordinal.rda
 09709ce20af5026336165e160315e20a *data/data_patternGDM1.rda
 295a54a5dcc60a028a8f72fd322e89b5 *data/data_patternGDM2.rda
-a8540413aef7e3d886f8e7cb44f27af3 *data/data_ratio.rda
+513753886fb3928e58064fa620cc0803 *data/data_ratio.rda
 9d4ff0e2a462ceca96bd636812ed910c *data/data_symbolic.rda
 c572ba4f2d51481225990217afe09374 *inst/csv/symbolic.csv
 dece74da8ef10a442efd785575659188 *inst/doc/HINoVMod_details.pdf
@@ -46,7 +46,7 @@ dece74da8ef10a442efd785575659188 *inst/doc/HINoVMod_details.pdf
 bf793ff79de5f0776a01f711cae2f978 *inst/doc/clusterGen_details.pdf
 9339b051bc7c0e7fdbdab9db8993c204 *inst/doc/clusterSim_details.pdf
 19c7ab45ab5a7bfe18b10db05a8a478f *inst/doc/comparingPartitions_details.pdf
-b51a0d6929db31f907b710bb1c026ea4 *inst/doc/dataNormalization_details.pdf
+6146d61fec7824b29fab5f6470396fe1 *inst/doc/dataNormalization_details.pdf
 bc74454f03677872a6dcf25cd26d36cb *inst/doc/distBC_details.pdf
 3cc882fed7883d46a8adb8d23047023a *inst/doc/distGDM_details.pdf
 4992b6cddfe4f22b5411a38c558188d6 *inst/doc/distSM_details.pdf
@@ -69,7 +69,7 @@ a51e1016982a139c36a3bd101aa5eab1 *man/HINoV.Symbolic.rd
 7bdcf623487083355dd305722e78608e *man/cluster.Gen.rd
 59fb62346fac166938072f1a02edff36 *man/cluster.Sim.rd
 b20c0b435be667bd59976585eb3526b9 *man/comparing.Partitions.rd
-702967be3f09bee8e4b5cf83fb2e8c8b *man/data.Normalization.rd
+ced900a5aa561c49464d17b04214c37b *man/data.Normalization.rd
 2040220436f6d5d9b3a9358fddbe202d *man/data_binary.rd
 d24462f6e31b59186b12ddc2ee23a022 *man/data_interval.rd
 3a3bac047f93a466319f1f3dec2dde7d *man/data_mixed.rd
