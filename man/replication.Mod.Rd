@@ -19,7 +19,7 @@ for ratio data: "n0" - without normalization, "n6" - (x/sd), "n6a" - (x/mad), "n
 
 for interval or mixed data: "n0" - without normalization, "n1" - (x-mean)/sd, "n2" - (x-median)/mad, "n3" - (x-mean)/range, "n3a" - positional unitization (x-median)/range,
 "n4" - (x-min)/range, "n5" - (x-mean)/max[abs(x-mean)], "n5a" - (x-median)/max[abs(x-median)], "n12" - normalization (x - mean)/(sum(x - mean)^2)^0.5,
-"n12a" - positional normalization (x - median)/(sum(x - median)^2)^0.5
+"n12a" - positional normalization (x - median)/(sum(x - median)^2)^0.5, "n13" - normalization with zero being the central point ((x-midrange)/(range/2))
 }
 \item{distance}{distance measures
 
@@ -35,7 +35,7 @@ for multi-state nominal: "d9" - Sokal & Michener
 
 for binary data: "b1" = Jaccard; "b2" = Sokal & Michener; "b3" = Sokal & Sneath (1); "b4" = Rogers & Tanimoto; "b5" = Czekanowski; "b6" = Gower & Legendre (1); "b7" = Ochiai; "b8" = Sokal & Sneath (2); "b9" = Phi of Pearson; "b10" = Gower & Legendre (2)
 }
-\item{method}{clustering method: "kmeans" (default), "single", "complete", "average", "mcquitty", "median", "centroid", "ward", "pam", "diana"}
+\item{method}{clustering method: "kmeans" (default), "single", "complete", "average", "mcquitty", "median", "centroid", "ward.D", "ward.D2", "pam", "diana"}
 \item{S}{the number of simulations used to compute mean corrected Rand index}
 \item{fixedAsample}{if NULL \emph{A} sample is generated randomly, otherwise this parameter contains object numbers arbitrarily assigned to \emph{A} sample}
 }

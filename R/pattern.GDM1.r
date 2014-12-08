@@ -6,7 +6,7 @@ pattern.GDM1<-function (data, performanceVariable, scaleType = "i", nomOptValues
     data <- as.matrix(data)
     pdata <- data
     normalizations <-  c("n0", "n1", "n2", "n3", "n3a", "n4", "n5", "n5a", "n6",
-           "n6a", "n7", "n8", "n9", "n9a", "n10", "n11", "n12", "n12a")
+           "n6a", "n7", "n8", "n9", "n9a", "n10", "n11", "n12", "n12a", "n13")
     for (v in performanceVariable) {
         if (sum(v == c("s", "n", "d")) == 0) 
             stop("performance variable should be one of the following: s-stimuli,d-destimuli or n-nominant variable")

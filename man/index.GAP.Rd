@@ -12,7 +12,7 @@ or
 "pc" - generate the reference variables from a uniform distribution over a box aligned with the principal components of the data. In detail, if $X=\{x_{ij}\}$  is our   n x m data matrix, assume that the columns have mean 0 and compute the singular value decomposition $X=UDV^T$. We transform via $X'=XV$ and then draw uniform features Z'  over the ranges of the columns of X' , as in method a) above. Finally we back-transform via $Z=Z'V^T$   to give reference data Z 
 }
 \item{B}{the number of simulations used to compute the gap statistic}
-\item{method}{the cluster analysis method to be used. This should be one of: "ward", "single", "complete", "average", "mcquitty", "median", "centroid", "pam", "k-means","diana"}
+\item{method}{the cluster analysis method to be used. This should be one of: "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid", "pam", "k-means","diana"}
 \item{d}{optional distance matrix, used for calculations if centrotypes="medoids"}
 \item{centrotypes}{"centroids" or "medoids"}
 }

@@ -21,7 +21,7 @@ for ratio data: "d1" - Manhattan, "d2" - Euclidean, "d3" - Chebychev (max), "d4"
 for interval or mixed (ratio & interval) data: "d1", "d2", "d3", "d4", "d5"}
 \item{method}{NULL for nonmetric data
 
-clustering method: "kmeans" (default) , "single", "ward", "complete", "average", "mcquitty", "median", "centroid", "pam"}
+clustering method: "kmeans" (default) , "single", "ward.D", "ward.D2", "complete", "average", "mcquitty", "median", "centroid", "pam"}
 \item{Index}{"cRAND" - corrected Rand index (default); "RAND" - Rand index}
 }
 \details{

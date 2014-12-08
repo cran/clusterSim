@@ -3,7 +3,7 @@ replication.Mod<-function (x, v = "m", u = 2, centrotypes = "centroids", normali
 {
     short2LongName <- function(value, fullName = FALSE) {
         longMethods <- c("single", "complete", "average", "mcquitty", 
-            "pam", "ward", "centroid", "median", "k-means", "diana")
+            "pam", "ward.D", "ward.D2", "centroid", "median", "k-means", "diana")
         longDistances <- c("manhattan", "minkowski", "maximum", 
             "euclidean", "gdm1", "canberra", "bc", "gdm2", "sm")
         fullDistances <- c("Manhattan", "Euclidean", "Chebyschev", 
@@ -52,7 +52,7 @@ replication.Mod<-function (x, v = "m", u = 2, centrotypes = "centroids", normali
                 (nrow(x) - 1))
     }
     normalizationsr <- c("n0", "n6", "n6a", "n7", "n8", "n9", "n9a", "n10", "n11")
-    normalizationsi <- c("n0", "n1", "n2", "n3", "n3a", "n4", "n5", "n5a", "n12", "n12a")
+    normalizationsi <- c("n0", "n1", "n2", "n3", "n3a", "n4", "n5", "n5a", "n12", "n12a","n13")
     if (!is.null(normalization)) {
         if (sum(types[1:3] == v) == 0) {
             if (normalization != "n0") {
@@ -144,7 +144,7 @@ replication.Mod<-function (x, v = "m", u = 2, centrotypes = "centroids", normali
                 if ((((distance == "bc" || distance == "canberra") && 
                   (normalization == "n1" || normalization == 
                     "n2" || normalization == "n3" || normalization == "n3a" || normalization == "n4" || normalization == "n5" ||
-                    normalization == "n5a" || normalization == "n12" || normalization == "n12a")))) {
+                    normalization == "n5a" || normalization == "n12" || normalization == "n12a"|| normalization == "n13")))) {
                   stop("for  Bray - Curtis and Canberra distances n1-n5 normalizations cannot be used")
                 }
             if (distance == "gdm1") {

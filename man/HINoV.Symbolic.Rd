@@ -10,7 +10,7 @@ HINoV.Symbolic(x, u=NULL, distance="H", method = "pam",
 \item{x}{symbolic interval data: a 3-dimensional table, first dimension represents object number, second dimension - variable number, and third dimension contains lower- and upper-bounds of intervals}
 \item{u}{number of clusters}
 \item{distance}{"M" - minimal distance between all vertices of hyper-cubes defined by symbolic interval variables; "H" - Hausdorff distance; "S" - sum of squares of distance between all vertices of hyper-cubes defined by symbolic interval variables }
-\item{method}{clustering method: "single", "ward", "complete", "average", "mcquitty", "median", "centroid", "pam" (default)}
+\item{method}{clustering method: "single", "ward.D", "ward.D2", "complete", "average", "mcquitty", "median", "centroid", "pam" (default)}
 \item{Index}{"cRAND" - corrected Rand index (default); "RAND" - Rand index}
 }
 \details{

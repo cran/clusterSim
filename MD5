@@ -1,4 +1,4 @@
-f7eeb3e52c0bc7f3e6a4c394bd065bdf *DESCRIPTION
+c1f8af2708908ce4455c524bf83681f4 *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 52e86cdaa77ea46c1d0b6a18200f2848 *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -24,9 +24,9 @@ ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
 aa36304f71439adc9f863824e299f965 *R/index.KL.r
 c76b0445fb1e7c96cc32d19b0c2c14db *R/index.S.r
 d7675724015c95dcde7b7f4b035d7071 *R/ordinalToMetric.r
-bd2d1de8c40d4b28a18bf28ebbeac44c *R/pattern.GDM1.r
+58b9bbb899315080a4450956e108bf41 *R/pattern.GDM1.r
 a371fd01af3e13cec2f9a59d2c8e52cf *R/pattern.GDM2.r
-5d2541f772b8222ebe09a36bb1203769 *R/replication.Mod.r
+f5230d09d077bc09a8ec59936f93ced9 *R/replication.Mod.r
 5eb2ebf4c01f66c5641c1428aafa6465 *R/reszta.r
 064090e876a567d91b51417cac48040a *R/shapes.r
 8035e436226d4d350a5252884d843804 *R/speccl.r
@@ -63,13 +63,13 @@ a70013aa728e5011dccd8c6d79fd0016 *inst/doc/ordinalToMetric_details.pdf
 e6560b44ae6a216f83f07ea30aa847bc *inst/doc/patternGDM2_details.pdf
 09e1d54014243b78cbc934f7299f6411 *inst/doc/replicationMod_details.pdf
 580f8b1c962b5a83b59d95e95017a92e *inst/doc/speccl_details.pdf
-916cace5db0d6ed46eaed6f2e6639cd2 *man/HINoV.Mod.rd
-a51e1016982a139c36a3bd101aa5eab1 *man/HINoV.Symbolic.rd
+0b1aa875dea470755d50b27b4484a321 *man/HINoV.Mod.rd
+0360bc93ab2b1dc21aceb5162f0ecb72 *man/HINoV.Symbolic.rd
 4f58fee40c6c21c2d954450879255373 *man/cluster.Description.rd
 7bdcf623487083355dd305722e78608e *man/cluster.Gen.rd
 59fb62346fac166938072f1a02edff36 *man/cluster.Sim.rd
 b20c0b435be667bd59976585eb3526b9 *man/comparing.Partitions.rd
-ced900a5aa561c49464d17b04214c37b *man/data.Normalization.rd
+be2ec70c4fb5e363aa99a42303d32799 *man/data.Normalization.rd
 2040220436f6d5d9b3a9358fddbe202d *man/data_binary.rd
 d24462f6e31b59186b12ddc2ee23a022 *man/data_interval.rd
 3a3bac047f93a466319f1f3dec2dde7d *man/data_mixed.rd
@@ -87,7 +87,7 @@ c0768fd44020c72c334d20099a65a77f *man/dist.Symbolic.rd
 d697e56473a171bd0c25569d9f8a00ec *man/index.G1.rd
 1a9c46054949e053e4579fda9c1e3a1a *man/index.G2.rd
 bd26257ebbb40dc403fb1f8f3a450101 *man/index.G3.rd
-5cd340f8a8b40f8bc4a9157c9a55447e *man/index.GAP.rd
+a72b4ae2186eeab240ca47cdcf424eab *man/index.GAP.rd
 946bfcd423efc66bc4d51e0371747463 *man/index.H.rd
 8f892dc60e6f3c2137123a30712048b0 *man/index.KL.rd
 5ce42a75d732a1e6a7e53c99e7a71683 *man/index.S.rd
@@ -98,7 +98,7 @@ a12bec9d6f2fda0ecb57ac93842d35a6 *man/pattern.GDM2.rd
 5d87c09a00f19867f966361d4bb9b0db *man/plotCategorial.rd
 2554f5fd7d76aa636fca87b3161ad931 *man/plotCategorial3d.rd
 af0e6ed3771683b399181362e8542bbf *man/plotInterval.rd
-ba9ed1481c679a9c3b261f5c4b42c127 *man/replication.Mod.rd
+f537f0a724c18996a9343fccf23b4465 *man/replication.Mod.rd
 fe303e18cef906ed9cd5a9702da65ec8 *man/shapes.blocks3d.rd
 4d2fe14ea8e6a759b02e60283d970c43 *man/shapes.circles2.rd
 bc468c0485ce42cb679d80174b59be5b *man/shapes.circles3.rd
