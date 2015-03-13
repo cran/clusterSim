@@ -9,7 +9,7 @@
 \item{singleObject}{0 - s(i)=0 or 1 - s(i)=1. When cluster contains a single object, it is unclear how a(i) of Silhouette index should be defined (see Kaufman & Rousseeuw (1990), p. 85).}
 }
 \details{
-See file \url{../doc/indexS_details.pdf} for further details
+See file \$R\_HOME\\library\\clusterSim\\pdf\\indexS\_details.pdf for further details
 }
 \value{
 calculated Silhouette index

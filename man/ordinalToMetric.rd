@@ -31,10 +31,11 @@ Jajuga, K., Walesiak, M., Bak, A. (2003), \emph{On the general distance measure}
 
 Walesiak, M. (1993), \emph{Statystyczna analiza wielowymiarowa w badaniach marketingowych [Multivariate statistical analysis in marketing research]}. Wroclaw University of Economics, Research Papers no. 654.
 
-Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, Argumenta Oeconomica, No. 2 (8), 167-173.
+Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173.
 
 Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
-Walesiak, M. (2014), \emph{Wzmacnianie skali pomiaru dla danych porządkowych w statystycznej analizie wielowymiarowej [Reinforcing measurement scale for ordinal data in multivariate statistical analysis]}, Prace Naukowe Uniwersytetu Ekonomicznego we Wroclawiu, Taksonomia 22.
+
+Walesiak, M. (2014), \emph{Wzmacnianie skali pomiaru dla danych porządkowych w statystycznej analizie wielowymiarowej [Reinforcing measurement scale for ordinal data in multivariate statistical analysis]}, Taksonomia 22, Prace Naukowe Uniwersytetu Ekonomicznego we Wrocławiu no. 327, 60-68.
 }
 
 \seealso{

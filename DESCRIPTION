@@ -1,39 +1,17 @@
 Package: clusterSim
-Title: Searching for optimal clustering procedure for a data set
-Version: 0.44-1
-Date: 2014-12-08
+Title: Searching for Optimal Clustering Procedure for a Data Set
+Version: 0.44-2
+Date: 2015-03-13
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl> Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: cluster, MASS
 Imports: ade4, e1071, rgl, R2HTML
 Suggests: mlbench
-Description: GDM Distance, 
-	Sokal-Michener Distance, 
-	Bray-Curtis Distance, 
-	Calinski-Harabasz Index, 
-	G2 Index, 
-	G3 Index, 
-	Silhouette Index, 
-	Krzanowski-Lai Index, 
-	Hartigan Index, 
-	Gap Index, 
-	DB Index, 
-	Data Normalization, 
-	HINoV method, 
-	Replication analysis for cluster validation, 
-  Clustering with several algorithms, distances,
-  Symbolic interval distances,
-  Plot functions, 
-  Random cluster generation, 
-  Linear ordering methods, 
-  Comparing partitions, 
-  Spectral clustering,
-  Ordinal to metric scale transformation,
-  Untypical data generation.
+Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for symbolic interval-valued data), cluster quality indices (Calinski-Harabasz, Baker-Hubert, Hubert-Levine, Silhouette, Krzanowski-Lai, Hartigan, Gap,	Davies-Bouldin),	data normalization formulas, data generation (typical and non-typical data), HINoV method,	replication analysis, linear ordering methods, spectral clustering, agreement indices between two partitions, plot functions (for categorial and symbolic interval-valued data).
 License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
-Packaged: 2014-12-08 17:55:14 UTC; andrzej
 NeedsCompilation: yes
+Packaged: 2015-03-13 22:34:33 UTC; Andrzej
 Repository: CRAN
-Date/Publication: 2014-12-09 10:10:15
+Date/Publication: 2015-03-14 08:09:54

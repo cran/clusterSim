@@ -20,7 +20,7 @@ given by symbolic objects with interval-valued variables)
 \item{power}{parameter (q) for calculating Ichino and Yaguchi distance}
 }
 \details{
-See file \url{../doc/distSymbolic_details.pdf} for further details
+See file \$R\_HOME\\library\\clusterSim\\pdf\\distSymbolic\_details.pdf for further details
 }
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 

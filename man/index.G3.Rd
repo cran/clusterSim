@@ -8,7 +8,7 @@
 \item{cl}{A vector of integers indicating the cluster to which each object is allocated}
 }
 \details{
-See file \url{../doc/indexG3_details.pdf} for further details
+See file \$R\_HOME\\library\\clusterSim\\pdf\\indexG3\_details.pdf for further details
 }
 \value{
 calculated G3 index

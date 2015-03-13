@@ -55,12 +55,17 @@ res[,1] <- min_nc:max_nc
 clusters <- NULL
 for (nc in min_nc:max_nc)
 {
-cl1 <- pam(md, nc-1, diss=TRUE)
-cl2 <- pam(md, nc, diss=TRUE)
-cl3 <- pam(md, nc+1, diss=TRUE)
-clall<- cbind(cl1$clustering, cl2$clustering, cl3$clustering)
-res[nc-min_nc+1,2] <- KL <- index.KL(data_ratio,clall,centrotypes="centroids")
-clusters <- rbind(clusters, cl2$cluster)
+  if(nc-1==1){
+    clustering1<-rep(1,nrow(data_ratio))
+  }
+  else{
+    clustering1 <- pam(md, nc-1, diss=TRUE)$clustering
+  }
+  clustering2 <- pam(md, nc, diss=TRUE)$clustering
+  clustering3 <- pam(md, nc+1, diss=TRUE)$clustering
+  clall<- cbind(clustering1, clustering2, clustering3)
+  res[nc-min_nc+1,2] <- KL <- index.KL(data_ratio,clall,centrotypes="centroids")
+  clusters <- rbind(clusters, clustering2)
 } 
 print(paste("max KL for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
 print("clustering for max KL")
@@ -81,12 +86,17 @@ res[,1] <- min_nc:max_nc
 clusters <- NULL
 for (nc in min_nc:max_nc)
 {
-cl1 <- pam(md, nc-1, diss=TRUE)
-cl2 <- pam(md, nc, diss=TRUE)
-cl3 <- pam(md, nc+1, diss=TRUE)
-clall<- cbind(cl1$clustering, cl2$clustering, cl3$clustering)
-res[nc-min_nc+1,2] <- KL <- index.KL(data_ratio,clall,d=md,centrotypes="medoids")
-clusters <- rbind(clusters, cl2$cluster)
+  if(nc-1==1){
+    clustering1<-rep(1,nrow(data_ratio))
+  }
+  else{
+    clustering1 <- pam(md, nc-1, diss=TRUE)$clustering
+  }
+  clustering2 <- pam(md, nc, diss=TRUE)$clustering
+  clustering3 <- pam(md, nc+1, diss=TRUE)$clustering
+  clall<- cbind(clustering1, clustering2, clustering3)
+  res[nc-min_nc+1,2] <- KL <- index.KL(data_ratio,clall,d=md,centrotypes="medoids")
+  clusters <- rbind(clusters, clustering2)
 } 
 print(paste("max KL for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
 print("clustering for max KL")

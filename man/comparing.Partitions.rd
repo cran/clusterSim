@@ -9,7 +9,7 @@
 \item{type}{"rand" - for Rand index, "crand" - for adjusted Rand index or "nowak" for Nowak index}
 }
 \details{
-See file \url{../doc/comparingPartitions_details.pdf} for further details.
+See file \$R\_HOME\\library\\clusterSim\\pdf\\comparingPartitions\_details.pdf for further details.
 
 Rand and adjusted Rand indices uses \code{classAgreement} function from \code{e1071} library.
 }
