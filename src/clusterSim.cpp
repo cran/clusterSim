@@ -161,7 +161,7 @@ extern "C" void   fng2(double * within , int * nwithin, double * between , int *
 	if ((*nwithin)*(*nbetween)==rowne)
 		wynik[0]=0;
 	else
-		wynik[0]=(2.0*s)/((*nwithin)*(*nbetween)-rowne)-1.0;
+		wynik[0]=(2.0*s)/((double)(*nwithin)*(*nbetween)-rowne)-1.0;
 	return;
 }
 
