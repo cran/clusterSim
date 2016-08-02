@@ -12,5 +12,12 @@ import(
   R2HTML,
   MASS
 )
-
+importFrom("modeest", "mfv")
+importFrom("grDevices", "rainbow")
+importFrom("graphics", "Axis", "box", "lines", "mtext", "par", "plot",
+           "points", "strwidth", "text")
+importFrom("stats", "as.dist", "as.hclust", "cutree", "dist", "hclust",
+           "kmeans", "mad", "median", "na.omit", "rnorm", "runif",
+           "sd", "var")
+importFrom("utils", "read.csv", "read.csv2", "write.table")
 useDynLib(clusterSim)

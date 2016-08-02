@@ -27,7 +27,7 @@ Third dimension contains number from 1 to 5:
 
 4 - median absolute deviation (mad) 
 
-5 - mode (value of the variable which has the largest observed frequency. If several are tied, the N.A. value is returned. This formula is applicable for nominal and ordinal data only). 
+5 - mode (value of the variable which has the largest observed frequency. This formula is applicable for nominal and ordinal data only). 
 
 For example: 
 

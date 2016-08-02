@@ -2,42 +2,7 @@ cluster.Description <-function(x, cl,sdType="sample")
 {
 modalValue<-function(t)
 {		
-	len<-length(t)
-	ile<-0
-	aggregated<-array(NA,c(len,2))
-	for(ii in 1:len)
-	{
-		found<-FALSE
-		if (ile!=0)
-		for (kk in 1:ile)
-		{
-			if (as.double(t[ii])==as.double(aggregated[kk,1]))
-			{
-				found<-TRUE
-				aggregated[kk,2]<-aggregated[kk,2]+1
-			}
-		}
-		if (! found)
-		{
-			ile<-ile+1
-			aggregated[ile,1]<-t[ii]	
-			aggregated[ile,2]<-1	
-		}				
-	}	
-	if (ile==0)
-		NA
-	else
-	if(ile==1)
-		aggregated[1,1]
-	else
-	{
-		aggregated<-aggregated[1:ile,]
-		maxCount<-max(aggregated[,2])
-		if (sum(aggregated[,2]==maxCount)==1)
-			aggregated[aggregated[,2]==maxCount,1]		
-		else
-			NA				
-	}
+  paste(mfv(t),collapse=",")
 }
 	if (sdType!="sample" && sdType!="population")
 		stop("sdType parameter should be one of two values: sample or population")

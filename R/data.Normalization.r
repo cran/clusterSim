@@ -185,5 +185,14 @@ data.Normalization<-function (x, type = "n0", normalization = "column")
     else if (!is.numeric(resul <- x)) 
         warning("Data not numeric, normalization not applicable")
     else stop("unknown input type")
+    if (is.numeric(t <- x)) {
+      if(sum(as.numeric(x)<=0)>0){
+        if(type=="n6" || type=="n6a" || type=="n7" || type=="n8" || type=="n9" || type=="n9a" || type=="n10" || type=="n11"){
+          warning("Data for this kind of normalization should be positive")
+        }
+      }
+    }
+
+
     resul
 }

@@ -319,6 +319,8 @@ cluster.Gen<-function(numObjects=50,means=NULL,cov=NULL, fixedCov=TRUE, model=1,
 		numberOfCategories<-rep(numberOfCategories,ncol(means)+noisyVariables)
 		}
 	}
+  #fixes false warning when outliers are generated
+  row.names(gM)<-NULL
 	if (scale=="m")
 	{
 		resul<-data.frame(gM)
