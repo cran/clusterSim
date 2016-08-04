@@ -56,7 +56,7 @@ index.DB<-function(x,cl,d=NULL,centrotypes="centroids",p=2,q=2){
       centerI<-centers[i,]
       centerI<-rep(centerI,sum(ind))
       centerI<-matrix(centerI,nrow=sum(ind),ncol=ncol(x),byrow=TRUE)
-      S[i] <- (sum(sqrt(apply(abs(x[ind,] - centerI),1,sum))^q)^(1/q))/length(ind)
+      S[i] <- mean(sqrt(apply((x[ind,] - centerI)^2,1,sum))^q)^(1/q)
     }
     else
       S[i] <- 0                         
@@ -74,3 +74,4 @@ index.DB<-function(x,cl,d=NULL,centrotypes="centroids",p=2,q=2){
   resul<-list(DB=DB,r=r,R=R,d=M,S=S,centers=centers)
   resul
 }
+
