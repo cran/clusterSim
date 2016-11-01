@@ -3,12 +3,14 @@
 \title{Descriptive statistics calculated separately for each cluster and variable}
 \description{Descriptive statistics calculated separately for each cluster and variable: arithmetic mean and standard deviation, median and median absolute deviation, mode }
 \usage{
-cluster.Description(x, cl, sdType="sample")
+cluster.Description(x, cl, sdType="sample",precission=4,modeAggregationChar=";")
 }
 \arguments{
 \item{x}{matrix or dataset}
 \item{cl}{a vector of integers indicating the cluster to which each object is allocated}
 \item{sdType}{type of standard deviation: for "sample" (n-1) or for "population" (n)}
+\item{precission}{Number of digits on the right side of decimal mark sign}
+\item{modeAggregationChar}{Character used for aggregation of mode values (if more than one value of mode appear in variable)}
 }
 \value{
 Three-dimensional array: 

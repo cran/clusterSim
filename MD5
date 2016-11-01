@@ -1,11 +1,11 @@
-4bc2629bbedc09d9456a408f7d12159b *DESCRIPTION
+8c6cec48c472e666ef563b2d7d5458d4 *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 a0a4d52c233ba8443abd6de83f5cc06d *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
 43b7ada16895a49d60c679419f7d8f28 *R/HINoV.Mod.r
 291ac554dd129e54d1ba942fd0dc52e7 *R/HINoV.Symbolic.r
 dd6a3997973fbcf85dd727aaf4cd6254 *R/Last.Lib.r
-c5d88a86590edc05368d5ff2792b4cf4 *R/cluster.Description.r
+a891661310169603f105e4700d0b19a8 *R/cluster.Description.r
 35d33a895d75804dda9843f6f2e65b18 *R/cluster.Gen.r
 cd37ff292b79dc05d4d4b25749c60b13 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
@@ -87,7 +87,7 @@ a50520917ec364adebd007c99545d6c9 *inst/pdf/replicationMod_details.pdf
 a500585bc4ab275a6598df241d83d2e0 *inst/pdf/speccl_details.pdf
 0b1aa875dea470755d50b27b4484a321 *man/HINoV.Mod.rd
 0360bc93ab2b1dc21aceb5162f0ecb72 *man/HINoV.Symbolic.rd
-0c53dc0ce051288d13b965fb02d8a28a *man/cluster.Description.rd
+51b5696f4aa3e2c1c823490a7e68e8a3 *man/cluster.Description.rd
 69c15cf1b51bf02e81cf52559796b844 *man/cluster.Gen.rd
 59fb62346fac166938072f1a02edff36 *man/cluster.Sim.rd
 2eb45600e1239461cc52bcbffa6931e6 *man/comparing.Partitions.rd
@@ -129,3 +129,6 @@ bc468c0485ce42cb679d80174b59be5b *man/shapes.circles3.rd
 e4b5dfa7846e783d346452b1d7d86c3f *man/speccl.rd
 75f47ba74bfcdd4c58c3e38172f7645b *src/clusterSim.cpp
 553e8b33df9ab877d5b4a51bdff54db1 *src/clusterSim.h
+7c80fd91c1fedf630db43d0f58ab7899 *tests/testthat.R
+1ca622d14689eb73a8cd89226558209a *tests/testthat/test_comparing.R
+5572046b0b7774467efa667d543c0b2d *tests/testthat/test_db.R
