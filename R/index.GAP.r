@@ -40,6 +40,9 @@ pcsim<-function(X,d,centrotypes) {
 	}
 	return(Xt) 
 }
+  if(method=="ward"){
+    method="ward.D"
+  }
   if(is.null(dim(x))){
     dim(x)<-c(length(x),1)
   }
@@ -65,7 +68,7 @@ pcsim<-function(X,d,centrotypes) {
 			else if(method=="diana")
 			pp2<-cutree(as.hclust(diana(dist(Xnew))),k=ClassNr)
 			else if (method=="single" || method=="complete"
-			|| method=="average" || method=="ward"
+			|| method=="average" || method=="ward" || method=="ward.D" || method=="ward.D2"
 			|| method=="mcquitty" || method=="median" || method=="centroid")
 				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
 			else	
@@ -93,7 +96,7 @@ pcsim<-function(X,d,centrotypes) {
       else if (method=="diana")
         pp2<-cutree(as.hclust(diana(dist(Xnew))),k=ClassNr)
 			else if (method=="single" || method=="complete"
-				|| method=="average" || method=="ward"
+				|| method=="average" || method=="ward" || method=="ward.D" || method=="ward.D2"
 				|| method=="mcquitty" || method=="median" || method=="centroid")
 				pp2<-cutree(hclust(dist(Xnew), method = method),ClassNr)
 			else	

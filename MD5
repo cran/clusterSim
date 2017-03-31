@@ -1,4 +1,4 @@
-8c6cec48c472e666ef563b2d7d5458d4 *DESCRIPTION
+d43e6e3d174afc13c2f98e6678578ab1 *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 a0a4d52c233ba8443abd6de83f5cc06d *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -19,7 +19,7 @@ b9ed901fa778f452393c4480b60c5695 *R/index.G1.r
 8da68798d32cae55565414c456e2946f *R/index.G1d.r
 3840a662e76b1b272028962d23f93ed5 *R/index.G2.r
 e819c4902348c249f6ada940e1d672f6 *R/index.G3.r
-2b675fe6e88a1638720ec124e232a1e9 *R/index.GAP.r
+da23193ca9e249120ff5a43a2dc75e18 *R/index.GAP.r
 ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
 aa36304f71439adc9f863824e299f965 *R/index.KL.r
 c76b0445fb1e7c96cc32d19b0c2c14db *R/index.S.r
@@ -30,14 +30,14 @@ f5230d09d077bc09a8ec59936f93ced9 *R/replication.Mod.r
 5eb2ebf4c01f66c5641c1428aafa6465 *R/reszta.r
 064090e876a567d91b51417cac48040a *R/shapes.r
 8035e436226d4d350a5252884d843804 *R/speccl.r
-5b8da097d102ca64e6860619c4ba7b6f *data/data_binary.rda
-abcd0e3bffe7f54bdc3bc8c5206a41c5 *data/data_interval.rda
-8bbdcf84472bf4f4406130b98371a856 *data/data_mixed.rda
-d35f674582ee7318fa804d13eb90a324 *data/data_nominal.rda
-291137b4b0970e7a130cf6ea11eb6774 *data/data_ordinal.rda
+1cd86e63f4fcca498fcd39a118e66c0f *data/data_binary.rda
+9eb7aa09acfa43c221e22ba7a893477e *data/data_interval.rda
+df1c720d8ad3fddffc7aee52934d0e64 *data/data_mixed.rda
+e84768e80a82758dc9eaf5087822cb30 *data/data_nominal.rda
+e65e91dddb5bb0de34de78936cc03291 *data/data_ordinal.rda
 09709ce20af5026336165e160315e20a *data/data_patternGDM1.rda
 295a54a5dcc60a028a8f72fd322e89b5 *data/data_patternGDM2.rda
-a5509cd197c1d2ccbdf8baedeeac2ab6 *data/data_ratio.rda
+c4259b53b328c10d01b0cac5de68676b *data/data_ratio.rda
 9d4ff0e2a462ceca96bd636812ed910c *data/data_symbolic.rda
 c572ba4f2d51481225990217afe09374 *inst/csv/symbolic.csv
 dece74da8ef10a442efd785575659188 *inst/doc/HINoVMod_details.pdf
@@ -127,7 +127,7 @@ bc468c0485ce42cb679d80174b59be5b *man/shapes.circles3.rd
 5eba4bc33ba69d782ffd23bcd1bb32d5 *man/shapes.two.moon.rd
 115409f2b0d338bf999270f48528601e *man/shapes.worms.rd
 e4b5dfa7846e783d346452b1d7d86c3f *man/speccl.rd
-75f47ba74bfcdd4c58c3e38172f7645b *src/clusterSim.cpp
+a1a667f25102ee0f16ff83199473a318 *src/clusterSim.cpp
 553e8b33df9ab877d5b4a51bdff54db1 *src/clusterSim.h
 7c80fd91c1fedf630db43d0f58ab7899 *tests/testthat.R
 1ca622d14689eb73a8cd89226558209a *tests/testthat/test_comparing.R

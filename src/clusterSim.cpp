@@ -1,6 +1,9 @@
 #include "clusterSim.h"
 #include "math.h"
 #include "stdio.h"
+#include <R.h> 
+#include <Rinternals.h>
+#include <R_ext/Rdynload.h>
 /*#include "windows.h"
 #include "string.h";
 #include "time.h";*/
@@ -20,6 +23,10 @@ void printTab (double * x,int r,int c){
 	printTab (x,r,c,r);
 }*/
 
+void R_init_clutserSim(DllInfo* info) {
+	R_registerRoutines(info, NULL, NULL, NULL, NULL);
+	R_useDynamicSymbols(info, TRUE);
+}
 
 #ifdef WIN32
 extern "C" void GDM_API  fngdm(double  * x,int *  rows, int * cols, int * type, double * weights, double * wynik)
