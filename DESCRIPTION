@@ -1,18 +1,33 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.45-2
-Date: 2017-03-28
+Version: 0.46-1
+Date: 2017-08-28
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl> Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: cluster, MASS
 Imports: ade4, e1071, rgl, R2HTML, modeest, grDevices, graphics, stats,
         utils
 Suggests: mlbench, testthat
-Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for symbolic interval-valued data), cluster quality indices (Calinski-Harabasz, Baker-Hubert, Hubert-Levine, Silhouette, Krzanowski-Lai, Hartigan, Gap,	Davies-Bouldin),	data normalization formulas, data generation (typical and non-typical data), HINoV method,	replication analysis, linear ordering methods, spectral clustering, agreement indices between two partitions, plot functions (for categorical and symbolic interval-valued data).
+Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for symbolic interval-valued data), cluster quality indices (Calinski-Harabasz, Baker-Hubert, Hubert-Levine, Silhouette, Krzanowski-Lai, Hartigan, Gap,	Davies-Bouldin),	data normalization formulas, data generation (typical and non-typical data), HINoV method,	replication analysis, linear ordering methods, spectral clustering, agreement indices between two partitions, plot functions (for categorical and symbolic interval-valued data). 
+ (MILLIGAN, G.W., COOPER, M.C. (1985) <doi:10.1007/BF02294245>, 
+ HUBERT, L., ARABIE, P. (1985), <doi:10.1007%2FBF01908075>, 
+ RAND, W.M. (1971) <doi:10.1080/01621459.1971.10482356>, 
+ JAJUGA, K., WALESIAK, M. (2000) <doi:10.1007/978-3-642-57280-7_11>, 
+ MILLIGAN, G.W., COOPER, M.C. (1988) <doi:10.1007/BF01897163>, 
+ CORMACK, R.M. (1971) <doi:10.2307/2344237>, 
+ JAJUGA, K., WALESIAK, M., BAK, A. (2003) <doi:10.1007/978-3-642-55721-7_12>, 
+ CARMONE, F.J., KARA, A., MAXWELL, S. (1999) <doi:10.2307/3152003>, 
+ DAVIES, D.L., BOULDIN, D.W. (1979) <doi:10.1109/TPAMI.1979.4766909>, 
+ CALINSKI, T., HARABASZ, J. (1974) <doi:10.1080/03610927408827101>,
+ HUBERT, L. (1974) <doi:10.1080/01621459.1974.10480191>, 
+ TIBSHIRANI, R., WALTHER, G., HASTIE, T. (2001) <doi:10.1111/1467-9868.00293>, 
+ KRZANOWSKI, W.J., LAI, Y.T. (1988) <doi:10.2307/2531893>, 
+ BRECKENRIDGE, J.N. (2000) <doi:10.1207/S15327906MBR3502_5>, 
+ WALESIAK, M., DUDEK, A. (2008) <doi:10.1007/978-3-540-78246-9_11>).
 License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2017-03-28 11:52:20 UTC; Andrzej
+Packaged: 2017-09-10 17:17:21 UTC; Andrzej
 Repository: CRAN
-Date/Publication: 2017-03-31 09:55:16 UTC
+Date/Publication: 2017-09-11 09:02:32 UTC

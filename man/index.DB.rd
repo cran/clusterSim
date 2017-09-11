@@ -31,8 +31,7 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
-Davies, D.L., Bouldin, D.W. (1979), \emph{A cluster separation measure}, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 1, no. 2, 224-227.
-
+Davies, D.L., Bouldin, D.W. (1979), \emph{A cluster separation measure}, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 1, no. 2, 224-227. Available at: \url{http://dx.doi.org/10.1109/TPAMI.1979.4766909}.
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 

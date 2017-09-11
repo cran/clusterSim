@@ -40,7 +40,7 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
-Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York.
+Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York. ISBN 0-471-35645-X.
 }
 \seealso{
 \code{\link{cluster.Sim}}

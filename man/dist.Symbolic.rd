@@ -29,7 +29,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \references{
 
-Billard, L., Diday, E. (2006), \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester.
+Billard, L., Diday, E. (2006), \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester. ISBN: 978-0-470-09016-9.
 
 }
 \seealso{

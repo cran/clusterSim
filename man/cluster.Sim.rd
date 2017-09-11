@@ -78,19 +78,19 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
-Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London.
+Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London. ISBN 9780340761199.
 
-Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw.
+Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, p. 338. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2004_Gatnar_Walesiak_Metody_SAW_w_badaniach_marketingowych.pdf}.
 
-Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London.
+Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London. ISBN 9781584880134.
 
-Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179.
+Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \url{https://dx.doi.org/10.1007/BF02294245}.
 
-Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. 
+Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. Available at: \url{https://dx.doi.org/10.1007/BF01897163}.
 
-Walesiak, M., Dudek, A. (2006), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - oprogramowanie komputerowe i wyniki badan}, Prace Naukowe AE we Wroclawiu, 1126, 120-129.
+Walesiak, M., Dudek, A. (2006), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - oprogramowanie komputerowe i wyniki badan}, Prace Naukowe AE we Wroclawiu, 1126, 120-129. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2006_Walesiak_Dudek_Taksonomia_13_PN_AE_1126.pdf}.
 
-Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego nr 450, 635-646. 
+Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego nr 450, 635-646. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2007_Walesiak_Dudek_Symulacyjna_optymalizacja_wyboru.pdf}.
 }
 \seealso{\code{\link{data.Normalization}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{index.G1}}, \code{\link{index.G2}}, 
 

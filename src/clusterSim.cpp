@@ -23,9 +23,10 @@ void printTab (double * x,int r,int c){
 	printTab (x,r,c,r);
 }*/
 
-void R_init_clutserSim(DllInfo* info) {
+void R_init_clusterSim(DllInfo* info) {
 	R_registerRoutines(info, NULL, NULL, NULL, NULL);
-	R_useDynamicSymbols(info, TRUE);
+  R_useDynamicSymbols(info, FALSE);
+  R_forceSymbols(info, TRUE);
 }
 
 #ifdef WIN32

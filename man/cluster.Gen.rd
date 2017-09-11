@@ -28,13 +28,15 @@ dimensions (variables) given in \code{numNoisyVar} argument;
 
 \$R\_HOME\\library\\clusterSim\\pdf\\clusterGen\_details.pdf; 
 
-\code{model=21,22,...} - if \code{fixedCov=TRUE} \code{means} should be read from \emph{means\_<modelNumber>.csv} 
-and  covariance matrix for all clusters should be read from \emph{cov\_<modelNumber>.csv} 
-and if  \code{fixedCov=FALSE} \code{means} should be read from \emph{means\_<modelNumber>.csv} 
-and covariance matrices should be read separately for each cluster 
-from 
+\code{model=21,22,...} - if \code{fixedCov=TRUE} \code{means} should be read from 
 
-\emph{cov\_<modelNumber>\_<clusterNumber>.csv}}
+\emph{means\_<modelNumber>.csv} and  covariance matrix for all clusters should be read 
+from \emph{cov\_<modelNumber>.csv} and if  \code{fixedCov=FALSE} \code{means} should be read from 
+
+\emph{means\_<modelNumber>.csv} 
+and covariance matrices should be read separately for each cluster 
+from \emph{cov\_<modelNumber>\_<clusterNumber>.csv}}
+
 \item{fixedCov}{if \code{fixedCov=TRUE} covariance matrix for all clusters is the same 
 and if 
 
@@ -47,7 +49,9 @@ and if
 \item{inputType}{"csv" - a dot as decimal point or "csv2" - a comma as decimal point in 
 
 \emph{means\_<modelNumber>.csv} and \emph{cov\_<modelNumber>.csv} files}
-\item{inputHeader}{\code{inputHeader=TRUE} indicates that input files (\emph{means\_<modelNumber>.csv}; \emph{cov\_<modelNumber...>.csv}) contain header row}
+\item{inputHeader}{\code{inputHeader=TRUE} indicates that input files (\emph{means\_<modelNumber>.csv};
+
+\emph{cov\_<modelNumber...>.csv}) contain header row}
 \item{inputRowNames}{\code{inputRowNames=TRUE} indicates that input files (\emph{means\_<modelNumber>.csv}; \emph{cov\_<modelNumber...>.csv}) contain first column with row names or with number of objects (positive integer values)}
 \item{outputCsv}{optional, name of csv file with generated data (first column contains id, second - number of cluster and others - data)}
 \item{outputCsv2}{optional, name of csv (a comma as decimal point and a semicolon as field separator) file with generated data (first column contains id, second - number of cluster and others - data)}
@@ -71,13 +75,15 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \references{
-Billard, L., Diday, E. (2006): \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester.
+Billard, L., Diday, E. (2006), \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester. ISBN: 978-0-470-09016-9.
 
-Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degree of separation}, "Journal of Classification", vol. 23, 315-334.
+Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degree of separation}, "Journal of Classification", vol. 23, 315-334. Available at: \url{http://dx.doi.org/10.1007/s00357-006-0018-y}.
 
-Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250.
+Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250. Available at: \url{http://dx.doi.org/10.1007/s00357-005-0015-6}.
 
-Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2008_Walesiak_Dudek_Springer.pdf}.
+
+Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2016_Walesiak_Uogolniona_miara_odleglosci_GDM.pdf}.
 }
 \examples{
 

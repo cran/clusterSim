@@ -46,11 +46,15 @@ Department of Econometrics and Computer Science, Wroclaw University of Economics
 
 Karatzoglou, A. (2006), \emph{Kernel methods. Software, algorithms and applications}, Dissertation, Wien, Technical University.
 
-Ng, A., Jordan, M., Weiss, Y. (2002), \emph{On spectral clustering: analysis and an algorithm}, In: T. Dietterich, S. Becker, Z. Ghahramani (Eds.), Advances in Neural Information Processing Systems 14. MIT Press, 849-856.
+Ng, A., Jordan, M., Weiss, Y. (2002), \emph{On spectral clustering: analysis and an algorithm}, In: T. Dietterich, S. Becker, Z. Ghahramani (Eds.), Advances in Neural Information Processing Systems 14. MIT Press, 849-856. Available at:
 
-Walesiak, M. (2011), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure in multivariate statistical analysis with R]}, Wydawnictwo UE, Wroclaw.
+\url{https://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf}.
 
-Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31.
+Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2011_Walesiak_Uogolniona_miara_odleglosci_GDM_w_SAW_z_wykorzystaniem_programu_R_errata.pdf}.
+
+Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2012_Walesiak_Przeglad_Statystyczny_z_1.pdf}.
+
+Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2016_Walesiak_Uogolniona_miara_odleglosci_GDM.pdf}.
 }
 
 \seealso{

@@ -17,12 +17,11 @@ See file \$R\_HOME\\library\\clusterSim\\pdf\\indexH\_details.pdf for further de
 }
 \references{
 
-Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York.
+Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York. ISBN 047135645X. 
 
-Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179.
+Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \url{https://dx.doi.org/10.1007/BF02294245}.
 
-Tibshirani, R., Walther, G., Hastie, T. (2001), \emph{Estimating the number of clusters in a data set via the gap statistic}, "Journal of the Royal Statistical Society", ser. B, vol. 63, part 2, 411-423.
-
+Tibshirani, R., Walther, G., Hastie, T. (2001), \emph{Estimating the number of clusters in a data set via the gap statistic}, "Journal of the Royal Statistical Society", ser. B, vol. 63, part 2, 411-423. Available at: \url{http://dx.doi.org/10.1111/1467-9868.00293}.
 }
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 

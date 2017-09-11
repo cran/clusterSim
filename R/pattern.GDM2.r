@@ -44,7 +44,7 @@ if(is.null(nominalTransfMethod))nominalTransfMethod=rep("none",ncol(data))
 if(length(nominalTransfMethod)==1)nominalTransfMethod=rep(nominalTransfMethod,ncol(data))
 if(length(nominalTransfMethod)!=ncol(data))stop("vector of transfer methods for nominant variables should have the size equal to numberof variables")
 for(v in nominalTransfMethod){
-  if(sum(v==c("symmetrical","database","none"))==0) stop("transfer methods should be one of the following: s-symmetrical,d-database")
+  if(sum(v==c("symmetrical","database","none"))==0) stop("transfer methods should be one of the following: symmetrical,database")
 }
 
 #ZNALEZIENIE WZORCA

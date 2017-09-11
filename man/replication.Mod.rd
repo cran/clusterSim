@@ -60,17 +60,15 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 }
 \references{
 
-Breckenridge, J.N. (2000), \emph{Validating cluster analysis: consistent replication and symmetry}, "Multivariate Behavioral Research", 35 (2), 261-285.
+Breckenridge, J.N. (2000), \emph{Validating cluster analysis: consistent replication and symmetry}, "Multivariate Behavioral Research", 35 (2), 261-285. Available at: \url{http://dx.doi.org/10.1207/S15327906MBR3502_5}.
 
-Gordon, A.D. (1999), \emph{Classification}, Chapman and Hall/CRC, London.
+Gordon, A.D. (1999), \emph{Classification}, Chapman and Hall/CRC, London. ISBN 9781584880134.
 
-Hubert, L., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classification", no. 1, 193-218.
+Hubert, L., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classification", no. 1, 193-218. Available at: \url{http://dx.doi.org/10.1007\%2FBF01908075}.
 
-Milligan, G.W. (1996), \emph{Clustering validation: results and implications for applied analyses}, In P. Arabie, L.J. Hubert, G. de Soete (Eds.), \emph{Clustering and classification}, World Scientific, Singapore, 341-375.
+Milligan, G.W. (1996), \emph{Clustering validation: results and implications for applied analyses}, In P. Arabie, L.J. Hubert, G. de Soete (Eds.), \emph{Clustering and classification}, World Scientific, Singapore, 341-375. ISBN 9789810212872.
 
-Walesiak, M. (2008), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, In: J. Pociecha (Ed.), \emph{Modelowanie i prognozowanie zjawisk spoleczno-gospodarczych}, Wydawnictwo AE, Krakow, 67-72. 
-
-
+Walesiak, M. (2008), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, In: J. Pociecha (Ed.), \emph{Modelowanie i prognozowanie zjawisk spoleczno-gospodarczych}, Wydawnictwo AE, Krakow, 67-72. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2008_Walesiak_Ocena_stabilnosci_wynikow_klasyfikacji.pdf}.
 }
 \seealso{\code{\link{cluster.Sim}}, \code{\link{hclust}}, \code{\link{kmeans}},  \code{\link{dist}},
 \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{dist.GDM}}, 
