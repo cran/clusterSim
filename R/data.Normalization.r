@@ -86,7 +86,7 @@ data.Normalization<-function (x, type = "n0", normalization = "column")
                     0,(sum(x[, nn]^2)^0.5)), n12 = c( 
                     ( mean(x[, nn])),(sum(( 
                       mean(x[, nn]))^2)^0.5)), 
-                     n12a = c(median(x[, nn])/(sum((x[, nn] - 
+                     n12a = c(median(x[, nn]),(sum((x[, nn] - 
                       median(x[, nn]))^2)^0.5)),
                      n13 = c( ((max(x[, nn])+min(x[, nn]))/2),((max(x[, nn]) - min(x[, nn]))/2)))
                  params<-cbind(params,p)
@@ -152,7 +152,7 @@ data.Normalization<-function (x, type = "n0", normalization = "column")
                     0,(sum(x[nn,]^2)^0.5)), n12 = c( 
                     ( mean(x[nn,])),(sum(( 
                       mean(x[nn,]))^2)^0.5)), 
-                     n12a = c(median(x[nn,])/(sum((x[nn,] - 
+                     n12a = c(median(x[nn,]),(sum((x[nn,] - 
                       median(x[nn,]))^2)^0.5)),
                      n13 = c( ((max(x[nn,])+min(x[nn,]))/2),((max(x[nn,]) - min(x[nn,]))/2)))
 
@@ -241,9 +241,9 @@ data.Normalization<-function (x, type = "n0", normalization = "column")
                     0,(sum(x[, i]^2)^0.5)), n12 = c( 
                     ( mean(x[, i])),(sum(( 
                       mean(x[, i]))^2)^0.5)), 
-                     n12a = cbind(median(x[, i])/(sum((x[, i] - 
+                     n12a = c(median(x[, i]),(sum((x[, i] - 
                       median(x[, i]))^2)^0.5)),
-                     n13 = cbind( ((max(x[, i])+min(x[, i]))/2),((max(x[, i]) - min(x[, i]))/2)))
+                     n13 = c( ((max(x[, i])+min(x[, i]))/2),((max(x[, i]) - min(x[, i]))/2)))
                  params<-cbind(params,p)
 
                }
@@ -291,9 +291,9 @@ data.Normalization<-function (x, type = "n0", normalization = "column")
                     0,(sum(x[i,]^2)^0.5)), n12 = c( 
                     ( mean(x[i,])),(sum(( 
                       mean(x[i,]))^2)^0.5)), 
-                     n12a = cbind(median(x[i,])/(sum((x[i,] - 
+                     n12a = c(median(x[i,]),(sum((x[i,] - 
                       median(x[i,]))^2)^0.5)),
-                     n13 = cbind( ((max(x[i,])+min(x[i,]))/2),((max(x[i,]) - min(x[i,]))/2)))
+                     n13 = c( ((max(x[i,])+min(x[i,]))/2),((max(x[i,]) - min(x[i,]))/2)))
                  params<-cbind(params,p)
                 }
             }
