@@ -1,4 +1,4 @@
-ffccdce40b74c40b9fad65b168be30ec *DESCRIPTION
+e35bebdddc72a699144119dcf893be27 *DESCRIPTION
 f74c9819260a07b14fe17ee68512c6f2 *INDEX
 a0a4d52c233ba8443abd6de83f5cc06d *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -13,7 +13,7 @@ cd37ff292b79dc05d4d4b25749c60b13 *R/cluster.Sim.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
 3aacb76111209294e82301664ad95b6f *R/dist.GDM.r
 e7fbf99ccaf6f22515517cee1013d6bb *R/dist.SM.r
-498902d0a5a1b770c0d97be5b8053d42 *R/dist.Symbolic.r
+39210475e00e48eb648b29853f694b73 *R/dist.Symbolic.r
 c27bdeaff9475e7f8dd1f0b79bc4e2b9 *R/index.DB.r
 b9ed901fa778f452393c4480b60c5695 *R/index.G1.r
 8da68798d32cae55565414c456e2946f *R/index.G1d.r
@@ -23,6 +23,7 @@ da23193ca9e249120ff5a43a2dc75e18 *R/index.GAP.r
 ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
 aa36304f71439adc9f863824e299f965 *R/index.KL.r
 c76b0445fb1e7c96cc32d19b0c2c14db *R/index.S.r
+2945422909c13c253a2fbb28517c769d *R/interval_normalization.r
 d7675724015c95dcde7b7f4b035d7071 *R/ordinalToMetric.r
 58b9bbb899315080a4450956e108bf41 *R/pattern.GDM1.r
 0d1c3f681f86613427a350c2dfdc5fc4 *R/pattern.GDM2.r
@@ -39,6 +40,7 @@ e65e91dddb5bb0de34de78936cc03291 *data/data_ordinal.rda
 295a54a5dcc60a028a8f72fd322e89b5 *data/data_patternGDM2.rda
 c4259b53b328c10d01b0cac5de68676b *data/data_ratio.rda
 9d4ff0e2a462ceca96bd636812ed910c *data/data_symbolic.rda
+9b924f1eff4afdde0b7cef323fcc11f8 *data/data_symbolic_interval_polish_voivodships.rda
 c572ba4f2d51481225990217afe09374 *inst/csv/symbolic.csv
 dece74da8ef10a442efd785575659188 *inst/doc/HINoVMod_details.pdf
 2374ad17158ac4674f31983549515bb8 *inst/doc/HINoVSymbolic_details.pdf
@@ -101,10 +103,11 @@ f695936e9748d35ebe89443ca9e1a080 *man/data_patternGDM1.rd
 2204450f96eb9c6d6ffc007b1b61a6ad *man/data_patternGDM2.rd
 1d0e31149cc684fd431bc1770e84706b *man/data_ratio.rd
 bb4ab62b4890fdd6db2203269e02d789 *man/data_symbolic.rd
+fc6dace5bcb57e5cd989d0780dd023f0 *man/data_symbolic_interval_polish_voivodships.rd
 351fdd676bec1b58dc8156cdbdf57edc *man/dist.BC.rd
 364484f07f349d3ea13a64b468dc7157 *man/dist.GDM.rd
 d43857d08b38993a74d717c5bb3b3eaa *man/dist.SM.rd
-66e308d8d10292d8bd3fb61395c7b6ad *man/dist.Symbolic.rd
+b95fee2b69a7db44ac7f0f8f24daca2f *man/dist.Symbolic.rd
 cc3c2a1b33570bb4359b20c836862c4f *man/index.DB.rd
 5dfd5993acd367c7c85f32b7dd96b0cd *man/index.G1.rd
 4bf78d53fe4cdaa1324965189dce65d4 *man/index.G2.rd
@@ -114,6 +117,7 @@ cc3c2a1b33570bb4359b20c836862c4f *man/index.DB.rd
 0a8a08c25bc2302b729bd291ed742202 *man/index.KL.rd
 7f640481cc6c0026cc8edaaef26f4a07 *man/index.S.rd
 b9df246e40395ab5a77dac37da7df741 *man/initial.Centers.rd
+52e7e27ef004c002bebabcd727189c32 *man/interval_normalization.rd
 3fc70d5f4b8fe27f62aa450130d21852 *man/ordinalToMetric.rd
 59785f18784abdbed126e3ec64eaec2a *man/pattern.GDM1.rd
 b5a78115f413262ea8ca0e4b3727d5a3 *man/pattern.GDM2.rd
