@@ -207,55 +207,52 @@ pary<-function (x, labels, panel = points,  lower.panel = panel,
 	}
 }
 
-plotCategorial3d<-function(x, tripleofVar=c(1,2,3), cl=NULL, clColors=NULL,...)
+plotCategorial3d<-function (x, tripleofVar = c(1, 2, 3), cl = NULL, clColors = NULL, 
+          ...) 
 {
-	#require("rgl")
-	rozmiary<-x[,1]
-	klasy<-cl
-	x<-x[,tripleofVar]
-	dane<-x
-	for (i in 1:length(rozmiary))
-	{
-		t<-dane[dane[,1]==dane[i,1],][dane[dane[,1]==dane[i,1],2]==dane[i,2],]
-		rozmiary[i]<-nrow(t[t[,3]==dane[i,3],])
-		
-	}
-	rozmiary<-data.Normalization(rozmiary,type="n4")
-	plot3d(0., 0.,0., xlim = c(0, max(dane[,1])+1), ylim = c(0,max(dane[,2])+1),zlim = c(0,max(dane[,3])+1), xlab = "", ylab = "",zlab="",type="n",axes=FALSE,zoom=3,...)
-	#open3d
-	kolor=rainbow(10)[sample(1:10,1)]
-	for (i in 1:nrow(dane))
-	{
-		if(!is.null(cl))
-		{
-		if (!is.null(clColors))
-		{
-			prawda<-FALSE
-			if (class(clColors)=="logical")
-				if (clColors==TRUE)
-				{
-					prawda<-TRUE
-				}
-				if (prawda)
-				{
-					colorsnames<-rainbow(max(cl)+1)
-				} 
-				else
-				{
-					colorsnames<-clColors
-				}
-			}
-			else
-			{
-				colorsnames<-rainbow(max(cl)+1)
-			}
-			spheres3d(dane[i,1],dane[i,2],dane[i,3],rozmiary[i],color=(colorsnames[klasy[i]]))
-		}
-		else
-		{
-			spheres3d(dane[i,1],dane[i,2],dane[i,3],rozmiary[i],color=kolor)
-		}
-	}
+  rozmiary <- x[, 1]
+  klasy <- cl
+  x <- x[, tripleofVar]
+  dane <- x
+  for (i in 1:length(rozmiary)) {
+    t <- dane[dane[, 1] == dane[i, 1], ][dane[dane[, 1] == 
+                                                dane[i, 1], 2] == dane[i, 2], ]
+    rozmiary[i] <- nrow(t[t[, 3] == dane[i, 3], ])
+  }
+  rozmiary <- data.Normalization(rozmiary, type = "n4")
+  plot3d(dane, xlim = c(0, max(dane[, 1]) + 1), ylim = c(0, 
+                                                            max(dane[, 2]) + 1), zlim = c(0, max(dane[, 3]) + 1), 
+         xlab = "X", ylab = "Y", zlab = "Z", type = "n", axes = TRUE, 
+         zoom = 3, ...)
+  
+  kolor = rainbow(10)[sample(1:10, 1)]
+  for (i in 1:nrow(dane)) {
+    if (!is.null(cl)) {
+      if (!is.null(clColors)) {
+        prawda <- FALSE
+        if (class(clColors) == "logical") 
+          if (clColors == TRUE) {
+            prawda <- TRUE
+          }
+        if (prawda) {
+          colorsnames <- rainbow(max(cl) + 1)
+        }
+        else {
+          colorsnames <- clColors
+        }
+      }
+      else {
+        colorsnames <- rainbow(max(cl) + 1)
+      }
+      spheres3d(dane[i, 1], dane[i, 2], dane[i, 3], rozmiary[i], 
+                color = (colorsnames[klasy[i]]))
+    }
+    else {
+      spheres3d(dane[i, 1], dane[i, 2], dane[i, 3], rozmiary[i], 
+                color = kolor)
+    }
+  }
+  axes3d(edges = "bbox", labels = TRUE, tick = TRUE, nticks = 5)
 }
 
 

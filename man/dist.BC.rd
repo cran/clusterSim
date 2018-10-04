@@ -14,7 +14,7 @@ object with calculated distance
 }
 \references{
 
-Cormack, R.M. (1971), \emph{A review of classification (with discussion)}, "Journal of the Royal Statistical Society", ser. A, part 3, 321-367. Available at: \url{http://dx.doi.org/10.2307/2344237}.
+Cormack, R.M. (1971), \emph{A review of classification (with discussion)}, "Journal of the Royal Statistical Society", ser. A, part 3, 321-367.
 
 Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, p. 41. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2004_Gatnar_Walesiak_Metody_SAW_w_badaniach_marketingowych.pdf}.
 }

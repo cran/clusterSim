@@ -97,6 +97,9 @@ if (type=="b")
 		l2SN<-longBinaryDistances[index]
 }
 }
+if(l2SN=="ward"){
+l2SN="ward.D"
+}
 l2SN
 }
 

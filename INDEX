@@ -1,72 +1,87 @@
-HINoV.Mod               Modification of Carmone, Kara & Maxwell
-                        Heuristic Identification of Noisy Variables
-                        (HINoV) method
-HINoV.Symbolic          Modification of Carmone, Kara & Maxwell
-                        Heuristic Identification of Noisy Variables
-                        (HINoV) method for symbolic interval data
-cluster.Description     Descriptive statistics calculated separately
-                        for each cluster and variable
-cluster.Gen             Random cluster generation with known structure
-                        of clusters
-cluster.Sim             Determination of optimal clustering procedure
-                        for a data set
-comparing.Partitions    Calculate agreement indices between two
-                        partitions
-data.Normalization      Types of variable normalization formulas
-data_binary             Binary data
-data_interval           Interval data
-data_mixed              Mixed data
-data_nominal            Nominal data
-data_ordinal            Ordinal data
-data_patternGDM1        Metric data with 17 objects and 10 variables (8
-                        stimulant variables, 2 destimulant variables)
-data_patternGDM2        Ordinal data with 27 objects and 6 variables (3
-                        stimulant variables, 2 destimulant variables
-                        and 1 nominant variable)
-data_ratio              Ratio data
-data_symbolic           Symbolic interval data
-dist.BC                 Calculates Bray-Curtis distance measure for
-                        ratio data
-dist.GDM                Calculates Generalized Distance Measure
-dist.SM                 Calculates Sokal-Michener distance measure for
-                        nominal variables
-dist.Symbolic           Calculates distance between symbolic
-                        interval-valued data
-index.DB                Calculates Davies-Bouldin's index
-index.G1                Calculates Calinski-Harabasz pseudo F-statistic
-index.G2                Calculates G2 internal cluster quality index
-index.G3                Calculates G3 internal cluster quality index
-index.Gap               Calculates Tibshirani, Walther and Hastie gap
-                        index
-index.H                 Calculates Hartigan index
-index.KL                Calculates Krzanowski-Lai index
-index.S                 Calculates Rousseeuw's Silhouette internal
-                        cluster quality index
-initial.Centers         Calculation of initial clusters centers for
-                        k-means like alghoritms
-ordinalToMetric         Reinforcing measurement scale for ordinal data
-pattern.GDM1            An application of GDM1 distance for metric data
-                        to compute the distances of objects from the
-                        pattern object (upper or lower)
-pattern.GDM2            An application of GDM2 distance for ordinal
-                        data to compute the distances of objects from
-                        the pattern object (upper or lower)
-plotCategorial          Plot categorial data on a scatterplot matrix
-plotCategorial3d        Plot categorial data with three-dimensional
-                        plots
-plotInterval            Plot symbolic interval-valued data on a
-                        scatterplot matrix
-replication.Mod         Modification of replication analysis for
-                        cluster validation
-shapes.blocks3d         Generation of data set containing two clusters
-                        with untypical shapes (cube divided into two
-                        parts by main diagonal plane)
-shapes.circles2         Generation of data set containing two clusters
-                        with untypical ring shapes (circles)
-shapes.circles3         Generation of data set containing three
-                        clusters with untypical ring shapes (circles)
-shapes.two.moon         Generation of data set containing two clusters
-                        with untypical shapes (quarter moons)
-shapes.worms            Generation of data set containing two clusters
-                        with untypical parabolic shapes (worms)
-speccl                  A spectral clustering algorithm
+cluster.Description   Descriptive statistics calculated separately
+                      for each cluster and variable
+cluster.Gen           Random cluster generation with known
+                      structure of clusters
+cluster.Sim           Determination of optimal clustering
+                      procedure for a data set
+comparing.Partitions
+                      Calculate agreement indices between two
+                      partitions
+data.Normalization    Types of variable (column) and object (row)
+                      normalization formulas
+data_binary           Binary data
+data_interval         Interval data
+data_mixed            Mixed data
+data_nominal          Nominal data
+data_ordinal          Ordinal data
+data_patternGDM1      Metric data with 17 objects and 10 variables
+                      (8 stimulant variables, 2 destimulant
+                      variables)
+data_patternGDM2      Ordinal data with 27 objects and 6 variables
+                      (3 stimulant variables, 2 destimulant
+                      variables and 1 nominant variable)
+data_ratio            Ratio data
+data_symbolic         Symbolic interval data
+data_symbolic_interval_polish_voivodships
+                      The evaluation of Polish voivodships tourism
+                      attractiveness level
+dist.BC               Calculates Bray-Curtis distance measure for
+                      ratio data
+dist.GDM              Calculates Generalized Distance Measure
+dist.SM               Calculates Sokal-Michener distance measure
+                      for nominal variables
+dist.Symbolic         Calculates distance between interval-valued
+                      symbolic data
+HINoV.Mod             Modification of Carmone, Kara & Maxwell
+                      Heuristic Identification of Noisy Variables
+                      (HINoV) method
+HINoV.Symbolic        Modification of Carmone, Kara & Maxwell
+                      Heuristic Identification of Noisy Variables
+                      (HINoV) method for symbolic interval data
+index.DB              Calculates Davies-Bouldin's index
+index.G1              Calculates Calinski-Harabasz pseudo
+                      F-statistic
+index.G2              Calculates G2 internal cluster quality index
+index.G3              Calculates G3 internal cluster quality index
+index.Gap             Calculates Tibshirani, Walther and Hastie
+                      gap index
+index.H               Calculates Hartigan index
+index.KL              Calculates Krzanowski-Lai index
+index.S               Calculates Rousseeuw's Silhouette internal
+                      cluster quality index
+initial.Centers       Calculation of initial clusters centers for
+                      k-means like alghoritms
+interval_normalization
+                      Types of normalization formulas for
+                      interval-valued symbolic variables
+ordinalToMetric       Reinforcing measurement scale for ordinal
+                      data
+pattern.GDM1          An application of GDM1 distance for metric
+                      data to compute the distances of objects
+                      from the pattern object (upper or lower)
+pattern.GDM2          An application of GDM2 distance for ordinal
+                      data to compute the distances of objects
+                      from the pattern object (upper or lower)
+plotCategorial        Plot categorial data on a scatterplot matrix
+plotCategorial3d      Plot categorial data with three-dimensional
+                      plots
+plotInterval          Plot symbolic interval-valued data on a
+                      scatterplot matrix
+replication.Mod       Modification of replication analysis for
+                      cluster validation
+shapes.blocks3d       Generation of data set containing two
+                      clusters with untypical shapes (cube divided
+                      into two parts by main diagonal plane)
+shapes.circles2       Generation of data set containing two
+                      clusters with untypical ring shapes
+                      (circles)
+shapes.circles3       Generation of data set containing three
+                      clusters with untypical ring shapes
+                      (circles)
+shapes.two.moon       Generation of data set containing two
+                      clusters with untypical shapes (similar to
+                      waxing and waning crescent moon)
+shapes.worms          Generation of data set containing two
+                      clusters with untypical parabolic shapes
+                      (worms)
+speccl                A spectral clustering algorithm

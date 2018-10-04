@@ -23,7 +23,6 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 \references{
 
 Krzanowski, W.J., Lai, Y.T. (1988), \emph{A criterion for determining the number of groups in a data set using sum of squares clustering}, "Biometrics", 44, 23-34.
-Available at: \url{http://dx.doi.org/10.2307/2531893}.
 
 Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \url{https://dx.doi.org/10.1007/BF02294245}.
 
