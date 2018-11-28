@@ -63,8 +63,12 @@ interval_normalization<-function(x,dataType="simple",type="n0",y=NULL){
   }
   if(dataType=="separate_tables"){
     xy<-array(0,c(nrow(x),ncol(x),2))
-    xy[,,1]<-x;
-    xy[,,2]<-y;
+    for(i in 1:nrow(x)){
+      for(j in 1:ncol(x)){
+        xy[i,j, 1] <- x[i,j]
+        xy[i,j , 2] <- y[i,j]
+      }
+    }
     x<-xy
   }
   if(dataType=="rows"){

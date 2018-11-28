@@ -6,9 +6,9 @@
 \format{data.frame: 75 objects, 5 variables, 5-class structure}
 \source{Artificially generated data}
 \examples{
-library(clusterSim)
-data(data_ratio)
-c <- pam(data_ratio,10)
-index.G1(data_ratio, c$clustering)
+#library(clusterSim)
+#data(data_ratio)
+#c <- pam(data_ratio,10)
+#index.G1(data_ratio, c$clustering)
 }
 \keyword{datasets}

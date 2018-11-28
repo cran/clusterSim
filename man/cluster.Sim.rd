@@ -109,9 +109,9 @@ library(clusterSim)
 #cluster.Sim(data_nominal, p=4, 2, 4, icq="G3", outputHtml="results4", methods=c("m2","m3","m5"))
 #data(data_binary)
 #cluster.Sim(data_binary, p=5, 2, 4, icq="S", outputHtml="results5", distances=c("b1","b3","b6"))
-data(data_ratio)
-cluster.Sim(data_ratio, 1, 2, 4,"G1", outputCsv="results6",normalizations=c("n1","n3"),
-distances=c("d2","d5"),methods=c("m5","m3","m1"))
+#data(data_ratio)
+#cluster.Sim(data_ratio, 1, 2, 4,"G1", outputCsv="results6",normalizations=c("n1","n3"),
+#distances=c("d2","d5"),methods=c("m5","m3","m1"))
 }
 \keyword{cluster}
 \keyword{data}

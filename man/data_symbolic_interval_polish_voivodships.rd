@@ -8,7 +8,7 @@ Two-stage data collection was performed. Firstly, data on tourist attractiveness
 
 x1 - beds in hotels per 1000 inhabitants of a county,
 
-x2 - number of nights spent daily by resident tourists (Poles) per 1000 inhabitants of a county,
+x2 - number of nights spent daily by resident tourists per 1000 inhabitants of a county,
 
 x3 - number of nights spent daily by foreign tourists per 1000 inhabitants of a county, 
 
