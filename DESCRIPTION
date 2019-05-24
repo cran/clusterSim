@@ -1,12 +1,11 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.47-3
-Date: 2018-11-28
+Version: 0.47-4
+Date: 2019-05-25
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl>, Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: R (>= 3.5.0), cluster, MASS
-Imports: ade4, e1071, rgl, R2HTML, modeest, grDevices, graphics, stats,
-        utils
+Imports: ade4, e1071, rgl, R2HTML, grDevices, graphics, stats, utils
 Suggests: mlbench, testthat
 Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for symbolic interval-valued data), cluster quality indices (Calinski-Harabasz, Baker-Hubert, Hubert-Levine, Silhouette, Krzanowski-Lai, Hartigan, Gap,	Davies-Bouldin),	data normalization formulas (metric data, interval-valued symbolic data), data generation (typical and non-typical data), HINoV method,	replication analysis, linear ordering methods, spectral clustering, agreement indices between two partitions, plot functions (for categorical and symbolic interval-valued data). 
  (MILLIGAN, G.W., COOPER, M.C. (1985) <doi:10.1007/BF02294245>, 
@@ -25,6 +24,6 @@ License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2018-11-28 10:43:58 UTC; Andrzej
+Packaged: 2019-05-24 07:48:11 UTC; andrzej
 Repository: CRAN
-Date/Publication: 2018-11-28 11:20:04 UTC
+Date/Publication: 2019-05-24 10:50:03 UTC

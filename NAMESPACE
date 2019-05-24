@@ -12,7 +12,6 @@ import(
   R2HTML,
   MASS
 )
-importFrom("modeest", "mfv")
 importFrom("grDevices", "rainbow")
 importFrom("graphics", "Axis", "box", "lines", "mtext", "par", "plot",
            "points", "strwidth", "text")

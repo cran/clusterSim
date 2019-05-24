@@ -1,3 +1,27 @@
+.cdf<-function (x) 
+{
+    cl <- typeof(x)
+    n <- length(x)
+    a <- sum(is.na(x))
+    if (n == 0L) 
+        return(NaN)
+    f <- factor(x)
+    tf <- tabulate(f)
+    n1 <- max(tf)
+    if (a > 0L) {
+        n2 <- ifelse(length(tf) > 1L, max(tf[tf != n1]), 0L)
+        if (n2 + a >= n1) 
+            return(as.vector(NA, mode = cl))
+    }
+    lf <- levels(f)[tf == n1]
+    if (is.factor(x)) {
+        return(as.factor(lf))
+    }
+    else {
+        return(as.vector(lf, mode = cl))
+    }
+}
+
 cluster.Description<-function (x, cl, sdType = "sample",precission=4,modeAggregationChar=";") 
 {
   if (sdType != "sample" && sdType != "population") 
@@ -29,10 +53,10 @@ cluster.Description<-function (x, cl, sdType = "sample",precission=4,modeAggrega
     else {
       t <- x[cl == i, ]
       if (m == 1) {
-        result[i, 1, 5]<- paste(round(mfv(t[j]),precission),collapse=modeAggregationChar) 
+        result[i, 1, 5]<- paste(round(.cdf(t[j]),precission),collapse=modeAggregationChar) 
       }
       else for (j in 1:m) {
-        result[i, j, 5]<- paste(round(mfv(t[,j]),precission),collapse=modeAggregationChar) 
+        result[i, j, 5]<- paste(round(.cdf(t[,j]),precission),collapse=modeAggregationChar) 
       }
     }
   }

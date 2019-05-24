@@ -120,7 +120,7 @@ if ((icq == "KL") && (maxClusterNo==nrow(x)-1) ) stop (paste("Number of classes 
 if (minClusterNo>maxClusterNo) stop ("minClusterNo cannot be greater than maxClusterNo")
 if (p==5) for (t in x) if(t!=0 && t!=1) stop("Path number five is for binary data only")
 if ((p==8 || p==9) && (icq!="G1") && (icq!="KL")) stop("For clustering methods not based on distance matrix like k-means only G1 and K-L indexes can be used")
-if ((p==3 || p==4 || p==5) && (icq=="G1" || icq=="KL")) stop ("G1 and K-L indexes may be used only with metric (ordinal or ratio) data")
+if ((p==3 || p==4 || p==5) && (icq=="G1" || icq=="KL")) stop ("G1 and K-L indexes may be used only with metric (interval or ratio) data")
 if (p==1 || p==6 || p==8)
 	if (sum(as.matrix(x)<0)!=0)
 		stop(paste("for path number",p,"all variables in data matrix have to be measured on ratio scale"))

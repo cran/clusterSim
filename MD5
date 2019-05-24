@@ -1,13 +1,13 @@
-c08d265301640b55f1b8cfa6ce453700 *DESCRIPTION
+60d2ebcbeef14990a67eeff3ae3ecc29 *DESCRIPTION
 49b53c03af4f93ac27ddc58664ea6cf5 *INDEX
-a0a4d52c233ba8443abd6de83f5cc06d *NAMESPACE
+5607ddc705618977013480021ab05854 *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
 43b7ada16895a49d60c679419f7d8f28 *R/HINoV.Mod.r
 291ac554dd129e54d1ba942fd0dc52e7 *R/HINoV.Symbolic.r
 dd6a3997973fbcf85dd727aaf4cd6254 *R/Last.Lib.r
-a891661310169603f105e4700d0b19a8 *R/cluster.Description.r
+fcbe8a4ca54c5f511cf5ad2ba168761f *R/cluster.Description.r
 35d33a895d75804dda9843f6f2e65b18 *R/cluster.Gen.r
-cb718c3b39b24dc2f5e7d509ab57bb71 *R/cluster.Sim.r
+1008783adfa9bc0eb8abb44c69db0789 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
 0eb77e9fd3ce49fb44e9b3bccc78e6f9 *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
