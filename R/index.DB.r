@@ -61,7 +61,7 @@ index.DB<-function(x,cl,d=NULL,centrotypes="centroids",p=2,q=2){
     else
       S[i] <- 0                         
   }
-  M<-as.matrix(dist(centers,p=p))
+  M<-as.matrix(dist(centers,method="minkowski",p=p))
   R <- array(Inf,c(k,k))
   r = rep(0,k)
   for (i in 1:k){

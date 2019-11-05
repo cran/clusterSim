@@ -26,7 +26,7 @@ Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielo
 Kaufman, L., Rousseeuw, P.J. (1990), \emph{Finding groups in data: an introduction to cluster analysis}, Wiley, New York, pp. 83-88. ISBN: 978-0-471-73578-6.
 }
 \seealso{
-\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
+\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, \code{\link{index.C}},
 \code{\link{index.KL}}, \code{\link{index.H}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
@@ -57,7 +57,7 @@ clusters <- rbind(clusters, cl2$cluster)
 print(paste("max S for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
 print("clustering for max S")
 print(clusters[which.max(res[,2]),])
-write.table(res,file="S_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
+#write.table(res,file="S_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
 plot(res,type="p",pch=0,xlab="Number of clusters",ylab="S",xaxt="n")
 axis(1, c(min_nc:max_nc))
 }

@@ -112,4 +112,6 @@ sigma.interval="default",mod.sample=0.75,R=10,iterations=3)
 print(res4)
 
 }
-\keyword{spectral clustering, cluster analysis, scales of measurement}
+\keyword{spectral clustering}
+\keyword{cluster analysis}
+\keyword{scales of measurement}

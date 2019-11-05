@@ -36,4 +36,5 @@ library(clusterSim)
 sw<-shapes.worms(180)
 plot(sw$data,col=rainbow(2)[sw$clusters])
 }
-\keyword{cluster,dataset}
+\keyword{cluster}
+\keyword{dataset}

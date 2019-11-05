@@ -31,7 +31,7 @@ Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of deter
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G3}}, \code{\link{index.S}}, \code{\link{index.H}}, 
-\code{\link{index.KL}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
+\code{\link{index.KL}}, \code{\link{index.Gap}}, \code{\link{index.C}}, \code{\link{index.DB}}
 }
 \examples{
 # Example 1
@@ -61,7 +61,7 @@ clusters <- rbind(clusters,cl2$cluster)
 print(paste("max G2 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
 print("clustering for max G2")
 print(clusters[which.max(res[,2]),])
-write.table(res,file="G2_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
+#write.table(res,file="G2_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
 plot(res, type="p", pch=0, xlab="Number of clusters", ylab="G2", xaxt="n")
 axis(1, c(min_nc:max_nc))
 }

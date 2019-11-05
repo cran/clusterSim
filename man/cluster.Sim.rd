@@ -10,9 +10,9 @@ cluster.Sim (x,p,minClusterNo,maxClusterNo,icq="S",outputHtml="",
 \arguments{
 \item{x}{matrix or dataset}
 \item{p}{path of simulation: 1 - ratio data, 2 - interval or mixed (ratio & interval) data, 3 - ordinal data, 4 - nominal data, 5 - binary data, 6 - ratio data without normalization, 7 - interval or mixed (ratio & interval) data without normalization, 8 - ratio data with k-means, 9 - interval or mixed (ratio & interval) data with k-means}
-\item{minClusterNo}{minimal number of clusters, between 2  and no. of objects - 1 (for G3: no. of objects - 2)}
-\item{maxClusterNo}{maximal number of clusters, between 2 and no. of objects - 1 (for G3: no. of objects - 2; for KL: no. of objects - 3), greater or equal minClusterNo}
-\item{icq}{Internal cluster quality index, "S" - Silhouette,"G1" - Calinski & Harabasz index, "G2" - Baker & Hubert index ,"G3" - Hubert & Levine index, "KL" - Krzanowski & Lai index }
+\item{minClusterNo}{minimal number of clusters, between 2  and no. of objects - 1 (for G3 or C: no. of objects - 2)}
+\item{maxClusterNo}{maximal number of clusters, between 2 and no. of objects - 1 (for G3 or C: no. of objects - 2; for KL: no. of objects - 3), greater or equal minClusterNo}
+\item{icq}{Internal cluster quality index, "S" - Silhouette,"G1" - Calinski & Harabasz index, "G2" - Baker & Hubert index ,"G3" - G3 index,"C" - C index, "KL" - Krzanowski & Lai index }
 \item{outputHtml}{ optional, name of html file with results}
 \item{outputCsv}{ optional, name of csv file with results}
 \item{outputCsv2}{ optional, name of csv (comma as decimal point sign) file with results}
@@ -94,7 +94,7 @@ Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury
 }
 \seealso{\code{\link{data.Normalization}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{index.G1}}, \code{\link{index.G2}}, 
 
-\code{\link{index.G3}}, \code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{hclust}}, \code{\link{dist}},
+\code{\link{index.G3}}, \code{\link{index.C}}, \code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{hclust}}, \code{\link{dist}},
 }
 \examples{
 library(clusterSim)

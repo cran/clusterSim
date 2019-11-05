@@ -34,4 +34,5 @@ library(clusterSim)
 stm<-shapes.two.moon(180)
 plot(stm$data,col=rainbow(2)[stm$clusters])
 }
-\keyword{cluster,dataset}
+\keyword{cluster}
+\keyword{dataset}

@@ -40,4 +40,5 @@ library(clusterSim)
 sbe<-shapes.bulls.eye(numObjects=c(120,60))
 plot(sbe$data,col=rainbow(2)[sbe$clusters])
 }
-\keyword{cluster,dataset}
+\keyword{cluster}
+\keyword{dataset}

@@ -34,7 +34,7 @@ Department of Econometrics and Computer Science, University of Economics, Wrocla
 Tibshirani, R., Walther, G., Hastie, T. (2001), \emph{Estimating the number of clusters in a data set via the gap statistic}, "Journal of the Royal Statistical Society", ser. B, vol. 63, part 2, 411-423. Available at: \url{http://dx.doi.org/10.1111/1467-9868.00293}.
 }
 \seealso{
-\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
+\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, \code{\link{index.C}},
 \code{\link{index.S}}, \code{\link{index.H}}, \code{\link{index.KL}}, \code{\link{index.DB}}
 }
 \examples{

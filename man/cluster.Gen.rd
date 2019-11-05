@@ -120,7 +120,10 @@ plot(grnd$data,col=colornames[grnd$clusters],ask=TRUE)
 # Example 5
 library(clusterSim)
 grnd <- cluster.Gen(c(20,35,20,25),model=14,dataType="m",numNoisyVar=1,
-fixedCov=FALSE, numOutliers=0.1, outputCsv2="data14.csv")
+fixedCov=FALSE, numOutliers=0.1)
+# or 
+#grnd <- cluster.Gen(c(20,35,20,25),model=14,dataType="m",numNoisyVar=1,
+#fixedCov=FALSE, numOutliers=0.1, outputCsv2="data14.csv")
 data <- as.matrix(grnd$data)
 colornames <- c("red","blue","green","brown","black")
 grnd$clusters[grnd$clusters==0]<-length(colornames)

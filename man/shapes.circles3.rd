@@ -40,4 +40,5 @@ library(clusterSim)
 sc3b<-shapes.circles3(numObjects=c(120,180,240))
 plot(sc3b$data,col=rainbow(3)[sc3b$clusters])
 }
-\keyword{cluster,dataset}
+\keyword{cluster}
+\keyword{dataset}

@@ -116,6 +116,7 @@ if(icq=="G1" && p>=3 && p<=5) stop ("Calinski Pseudo F statistic may be used onl
 if (minClusterNo<2 || minClusterNo>nrow(x)-1) stop (paste("Number of classes must be in <2 ,",nrow(x)-1,">" ))
 if (maxClusterNo<2 || maxClusterNo>nrow(x)-1) stop (paste("Number of classes must be in <2 ,",nrow(x)-1,">" ))
 if ((icq == "G3") && (maxClusterNo==nrow(x)-1) ) stop (paste("Number of classes for G3 index can not be equal",nrow(x)-1 ))
+if ((icq == "C") && (maxClusterNo==nrow(x)-1) ) stop (paste("Number of classes for C index can not be equal",nrow(x)-1 ))
 if ((icq == "KL") && (maxClusterNo==nrow(x)-1) ) stop (paste("Number of classes for KL index can not be equal",nrow(x)-1 ))
 if (minClusterNo>maxClusterNo) stop ("minClusterNo cannot be greater than maxClusterNo")
 if (p==5) for (t in x) if(t!=0 && t!=1) stop("Path number five is for binary data only")
@@ -166,13 +167,13 @@ v_distDesc =cbind(v_distDesc,c("Manhattan","Euclidean","Chebyschev","Squared Euc
 v_distDesc =cbind(v_distDesc,c("N.A.","","","","","","","","",""))
 v_distDesc =cbind(v_distDesc,c("N.A.","","","","","","","","",""))
 
-v_method=c("single","complete","average","mcquitty","pam","ward","centroid","median")
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
-v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward","centroid","median"))
+v_method=c("single","complete","average","mcquitty","pam","ward.D","centroid","median")
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
+v_method=cbind(v_method,c("single","complete","average","mcquitty","pam","ward.D","centroid","median"))
 v_method=cbind(v_method,c("k-means","","","","","","",""))
 v_method=cbind(v_method,c("k-means","","","","","","",""))
 
@@ -266,7 +267,7 @@ if(!missing(methods))
 }
 
 
-if (icq=="G3")
+if (icq=="G3" || icq=="C")
 {
 	wynik_global=maxint
 }
@@ -451,6 +452,32 @@ for (i_norm in 1 : l_norm)
 
 				}}
 
+				if (icq=="C")
+				{
+				for (liczba_klas in minClusterNo:maxClusterNo)
+				{
+					c<- pam(d, liczba_klas,diss=TRUE)
+					t<-index.C(d,c$clustering)
+					if(t<wynik_global)
+					{
+						wynik_global=t
+						max_norm=i_norm
+						max_dist=i_dist
+						max_classes=liczba_klas
+						max_method=i_method
+						max_cl<-c$clustering
+					}
+					i_result<-i_result+1
+					result[i_result,1]<-i_result
+					result[i_result,2]<-liczba_klas
+					result[i_result,3]<-i_norm
+					result[i_result,4]<-i_dist
+					result[i_result,5]<-i_method
+					result[i_result,6]<-t
+
+				}}
+
+
 				if (icq=="G1")
 				{
 				for (liczba_klas in minClusterNo:maxClusterNo)
@@ -585,6 +612,31 @@ for (i_norm in 1 : l_norm)
 					result[i_result,5]<-i_method
 					result[i_result,6]<-t
 				}}
+
+				if (icq=="C")
+				{
+				for (liczba_klas in minClusterNo:maxClusterNo)
+				{
+					c<-kmeans(y,y[initial.Centers(y,liczba_klas),],100)	# pomyslec o seeds
+					t<-index.C(d,c$cluster)
+					if(t<wynik_global)
+					{
+						wynik_global<-t
+						max_norm=i_norm
+						max_dist=i_dist
+						max_method=i_method
+						max_classes=liczba_klas
+						max_cl<-c$cluster
+					}
+					i_result<-i_result+1
+					result[i_result,1]<-i_result
+					result[i_result,2]<-liczba_klas
+					result[i_result,3]<-i_norm
+					result[i_result,4]<-i_dist
+					result[i_result,5]<-i_method
+					result[i_result,6]<-t
+				}}
+
 
  				if (icq=="G1")
 				{
@@ -729,6 +781,32 @@ for (i_norm in 1 : l_norm)
 					result[i_result,6]<-t
 				}}
 
+				if (icq=="C")
+				{
+				hc <- hclust(d, method = v_method[i_method,p])
+				for (liczba_klas in minClusterNo:maxClusterNo)
+				{
+					c<-cutree(hc,k=liczba_klas)
+					t<-index.C(d,c)
+					if(t<wynik_global)
+					{
+						wynik_global<-t
+						max_norm=i_norm
+						max_dist=i_dist
+						max_method=i_method
+						max_classes=liczba_klas
+						max_cl<-c
+					}
+					i_result<-i_result+1
+					result[i_result,1]<-i_result
+					result[i_result,2]<-liczba_klas
+					result[i_result,3]<-i_norm
+					result[i_result,4]<-i_dist
+					result[i_result,5]<-i_method
+					result[i_result,6]<-t
+				}}
+
+
  				if (icq=="G1")
 				{
 				hc <- hclust(d, method = v_method[i_method,p])
@@ -790,7 +868,7 @@ for (i_norm in 1 : l_norm)
 }
 czas2<-Sys.time()
 result<-result[1:i_result,]
-if (icq=="G3")
+if (icq=="G3" || icq=="C")
 	t<-order(result[,6],decreasing=FALSE)
 else
 	t<-order(result[,6],decreasing=TRUE)
@@ -834,7 +912,7 @@ sorted<-cbind(sorted[,7],sorted[,1:6])
 sorted<-as.data.frame(sorted)
 result<-as.data.frame(result)
 
-indexName<-switch(icq,"S"="Silhouette","G2"="G2 index","G3"="G3 index","G1"="Calinski-Harabasz index ","KL"="Krzanowski-Lai index")
+indexName<-switch(icq,"S"="Silhouette","G2"="G2 index","G3"="G3 index","C"="C index","G1"="Calinski-Harabasz index ","KL"="Krzanowski-Lai index")
 names(result)<-c(" No. "," No. of clusters "," Normalization formula "," Distance measure "," Clustering method ",indexName,"Rank")
 names(sorted)<-c(" Rank "," No. "," No. of clusters "," Normalization formula "," Distance measure "," Clustering method ",indexName)
 
@@ -865,3 +943,4 @@ if (outputCsv2!="")
 resul<-list(path=p,result=wynik_global,normalization=v_norm[max_norm,p],distance=v_distDesc[max_dist,p],method=v_method[max_method,p],classes=as.vector(sorted[1,3]),optClustering=max_cl,optClusteringDescription=cluster.Description(as.matrix(x),max_cl),time<-(czas2-czas1))
 resul
 }
+

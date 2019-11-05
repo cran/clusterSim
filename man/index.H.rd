@@ -29,7 +29,7 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
 }
 \seealso{
-\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, 
+\code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.G3}}, \code{\link{index.C}},
 \code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
@@ -77,7 +77,7 @@ if (found)
 {
 	print("Clustering not found with H<=10")
 }
-write.table(res,file="H_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
+#write.table(res,file="H_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
 plot(res,type="p",pch=0,xlab="Number of clusters",ylab="H",xaxt="n")
 abline(h=10, untf=FALSE)
 axis(1, c(min_nc:max_nc))
@@ -118,7 +118,7 @@ if (found)
 {
 	print("Clustering not found with H<=10")
 }
-write.table(res,file="H_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
+#write.table(res,file="H_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
 plot(res,type="p",pch=0,xlab="Number of clusters",ylab="H",xaxt="n")
 abline(h=10, untf=FALSE)
 axis(1, c(min_nc:max_nc))

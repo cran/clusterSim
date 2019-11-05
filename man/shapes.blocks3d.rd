@@ -33,4 +33,5 @@ library(rgl)
 sb3d<-shapes.blocks3d(300,1,3,3,3)
 plot3d(sb3d$data,col=rainbow(2)[sb3d$clusters])
 }
-\keyword{cluster,dataset}
+\keyword{cluster}
+\keyword{dataset}

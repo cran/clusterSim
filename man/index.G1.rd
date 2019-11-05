@@ -36,7 +36,7 @@ Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London, p. 62. I
 Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \url{https://dx.doi.org/10.1007/BF02294245}.
 }
 \seealso{
-\code{\link{index.G2}},\code{\link{index.G3}},\code{\link{index.S}}, 
+\code{\link{index.G2}},\code{\link{index.G3}},\code{\link{index.S}}, \code{\link{index.C}},
 \code{\link{index.H}},\code{\link{index.KL}},\code{\link{index.Gap}}, \code{\link{index.DB}}
 }
 \examples{
@@ -65,7 +65,7 @@ clusters <- rbind(clusters, cl2$cluster)
 print(paste("max G1 for",(min_nc:max_nc)[which.max(res[,2])],"clusters=",max(res[,2])))
 print("clustering for max G1")
 print(clusters[which.max(res[,2]),])
-write.table(res,file="G1_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
+#write.table(res,file="G1_res.csv",sep=";",dec=",",row.names=TRUE,col.names=FALSE)
 plot(res, type="p", pch=0, xlab="Number of clusters", ylab="G1", xaxt="n")
 axis(1, c(min_nc:max_nc))
 }

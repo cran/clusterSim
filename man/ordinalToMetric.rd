@@ -54,4 +54,7 @@ data(data_patternGDM2)
 res2<-ordinalToMetric(data_patternGDM2,scaleType="o",patternCoordinates=c(5,4,3,4,2,4))
 print(res2)
 }
-\keyword{ordinal scale, GDM distance, reinforcing measurement scale, multivariate statistical analysis}
+\keyword{ordinal scale}
+\keyword{GDM distance}
+\keyword{reinforcing measurement scale}
+\keyword{multivariate statistical analysis}
