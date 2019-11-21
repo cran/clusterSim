@@ -2,7 +2,7 @@
 \alias{data.Normalization}
 \title{Types of variable (column) and object (row) normalization formulas}
 \description{Types of variable (column) and object (row) normalization formulas}
-\usage{data.Normalization (x,type="n0",normalization="column")}
+\usage{data.Normalization (x,type="n0",normalization="column",...)}
 \arguments{
 \item{x}{vector, matrix or dataset}
 \item{type}{type of normalization:}
@@ -45,7 +45,8 @@ n12a - positional normalization ((x-median)/sqrt(sum((x-median)^2)))
 n13 - normalization with zero being the central point ((x-midrange)/(range/2))
 
 \item{normalization}{"column" - normalization by variable, "row" - normalization by object}
-
+\item{...}{arguments passed to \code{sum}, \code{mean}, \code{min} \code{sd}, \code{mad} and other aggregation functions. In particular: 
+\code{na.rm} - a logical value indicating whether NA values should be stripped before the computation}
 }
 \value{
 Normalized data
@@ -78,7 +79,7 @@ Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz 
 \examples{
 library(clusterSim)
 data(data_ratio)
-z1 <- data.Normalization(data_ratio,type="n1",normalization="column")
-z2 <- data.Normalization(data_ratio,type="n10",normalization="row")
+z1 <- data.Normalization(data_ratio,type="n1",normalization="column",na.rm=FALSE)
+z2 <- data.Normalization(data_ratio,type="n10",normalization="row",na.rm=FALSE)
 }
 \keyword{cluster}

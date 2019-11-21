@@ -1,4 +1,4 @@
-33b6c6d034adedc0427fc84177792fa8 *DESCRIPTION
+e20db24cbcf592e18914455084f71d6f *DESCRIPTION
 49b53c03af4f93ac27ddc58664ea6cf5 *INDEX
 5607ddc705618977013480021ab05854 *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -9,7 +9,7 @@ fcbe8a4ca54c5f511cf5ad2ba168761f *R/cluster.Description.r
 35d33a895d75804dda9843f6f2e65b18 *R/cluster.Gen.r
 7abcd451397d3666c1c33dd9eb71e9c7 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
-0eb77e9fd3ce49fb44e9b3bccc78e6f9 *R/data.Normalization.r
+8d1696fa0236f95008544dfa6a29cc6c *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
 3aacb76111209294e82301664ad95b6f *R/dist.GDM.r
 e7fbf99ccaf6f22515517cee1013d6bb *R/dist.SM.r
@@ -24,7 +24,7 @@ da23193ca9e249120ff5a43a2dc75e18 *R/index.GAP.r
 ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
 aa36304f71439adc9f863824e299f965 *R/index.KL.r
 c76b0445fb1e7c96cc32d19b0c2c14db *R/index.S.r
-b59e2139bb6d398fc5fab9874609c69f *R/interval_normalization.r
+d9451cadf12c13d5f97e5a49e2009f19 *R/interval_normalization.r
 d7675724015c95dcde7b7f4b035d7071 *R/ordinalToMetric.r
 58b9bbb899315080a4450956e108bf41 *R/pattern.GDM1.r
 0d1c3f681f86613427a350c2dfdc5fc4 *R/pattern.GDM2.r
@@ -32,14 +32,14 @@ f5230d09d077bc09a8ec59936f93ced9 *R/replication.Mod.r
 398ae046487281398f1e7ded3d970ecb *R/reszta.r
 064090e876a567d91b51417cac48040a *R/shapes.r
 8035e436226d4d350a5252884d843804 *R/speccl.r
-0df423ca58a90bd44eaed7eac43819e4 *data/data_binary.rda
-c77a1236d25e76b5e11008993ae1502d *data/data_interval.rda
-871be54d2b4aea89342ebd47f58100b3 *data/data_mixed.rda
-5fbcf9bf15444bad4e384a502895427e *data/data_nominal.rda
-1e186c3d0f3f7b81bf88017fdf703ac5 *data/data_ordinal.rda
+cf9617619f2637e6d8066364f96a9993 *data/data_binary.rda
+4e7d1673b88e59e490e6b7eb6fd4e968 *data/data_interval.rda
+74a4f67f7e9b208f0f1ffd0a2916b582 *data/data_mixed.rda
+e9af698a94987e3067c22af0eabece8d *data/data_nominal.rda
+77596a522b6da273b4fb8de35076b4ba *data/data_ordinal.rda
 09709ce20af5026336165e160315e20a *data/data_patternGDM1.rda
 295a54a5dcc60a028a8f72fd322e89b5 *data/data_patternGDM2.rda
-140d16d8d91e4c47061a3a77153fad42 *data/data_ratio.rda
+f8e75d96486e511d1540637b10fc93b3 *data/data_ratio.rda
 9d4ff0e2a462ceca96bd636812ed910c *data/data_symbolic.rda
 cf7021e9cf7f6169109b70c0cfb33788 *data/data_symbolic_interval_polish_voivodships.rda
 c572ba4f2d51481225990217afe09374 *inst/csv/symbolic.csv
@@ -72,7 +72,7 @@ e9054cc055610582f3079c1a8b783a83 *man/HINoV.Mod.rd
 2308ee919170bc44c0e00028657c9be6 *man/cluster.Gen.rd
 988131cc35ebd2c5bd3b1a34fe735cde *man/cluster.Sim.rd
 11a4745c7e076b141f856c192d1f8a09 *man/comparing.Partitions.rd
-efb20b8f1e181639f054bc0269ef161b *man/data.Normalization.rd
+c086c8833581936e0f06c5436b2e3279 *man/data.Normalization.rd
 eb017526ad6aabf5a58252c953f1172d *man/data_binary.rd
 6e3328d361bb868a5a660ba8190e4753 *man/data_interval.rd
 3a3bac047f93a466319f1f3dec2dde7d *man/data_mixed.rd
@@ -97,7 +97,7 @@ ace02de026d48307e8dfd32b02bb4023 *man/index.G1.rd
 474ea2670eb57958b0ac36ddbecab2b4 *man/index.KL.rd
 06d9ab538edc859265a2a2c8230da728 *man/index.S.rd
 b9df246e40395ab5a77dac37da7df741 *man/initial.Centers.rd
-52e7e27ef004c002bebabcd727189c32 *man/interval_normalization.rd
+d1c8c25bce750a6e84ba332ecc657b81 *man/interval_normalization.rd
 52fdb9b6dcb2c67b640b5093290307b1 *man/ordinalToMetric.rd
 59785f18784abdbed126e3ec64eaec2a *man/pattern.GDM1.rd
 b5a78115f413262ea8ca0e4b3727d5a3 *man/pattern.GDM2.rd
@@ -111,7 +111,7 @@ cc3769eedec14959759ab5820e42ebdc *man/shapes.circles3.rd
 4eb80f4caecf558ac5368e4f375c85c5 *man/shapes.two.moon.rd
 c82375ed3a67aefd4107fa14fb5a661f *man/shapes.worms.rd
 c8652414b221de079d4c93659d00609f *man/speccl.rd
-aa2d84c7b3694c99187bcdf95d06f765 *src/clusterSim.cpp
+f0aac51dda77dd13666e3bd2eb35e07d *src/clusterSim.cpp
 553e8b33df9ab877d5b4a51bdff54db1 *src/clusterSim.h
 7c80fd91c1fedf630db43d0f58ab7899 *tests/testthat.R
 1ca622d14689eb73a8cd89226558209a *tests/testthat/test_comparing.R

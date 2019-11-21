@@ -2,7 +2,7 @@
 \alias{interval_normalization}
 \title{Types of normalization formulas for interval-valued symbolic variables}
 \description{Types of normalization formulas for interval-valued symbolic variables}
-\usage{interval_normalization(x,dataType="simple",type="n0",y=NULL)}
+\usage{interval_normalization(x,dataType="simple",type="n0",y=NULL,...)}
 \arguments{
 \item{x}{matrix dataset or symbolic table object}
 \item{dataType}{Type of symbolic data table passed to function, 
@@ -57,7 +57,8 @@ n12a - positional normalization ((x-median)/sqrt(sum((x-median)^2)))
 n13 - normalization with zero being the central point ((x-midrange)/(range/2))
 
 \item{y}{matrix or dataset with upper bounds of intervals if argument \code{dataType} is uuqual to "separate_tables"}
-
+\item{...}{arguments passed to \code{sum}, \code{mean}, \code{min} \code{sd}, \code{mad} and other aggregation functions. In particular: 
+\code{na.rm} - a logical value indicating whether NA values should be stripped before the computation}
 }
 \value{
 Normalized data

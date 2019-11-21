@@ -36,7 +36,7 @@ extern "C" void  fngdm(double  * x,int *  rows, int * cols, int * type, double *
 #endif
 {
 int i,j,k,l;
-double l1,m1,m2,a,b;
+double l1,m1,m2,a;
 double *mianownik;
 
 int wiersze,kolumny,typ;
@@ -119,6 +119,7 @@ double GDM_a (int i, int p, int j, double  * x , int type,int wiersze )
 {
 double result;
 double xi,xp;
+  result=0;
 	xi=x[wiersze*(j-1)+i-1];
 	xp=x[wiersze*(j-1)+p-1];
 	if(type==typ_metryczny)

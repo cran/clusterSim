@@ -57,7 +57,7 @@ resul
 }
 
 
-interval_normalization<-function(x,dataType="simple",type="n0",y=NULL){
+interval_normalization<-function(x,dataType="simple",type="n0",y=NULL,...){
   if(dataType=="sda"){
     x<-.SO2Simple(x)
   }
@@ -84,7 +84,7 @@ interval_normalization<-function(x,dataType="simple",type="n0",y=NULL){
     x<-xy
   }
   nx<-x
-  bindx<-data.Normalization(as.matrix(rbind(x[,,1],x[,,2])),type=type)
+  bindx<-data.Normalization(as.matrix(rbind(x[,,1],x[,,2])),type=type,...)
   nx[,,1]<-bindx[1:dim(x)[[1]],]
   nx[,,2]<-bindx[(dim(x)[[1]]+1):dim(bindx)[[1]],]
   sda=.simple2SO(nx)
