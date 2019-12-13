@@ -52,14 +52,14 @@ cluster.Gen<-function(numObjects=50,means=NULL,cov=NULL, fixedCov=TRUE, model=1,
 		{
 			if (inputType=="csv")
 			{
-				try(means<-as.matrix(read.csv(paste("means_",model,".csv",sep=""),header=inputHeader,row.names=inputRowNames)),TRUE)
+				try({try_monitor<-TRUE;means<-as.matrix(read.csv(paste("means_",model,".csv",sep=""),header=inputHeader,row.names=inputRowNames));try_monitor<-FALSE},TRUE)
 			}
 			else
 			{
-				try(means<-as.matrix(read.csv2(paste("means_",model,".csv",sep=""),header=inputHeader,row.names=inputRowNames)),TRUE)
+				try({try_monitor<-TRUE;means<-as.matrix(read.csv2(paste("means_",model,".csv",sep=""),header=inputHeader,row.names=inputRowNames));try_monitor<-FALSE},TRUE)
 			}
 			#print(.Last.value)
-			if (class(.Last.value)=="try-error")
+			if (try_monitor)
 			{
         model<-3
 			}

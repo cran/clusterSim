@@ -97,11 +97,11 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
           ka<-.GausKernel(as.matrix(dist(bootstrap))^2,sigma)
         }
         else{
-          dd<-try(dist(bootstrap,method=distance),silent=silDebug)
-          if(class(dd)=="try-error"){
-            dd<-try(dist.binary(bootstrap,method=distance),silent=silDebug)
+          try({try_monitor<-TRUE;dd<-dist(bootstrap,method=distance);try_monitor<-FALSE},silent=silDebug)
+          if(try_monitor){
+            try({try_monitor<-TRUE;dd<-dist.binary(bootstrap,method=distance);try_monitor<-FALSE},silent=silDebug)
           }
-          if(class(dd)=="try-error"){
+          if(try_monitor){
             stop(paste("unknown distance method ",distance))
           }
           ka<-.GausKernel(as.matrix(dd),sigma)
@@ -110,19 +110,19 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
         l<-d * ka %*% diag(d)
         ei<-NULL
         tf<-function(l,nc){eigen(l,symmetric=TRUE)$vectors[,1:nc]}
-        ei<-try(tf(l,nc),silent=silDebug)
+        try({try_monitor<-TRUE;ei<-tf(l,nc);try_monitor<-FALSE},silent=silDebug)
         #bbootstrap<<-bootstrap
         #dd<<-d
         #kka<<-ka
         #ll<<-l
         #ssigma<<-sigma
         ##print(class(ei))
-        if(class(ei)!="try-error"){
+        if(!try_monitor){
           if(!is.null(ei)  && is.numeric(ei)){
-            yi<-try(ei/sqrt(rowSums(ei^2)),silent=silDebug)
+            try({try_monitor<-TRUE;yi<-ei/sqrt(rowSums(ei^2));try_monitor<-FALSE},silent=silDebug)
             if(sum(is.na(yi))==0){
-            res<-try(kmeans(yi, yi[initial.Centers(yi,nc),],...),silent=silDebug)
-            if(class(res)=="try-error"){
+            try({try_monitor<-TRUE;res<-kmeans(yi, yi[initial.Centers(yi,nc),],...);try_monitor<-FALSE},silent=silDebug)
+            if(try_monitor){
               res<-list(withinss=1e10)
               next
             }
@@ -193,11 +193,11 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
     km<-.GausKernel(as.matrix(scdist),sig)
   }
   else{
-        scdist<-try(dist(x,method=distance),silent=silDebug)
-        if(class(dd)=="try-error"){
-          scdist<-try(dist.binary(x,method=distance),silent=silDebug)
+        try({try_monitor<-TRUE;scdist<-dist(x,method=distance);try_monitor<-FALSE},silent=silDebug)
+        if(try_monitor){
+          try({try_monitor<-TRUE;scdist<-dist.binary(x,method=distance);try_monitor<-FALSE},silent=silDebug)
         }
-        if(class(scdist)=="try-error"){
+        if(try_monitor){
           stop(paste("unknown distance method ",distance))
           globalOk<-FALSE
         }
@@ -208,27 +208,27 @@ speccl<-function(data,nc,distance="GDM1",sigma="automatic",sigma.interval="defau
   d<-1/sqrt(rowSums(km))
   l<-d * km %*% diag(d)
   if(getRversion() >= '3.0'){
-  ei<-try(eigen(l,symmetric=T)$vectors[, 1:nc],silent=silDebug)
+  try({try_monitor<-TRUE;ei<-eigen(l,symmetric=T)$vectors[, 1:nc];try_monitor<-FALSE},silent=silDebug)
   }
   else{
-  ei<-try(eigen(l)$vectors[, 1:nc],silent=silDebug)
+  try({try_monitor<-TRUE;ei<-eigen(l)$vectors[, 1:nc];try_monitor<-FALSE},silent=silDebug)
   }
-  if(class(ei)=="try-error"){
+  if(try_monitor){
     #stop(paste("Not possible to calculate eigenvalues, try with other distance type - ",distance))
     globalOk<-FALSE
     #print("bad eigen")
   }
   if(globalOk){yi<-ei/sqrt(rowSums(ei^2))}
   if(globalOk){
-    res<-try(kmeans(yi, yi[initial.Centers(yi, nc),], ...),silent=silDebug)
-    if(class(res)=="try-error"){
-      res<-try(kmeans(yi,nc,...),silent=silDebug)
+    try({try_monitor<-TRUE;res<-kmeans(yi, yi[initial.Centers(yi, nc),], ...);try_monitor<-FALSE},silent=silDebug)
+    if(try_monitor){
+      try({try_monitor<-TRUE;res<-kmeans(yi,nc,...);try_monitor<-FALSE},silent=silDebug)
     }
   }
-  if(globalOk && class(res)=="try-error"){
+  if(globalOk && try_monitor){
     #yyi<<-yi
     #print("bad clustering")
-    if(is.character(all.equal(na.action,na.omit))){     # if all.equals not returns true it returns string"
+    if(is.character(all.equal(na.action,na.omit))){     # if all.equals not returns TRUE it returns string"
       tries<-tries+1
       if(tries<5){
         stop(paste("Not possible to do clustering, try with other distance type - ",distance))
