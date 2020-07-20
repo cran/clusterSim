@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.48-3
-Date: 2019-12-13
+Version: 0.49-1
+Date: 2020-07-20
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl>, Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: R (>= 3.5.0), cluster, MASS
@@ -24,6 +24,6 @@ License: GPL (>= 2)
 URL: http://keii.ue.wroc.pl/clusterSim
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2019-12-10 16:27:26 UTC; andrzej
+Packaged: 2020-07-17 07:42:50 UTC; andrzej
 Repository: CRAN
-Date/Publication: 2019-12-13 11:30:02 UTC
+Date/Publication: 2020-07-20 20:20:03 UTC

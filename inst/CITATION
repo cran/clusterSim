@@ -1,0 +1,16 @@
+bibentry(bibtype = "InProceedings",
+    title = "The Choice of Variable Normalization Method in Cluster Analysis",
+    author = c(
+       person(given="Marek", family="Walesiak",
+              email = "Marek.Walesiak@ue.wroc.pl"),
+       person(given="Andrzej", family="Dudek",
+              email = "Andrzej.Dudek@ue.wroc.pl")),
+    booktitle = "Education Excellence and Innovation Management: A 2025 Vision to Sustain Economic Development During Global Challenges",
+    booksubtitle = "Proceedings of the 35th International Business Information Management Association Conference (IBIMA), 1-2 April 2020, Seville, Spain",
+    year = "2020",
+    publisher = "International Business Information Management Association (IBIMA)",
+    editor = "Khalid S. Soliman",
+    pages =  "325-340",
+    isbn = "978-0-9998551-4-1",
+    header = "To cite clusterSim in publications use:"
+)

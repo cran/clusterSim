@@ -115,6 +115,94 @@ int wiersze,kolumny,typ;
 	return;
 }
 
+
+#ifdef WIN32
+extern "C" void GDM_API  fngdm_single_column(double  * x,int *  rows, int * cols, int * type, double * weights, double * wynik)
+#else
+extern "C" void  fngdm_single_column(double  * x,int *  rows, int * cols, int * type, double * weights, double * wynik)
+#endif
+{
+int i,j,k,l;
+double l1,m1,m2,a;
+double *mianownik;
+
+int wiersze,kolumny,typ;
+
+	wiersze=*rows;
+	kolumny=*cols;
+	typ=*type;
+	mianownik=new double[(*rows)+1];
+
+	if (typ==typ_nominalny)
+	{    
+		for(i=1;i<=1;i++)
+		for(k=1;k<=i;k++)
+		{
+			wynik[wiersze*(i-1)+k-1]=0;
+			for(j=1;j<=kolumny;j++)
+				if (x[(wiersze)*(j-1)+i-1]!=x[(wiersze)*(j-1)+k-1])
+					wynik[wiersze*(i-1)+k-1]+=1.0/kolumny;
+			//wynik[wiersze*(i-1)+k-1]/=;
+			//wynik[wiersze*(k-1)+i-1]=wynik[wiersze*(i-1)+k-1];
+		}
+	}
+	else
+		{
+
+		for(i=1;i<=wiersze;i++)
+		{
+			mianownik[i]=0;
+			for(j=1;j<=kolumny;j++)
+			for(l=1;l<=wiersze;l++)
+			{
+				a=GDM_a(i,l,j,x,typ,wiersze);
+				mianownik[i]+=weights[j-1]*a*a;
+			}
+		}
+		for(i=1;i<=1;i++)
+		{
+			/*m1=0;
+			for(j=1;j<=kolumny;j++) 
+			for(l=1;l<=wiersze;l++)
+			{
+				a=GDM_a(i,l,j,x,typ,wiersze);
+				m1+=weights[j-1]*a*a;
+			}
+			m2=0;
+			for(j=1;j<=kolumny;j++) 
+			for(k=1;k<=wiersze;k++)
+			{
+				b=GDM_a(i,k,j,x,typ,wiersze);
+				m2+=weights[j-1]*b*b;
+			}           */
+			for(k=1;k<=wiersze;k++)
+			{
+				l1=0;
+				for(j=1;j<=kolumny;j++) 
+				{
+					l1+=weights[j-1]*GDM_a(i,k,j,x,typ,wiersze)*GDM_a(k,i,j,x,typ,wiersze);
+				}
+				for(j=1;j<=kolumny;j++) 
+				for(l=1;l<=wiersze;l++)
+					if (l!=i && l!=k)
+						l1+=weights[j-1]*GDM_a(i,l,j,x,typ,wiersze)*GDM_a(k,l,j,x,typ,wiersze);
+				m1=mianownik[i];
+				m2=mianownik[k];
+				wynik[wiersze*(i-1)+k-1]=.5-(l1/(2*sqrt(m1*m2)));
+				//wynik[wiersze*(k-1)+i-1]=wynik[wiersze*(i-1)+k-1];
+	#ifdef wyniki_do_pliku
+				fprintf(plik_wynik,"\n i: %i , k: %i , l1: %g , \nm1:%g ,  m2:%g ,  m:%g",i,k,l1,m1,m2,2*sqrt(m1*m2));
+				fprintf(plik_wynik,"\n%d,%d,   Wynik: %g",i,k,wynik[wiersze*(i-1)+k-1]);
+				fprintf(plik_wynik,"\n-----------------------------------------------------------------------");
+	#endif
+			}	
+		}
+	}
+	//printTab(wynik,*rows,4,4);
+	return;
+}
+
+
 double GDM_a (int i, int p, int j, double  * x , int type,int wiersze )
 {
 double result;
@@ -147,6 +235,10 @@ double xi,xp;
 	}
 	return result;
 }	
+
+
+
+
 
 #ifdef WIN32
 extern "C" void GDM_API  fng2(double * within , int * nwithin, double * between , int * nbetween, double * wynik )

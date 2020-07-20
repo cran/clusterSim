@@ -102,8 +102,8 @@ pattern.GDM1<-function (data, performanceVariable, scaleType = "i", nomOptValues
     ndata <- rbind(data, pattern)
     row.names(ndata)[nrow(ndata)] <- "pattern"
     cdata <- rbind(pattern, data)
-    gdm <- GDM1(cdata, weightsType = weightsType, weights = weights)
-    gdm_p <<- as.matrix(gdm)[1, ][-1]
+    gdm <- .GDM.single.column(cdata,method="GDM1",weightsType = weightsType, weights = weights)
+    gdm_p <<- as.vector(gdm[-1,])
     names(gdm_p) <- row.names(data)
     if (patternType == "upper") {
         sortedgdm_p <- sort(gdm_p)

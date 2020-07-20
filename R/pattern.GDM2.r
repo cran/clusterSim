@@ -127,8 +127,8 @@ if(patternType=="lower"){
 
 #WLASCIWE PORZADKOWANIE
 cdata<-rbind(pattern,data)
-gdm<-GDM2(cdata,weightsType=weightsType, weights=weights)
-gdm_p<-as.matrix(gdm)[1,][-1]
+gdm <- .GDM.single.column(cdata,method="GDM2", weightsType = weightsType, weights = weights)
+gdm_p <<- as.vector(gdm[-1,])
 names(gdm_p)<-row.names(data)
 #print("GDM distances from pattern object")
 #print(gdm_p)
