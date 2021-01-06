@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.49-1
-Date: 2020-07-20
+Version: 0.49-2
+Date: 2021-01-04
 Author: Marek Walesiak <marek.walesiak@ue.wroc.pl>, Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: R (>= 3.5.0), cluster, MASS
@@ -21,9 +21,9 @@ Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for sym
  BRECKENRIDGE, J.N. (2000) <doi:10.1207/S15327906MBR3502_5>, 
  WALESIAK, M., DUDEK, A. (2008) <doi:10.1007/978-3-540-78246-9_11>).
 License: GPL (>= 2)
-URL: http://keii.ue.wroc.pl/clusterSim
+URL: http://keii.ue.wroc.pl/clusterSim/
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2020-07-17 07:42:50 UTC; andrzej
+Packaged: 2021-01-04 19:51:07 UTC; andrzej
 Repository: CRAN
-Date/Publication: 2020-07-20 20:20:03 UTC
+Date/Publication: 2021-01-06 16:00:57 UTC

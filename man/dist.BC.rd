@@ -21,7 +21,7 @@ Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielo
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
 }
 \seealso{
 \code{\link{dist.GDM}}, \code{\link{dist.SM}}, \code{\link{dist}}

@@ -21,11 +21,11 @@ Calinski-Harabasz pseudo F-statistic
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
 }
 \references{
 
-Calinski, T., Harabasz, J. (1974), \emph{A dendrite method for cluster analysis}, "Communications in Statistics", vol. 3, 1-27. Available at: \url{http://dx.doi.org/10.1080/03610927408827101}.
+Calinski, T., Harabasz, J. (1974), \emph{A dendrite method for cluster analysis}, "Communications in Statistics", vol. 3, 1-27. Available at: \doi{10.1080/03610927408827101}.
 
 Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London, p. 103. ISBN 9780340761199.
 
@@ -33,7 +33,7 @@ Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielo
 
 Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London, p. 62. ISBN 9781584880134.
 
-Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \url{https://dx.doi.org/10.1007/BF02294245}.
+Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of determining the number of cluster in a data set}, "Psychometrika", vol. 50, no. 2, 159-179. Available at: \doi{10.1007/BF02294245}.
 }
 \seealso{
 \code{\link{index.G2}},\code{\link{index.G3}},\code{\link{index.S}}, \code{\link{index.C}},

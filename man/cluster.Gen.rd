@@ -72,14 +72,14 @@ for symbolic interval data three-dimensional structure: first dimension represen
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
 }
 \references{
 Billard, L., Diday, E. (2006), \emph{Symbolic data analysis. Conceptual statistics and data mining}, Wiley, Chichester. ISBN: 978-0-470-09016-9.
 
-Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degree of separation}, "Journal of Classification", vol. 23, 315-334. Available at: \url{http://dx.doi.org/10.1007/s00357-006-0018-y}.
+Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degree of separation}, "Journal of Classification", vol. 23, 315-334. Available at: \doi{10.1007/s00357-006-0018-y}.
 
-Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250. Available at: \url{http://dx.doi.org/10.1007/s00357-005-0015-6}.
+Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250. Available at: \\doi{10.1007/s00357-005-0015-6}.
 
 Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2008_Walesiak_Dudek_Springer.pdf}.
 

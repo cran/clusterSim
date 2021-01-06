@@ -1,27 +1,9 @@
 #include "clusterSim.h"
 #include "math.h"
 #include "stdio.h"
-#include <R.h> 
-#include <Rinternals.h>
+//#include <R.h> 
+//#include <Rinternals.h>
 #include <R_ext/Rdynload.h>
-/*#include "windows.h"
-#include "string.h";
-#include "time.h";*/
-
-/*void printTab (double * x,int r,int c,int rToPrint){
-		printf("\n*************************** ZACZYNAM DRUKOWAC TABELE **************************\n");
-		for(int i=0;i<rToPrint;i++){
-		for(int j=0;j<c;j++){
-			printf(" %3.5e ",x[r*j+i]);
-		}
-		printf("\n");
-	}
-
-}*/
-/*
-void printTab (double * x,int r,int c){
-	printTab (x,r,c,r);
-}*/
 
 void R_init_clusterSim(DllInfo* info) {
 	R_registerRoutines(info, NULL, NULL, NULL, NULL);
@@ -103,11 +85,6 @@ int wiersze,kolumny,typ;
 				m2=mianownik[k];
 				wynik[wiersze*(i-1)+k-1]=.5-(l1/(2*sqrt(m1*m2)));
 				wynik[wiersze*(k-1)+i-1]=wynik[wiersze*(i-1)+k-1];
-	#ifdef wyniki_do_pliku
-				fprintf(plik_wynik,"\n i: %i , k: %i , l1: %g , \nm1:%g ,  m2:%g ,  m:%g",i,k,l1,m1,m2,2*sqrt(m1*m2));
-				fprintf(plik_wynik,"\n%d,%d,   Wynik: %g",i,k,wynik[wiersze*(i-1)+k-1]);
-				fprintf(plik_wynik,"\n-----------------------------------------------------------------------");
-	#endif
 			}	
 		}
 	}
@@ -190,11 +167,6 @@ int wiersze,kolumny,typ;
 				m2=mianownik[k];
 				wynik[wiersze*(i-1)+k-1]=.5-(l1/(2*sqrt(m1*m2)));
 				//wynik[wiersze*(k-1)+i-1]=wynik[wiersze*(i-1)+k-1];
-	#ifdef wyniki_do_pliku
-				fprintf(plik_wynik,"\n i: %i , k: %i , l1: %g , \nm1:%g ,  m2:%g ,  m:%g",i,k,l1,m1,m2,2*sqrt(m1*m2));
-				fprintf(plik_wynik,"\n%d,%d,   Wynik: %g",i,k,wynik[wiersze*(i-1)+k-1]);
-				fprintf(plik_wynik,"\n-----------------------------------------------------------------------");
-	#endif
 			}	
 		}
 	}
@@ -254,9 +226,6 @@ extern "C" void   fng2(double * within , int * nwithin, double * between , int *
 		{
 			if (within[i]<between[j]) s++;
 			if (within[i]==between[j]) rowne++;
-			#ifdef wyniki_do_pliku
-			fprintf(plik_wynik,"%i , %i : %g, %g \n",i,j,within[i],between[j]);
-			#endif
 
 		}
 	if ((*nwithin)*(*nbetween)==rowne)
