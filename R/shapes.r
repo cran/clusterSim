@@ -168,22 +168,3 @@ shapes.blocks3d<-function(numObjects=180,shapesUnitSize=0.5, shape2coordinateX=1
 
 }
 
-
-#sw<-shapes.worms(180)
-#plot(sw$data,col=rainbow(2)[sw$clusters])
-
-#sw<-shapes.circles2(180)
-#plot(sw$data,col=rainbow(2)[sw$clusters])
-
-#sw<-shapes.circles3 (180)
-#plot(sw$data,col=rainbow(3)[sw$clusters])
-
-#sw<-shapes.bulls.eye (180)
-#plot(sw$data,col=rainbow(2)[sw$clusters])
-
-#sw<-shapes.two.moon (180)
-#plot(sw$data,col=rainbow(2)[sw$clusters])
-
-#library(rgl)
-#sw<-shapes.blocks3d (300,1,3,3,3)
-#plot3d(sw$data,col=rainbow(2)[sw$clusters])

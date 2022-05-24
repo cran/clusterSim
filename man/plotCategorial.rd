@@ -16,7 +16,7 @@ Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.d
 Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
 }
 \seealso{
-\code{\link{plotCategorial3d}}, \code{\link{colors}}, \code{\link{pairs}}
+\code{\link{colors}}, \code{\link{pairs}}
 }
 \examples{
 # Example 1
