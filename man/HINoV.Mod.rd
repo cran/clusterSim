@@ -1,6 +1,6 @@
 \name{HINoV.Mod}
 \alias{HINoV.Mod}
-\title{Modification of Carmone, Kara \& Maxwell Heuristic Identification of Noisy Variables (HINoV) method}
+\title{Modification of Carmone, Kara & Maxwell Heuristic Identification of Noisy Variables (HINoV) method}
 \description{Modification of Heuristic Identification of Noisy Variables (HINoV) method}
 \usage{
 HINoV.Mod (x, type="metric", s = 2, u, distance=NULL, 

@@ -5,11 +5,22 @@
 //#include <Rinternals.h>
 #include <R_ext/Rdynload.h>
 
-void R_init_clusterSim(DllInfo* info) {
-	R_registerRoutines(info, NULL, NULL, NULL, NULL);
+
+static const R_CMethodDef CEntries[] = {
+  {"fngdm",        (DL_FUNC) &fngdm,        6},
+  {"fngdm_single_column",     (DL_FUNC) &fngdm_single_column,     6},
+  {"fng2", (DL_FUNC) &fng3, 5},
+  {"fng3",      (DL_FUNC) &fng3,      4},
+  {NULL, NULL, 0}
+};
+
+void R_init_clusterSim(DllInfo *info)
+{
+  R_registerRoutines(info, CEntries, NULL, NULL, NULL);
   R_useDynamicSymbols(info, FALSE);
   R_forceSymbols(info, TRUE);
 }
+
 
 #ifdef WIN32
 extern "C" void GDM_API  fngdm(double  * x,int *  rows, int * cols, int * type, double * weights, double * wynik)

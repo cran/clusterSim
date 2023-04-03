@@ -8,7 +8,7 @@
 \item{cl}{A vector of integers indicating the cluster to which each object is allocated}
 }
 \details{
-See file \$R\_HOME\\library\\clusterSim\\pdf\\indexC\_details.pdf for further details
+See file $R_HOME\\library\\clusterSim\\pdf\\indexC_details.pdf for further details
 
 Thanks to Özge Sahin from Technical University of Munich for for pointing the difference between \code{\link{index.G3}} and \code{\link{index.C}}.
 

@@ -1,6 +1,6 @@
 \name{HINoV.Symbolic}
 \alias{HINoV.Symbolic}
-\title{Modification of Carmone, Kara \& Maxwell Heuristic Identification of Noisy Variables (HINoV) method for symbolic interval data}
+\title{Modification of Carmone, Kara & Maxwell Heuristic Identification of Noisy Variables (HINoV) method for symbolic interval data}
 \description{Modification of Heuristic Identification of Noisy Variables (HINoV) method for symbolic interval data}
 \usage{
 HINoV.Symbolic(x, u=NULL, distance="H", method = "pam", 

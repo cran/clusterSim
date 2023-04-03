@@ -35,6 +35,8 @@ dist.GDM<-function(x,method="GDM1",weightsType="equal",weights=NULL)
 		wynik[i,j]=t[(i-1)*nr+j]
 		wynik[j,i]=t[(j-1)*nr+i]
 	}
+  row.names(wynik)<-row.names(x)
+  colnames(wynik)<-row.names(x)
 	as.dist(wynik)
 }
 GDM<-function(x,method="GDM1",weightsType="equal",weights=NULL){dist.GDM(x,method=method,weightsType,weights)}
@@ -79,5 +81,6 @@ GDM2<-function(x,weightsType="equal",weights=NULL){dist.GDM(x,"GDM2",weightsType
 	{
 		wynik[i,1]=t[i]
 	}
+  names(wynik)<-names(x)
 	wynik
 }
