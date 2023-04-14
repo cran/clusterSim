@@ -6,7 +6,7 @@ dist.SM<-function(x)
     dim(x)<-c(length(x),1)
 	}
 	nr=nrow(x)
-	t<-.C("fng3",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik
+	t<-.C(C_fng3,as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik
 	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
 	for (i in 1:nr)
 	for (j in 1:nr)

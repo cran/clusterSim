@@ -26,7 +26,7 @@ dist.GDM<-function(x,method="GDM1",weightsType="equal",weights=NULL)
 			"GDM3"=3)
 
 	nr=nrow(x)
-	t<-.C("fngdm",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
+	t<-.C(C_fngdm,as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
 	as.integer(method_int),as.double(weights),wynik=double(nrow(x)*nrow(x)),PACKAGE="clusterSim")$wynik
 	wynik<-matrix(nrow=nr,ncol=nr,dimnames=names(x))
 	for (i in 1:nr)
@@ -74,7 +74,7 @@ GDM2<-function(x,weightsType="equal",weights=NULL){dist.GDM(x,"GDM2",weightsType
 			"GDM3"=3)
 
 	nr=nrow(x)
-	t<-.C("fngdm_single_column",as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
+	t<-.C(C_fngdm_single_column,as.double(x),as.integer(nrow(x)),as.integer(ncol(x)),
 	as.integer(method_int),as.double(weights),wynik=double(nrow(x)),PACKAGE="clusterSim")$wynik
 	wynik<-matrix(nrow=nr,ncol=1,dimnames=names(x))
 	for (i in 1:nr)

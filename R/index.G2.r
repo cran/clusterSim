@@ -31,5 +31,5 @@ index.G2 <- function(d,cl){
    }
    nwithin<-length(within.dist)
    nbetween<-length(between.dist)
-   .C("fng2",as.double(within.dist),as.integer(nwithin),as.double(between.dist),as.integer(nbetween),wynik=double(1),PACKAGE="clusterSim")$wynik[1]
+   .C(C_fng2,as.double(within.dist),as.integer(nwithin),as.double(between.dist),as.integer(nbetween),wynik=double(2),PACKAGE="clusterSim")$wynik[1]
 }

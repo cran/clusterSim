@@ -3,13 +3,13 @@
 #include "stdio.h"
 //#include <R.h> 
 //#include <Rinternals.h>
-#include <R_ext/Rdynload.h>
+
 
 
 static const R_CMethodDef CEntries[] = {
   {"fngdm",        (DL_FUNC) &fngdm,        6},
   {"fngdm_single_column",     (DL_FUNC) &fngdm_single_column,     6},
-  {"fng2", (DL_FUNC) &fng3, 5},
+  {"fng2", (DL_FUNC) &fng2, 5},
   {"fng3",      (DL_FUNC) &fng3,      4},
   {NULL, NULL, 0}
 };

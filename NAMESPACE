@@ -1,7 +1,9 @@
 # Remove the previous line if you edit this file
 
 # Export all names
-exportPattern("^[^\\.]")
+exportPattern("^[^\\.C\\_]")
+
+useDynLib(clusterSim, .registration = TRUE, .fixes = "C_")
 
 # Import all packages listed as Imports or Depends
 import(
@@ -18,4 +20,3 @@ importFrom("stats", "as.dist", "as.hclust", "cutree", "dist", "hclust",
            "kmeans", "mad", "median", "na.omit", "rnorm", "runif",
            "sd", "var")
 importFrom("utils", "read.csv", "read.csv2", "write.table")
-useDynLib(clusterSim)

@@ -1,6 +1,6 @@
-54590e6afe9543ca670a393263aed433 *DESCRIPTION
+eb5b6bafc48850518e249c8aac4de77b *DESCRIPTION
 49b53c03af4f93ac27ddc58664ea6cf5 *INDEX
-e99af487fa6ba33777a6b3891096397a *NAMESPACE
+47a01d7954f600af29a37b0d1da53b6b *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
 43b7ada16895a49d60c679419f7d8f28 *R/HINoV.Mod.r
 291ac554dd129e54d1ba942fd0dc52e7 *R/HINoV.Symbolic.r
@@ -11,14 +11,14 @@ fcbe8a4ca54c5f511cf5ad2ba168761f *R/cluster.Description.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
 fb3981583c44d1a633e57cd8ec845ff3 *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
-6def640d14cc35ed6e85d984e5c8fea0 *R/dist.GDM.r
-e7fbf99ccaf6f22515517cee1013d6bb *R/dist.SM.r
+7f7d2ae6e834acfe3a77132606f40531 *R/dist.GDM.r
+abfd60042d8fcf35f9b7e350843952da *R/dist.SM.r
 39210475e00e48eb648b29853f694b73 *R/dist.Symbolic.r
 15d7fea7be77e311b0acfcd531f37d53 *R/index.C.r
 02a257875f47468098bb6424313305a8 *R/index.DB.r
 b9ed901fa778f452393c4480b60c5695 *R/index.G1.r
 8da68798d32cae55565414c456e2946f *R/index.G1d.r
-3840a662e76b1b272028962d23f93ed5 *R/index.G2.r
+03b899c1f09d020c2fd603c94cca4eb6 *R/index.G2.r
 e819c4902348c249f6ada940e1d672f6 *R/index.G3.r
 da23193ca9e249120ff5a43a2dc75e18 *R/index.GAP.r
 ebaf414740c4675bbc69052ce62f58d1 *R/index.H.r
@@ -93,7 +93,7 @@ bb4ab62b4890fdd6db2203269e02d789 *man/data_symbolic.rd
 ac072f69451c61befe1abde4501eda1d *man/index.C.rd
 22e54fd7e685778510e99c94b4e081d2 *man/index.DB.rd
 70f9579f0044efe8af1747122010ffb1 *man/index.G1.rd
-1d917f69000177a9f796ef99b66989b5 *man/index.G2.rd
+cb51c5c5cc55b8d6c85e35ac72ff38bd *man/index.G2.rd
 9d84d806c3ce9ebfe392c45c5b54316b *man/index.G3.rd
 bf055e2ea32afe95d5452ba5c87d1ee8 *man/index.GAP.rd
 929786cec164ae5c105dec5207a824c9 *man/index.H.rd
@@ -113,8 +113,8 @@ fd10c0c90005743848a640bb940abc99 *man/shapes.circles2.rd
 5035e66654d4b8334eb3939d06f8d8f6 *man/shapes.two.moon.rd
 09ae34ab110e15c6882fabea2370ec85 *man/shapes.worms.rd
 343c3a47e4a4d3d01da6e376d961ffdb *man/speccl.rd
-843455c10196580c2be4463ed62fc9c2 *src/clusterSim.cpp
-3209dda4633a651b81c03b9d279511f5 *src/clusterSim.h
+a62f8d3733d04a68de3947d9ff737d92 *src/clusterSim.cpp
+14a0de814feb79c89cd2af2e82ff6163 *src/clusterSim.h
 7c80fd91c1fedf630db43d0f58ab7899 *tests/testthat.R
 21ddcc137de323c4e8da78b25741bf67 *tests/testthat/test_GDM.R
 1ca622d14689eb73a8cd89226558209a *tests/testthat/test_comparing.R
