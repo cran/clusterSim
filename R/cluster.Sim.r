@@ -356,9 +356,9 @@ for (i_norm in 1 : l_norm)
 			lmax_method=l_method
 		else
 			lmax_method=l_method-3
-		if (is.nan(d) || is.nan(d) || is.infinite(d))
+		if (any(is.na(d)) || any(is.nan(d)) || any(is.infinite(d)))
 		{
-			(paste("Nieskonczonosc",i_norm,i_dist))
+			(paste("Infinity or nan in dist",i_norm,i_dist))
 			print(d)
 			stop()
 		}	

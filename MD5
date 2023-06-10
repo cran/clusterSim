@@ -1,4 +1,4 @@
-eb5b6bafc48850518e249c8aac4de77b *DESCRIPTION
+5a5fdffd98998b09337ebe3a9f863e2a *DESCRIPTION
 49b53c03af4f93ac27ddc58664ea6cf5 *INDEX
 47a01d7954f600af29a37b0d1da53b6b *NAMESPACE
 5e8289aba3c8f3054a216d578af4c371 *R/First.Lib.r
@@ -7,7 +7,7 @@ eb5b6bafc48850518e249c8aac4de77b *DESCRIPTION
 dd6a3997973fbcf85dd727aaf4cd6254 *R/Last.Lib.r
 fcbe8a4ca54c5f511cf5ad2ba168761f *R/cluster.Description.r
 49bc457c2c8c1e68f18ad73d07c6f3e6 *R/cluster.Gen.r
-7abcd451397d3666c1c33dd9eb71e9c7 *R/cluster.Sim.r
+242e077e6b65076a247da4901f4a5324 *R/cluster.Sim.r
 4a2915d2881e51ef5c115f6333c49315 *R/comparing.Partitions.r
 fb3981583c44d1a633e57cd8ec845ff3 *R/data.Normalization.r
 dadd3c41e27b9b02952fc213e573ccd4 *R/dist.BC.r
