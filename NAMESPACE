@@ -10,7 +10,6 @@ import(
   ade4,
   cluster,
   e1071,
-  R2HTML,
   MASS
 )
 importFrom("grDevices", "rainbow")

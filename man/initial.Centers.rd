@@ -37,7 +37,7 @@ Numbers of objects choosen as initial cluster centers
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Hartigan, J. (1975), \emph{Clustering algorithms}, Wiley, New York. ISBN 0-471-35645-X.

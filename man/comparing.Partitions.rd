@@ -19,7 +19,7 @@ Returns value of index.
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 

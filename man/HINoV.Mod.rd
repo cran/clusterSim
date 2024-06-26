@@ -35,7 +35,7 @@ See file \url{../doc/HINoVMod_details.pdf} for further details
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Carmone, F.J., Kara, A., Maxwell, S. (1999), \emph{HINoV: a new method to improve market segment definition by identifying noisy variables}, "Journal of Marketing Research", November, vol. 36, 501-509.

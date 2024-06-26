@@ -20,7 +20,7 @@ Thanks to prof. Christian Hennig \email{c.hennig@ucl.ac.uk} for finding and fixi
 \value{
 \item{DB}{Davies-Bouldin's index}
 \item{r}{vector of maximal R values for each cluster}
-\item{R}{R matrix $(S_r+S_s)/d_{rs}$}
+\item{R}{R matrix \eqn{(S_r+S_s)/d_{rs}} }
 \item{d}{matrix of distances between centroids or medoids of clusters}
 \item{S}{vector of dispersion measures for each cluster}
 \item{centers}{coordinates of centroids or medoids for all clusters}
@@ -28,7 +28,7 @@ Thanks to prof. Christian Hennig \email{c.hennig@ucl.ac.uk} for finding and fixi
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Davies, D.L., Bouldin, D.W. (1979), \emph{A cluster separation measure}, IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 1, no. 2, 224-227. Available at: \doi{10.1109/TPAMI.1979.4766909}.

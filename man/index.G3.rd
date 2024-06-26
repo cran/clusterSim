@@ -19,7 +19,7 @@ Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London, p. 62. I
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}}, \code{\link{index.S}}, \code{\link{index.C}},
@@ -59,3 +59,4 @@ plot(res, type="p", pch=0, xlab="Number of clusters", ylab="G3", xaxt="n")
 axis(1, c(min_nc:max_nc))
 }
 \keyword{cluster}
+

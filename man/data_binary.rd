@@ -8,7 +8,7 @@
 \examples{
 #library(clusterSim)
 #data(data_binary)
-#cluster.Sim(data_binary, p=5, 2, 6, icq="S", 
-#outputHtml="results5", distances=c("b1","b3","b6"))
+#cluster.Sim(as.matrix(data_binary), p=5, 2, 6, icq="S", 
+#outputCsv="results5", distances=c("b1","b3","b6"))
 }
 \keyword{datasets}

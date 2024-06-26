@@ -38,14 +38,14 @@ object with calculated distance
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Jajuga, K., Walesiak, M., Bak, A. (2003), \emph{On the general distance measure}, In: M. Schwaiger, O. Opitz (Eds.), Exploratory data analysis in empirical research, Springer-Verlag, Berlin, Heidelberg, 104-109. Available at: \doi{10.1007/978-3-642-55721-7_12}.
 
-Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/1999_Walesiak_Argumenta_Oeconomica_no_2.pdf}.
+Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173.
 
-Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2006_Walesiak_Uogolniona_miara_odleglosci.pdf}.
+Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw.
 }
 \seealso{
 \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{dist}}

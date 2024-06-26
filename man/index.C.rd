@@ -22,7 +22,7 @@ Hubert, L.J., Levin, J.R. (1976), A General Statistical Framework for Assessing 
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \seealso{
 \code{\link{index.G1}}, \code{\link{index.G2}},  \code{\link{index.G3}}, \code{\link{index.S}}, 
@@ -62,3 +62,4 @@ plot(res, type="p", pch=0, xlab="Number of clusters", ylab="C", xaxt="n")
 axis(1, c(min_nc:max_nc))
 }
 \keyword{cluster}
+

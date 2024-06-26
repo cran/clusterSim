@@ -56,7 +56,7 @@ See file \url{../doc/replication.Mod_details.pdf} for further details
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 
@@ -68,7 +68,7 @@ Hubert, L., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classifi
 
 Milligan, G.W. (1996), \emph{Clustering validation: results and implications for applied analyses}, In P. Arabie, L.J. Hubert, G. de Soete (Eds.), \emph{Clustering and classification}, World Scientific, Singapore, 341-375. ISBN 9789810212872.
 
-Walesiak, M. (2008), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, In: J. Pociecha (Ed.), \emph{Modelowanie i prognozowanie zjawisk spoleczno-gospodarczych}, Wydawnictwo AE, Krakow, 67-72. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2008_Walesiak_Ocena_stabilnosci_wynikow_klasyfikacji.pdf}.
+Walesiak, M. (2008), \emph{Ocena stabilnosci wynikow klasyfikacji z wykorzystaniem analizy replikacji}, In: J. Pociecha (Ed.), \emph{Modelowanie i prognozowanie zjawisk spoleczno-gospodarczych}, Wydawnictwo AE, Krakow, 67-72.
 }
 \seealso{\code{\link{cluster.Sim}}, \code{\link{hclust}}, \code{\link{kmeans}},  \code{\link{dist}},
 \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{dist.GDM}}, 
@@ -87,3 +87,4 @@ replication.Mod(data_binary,"b", u=2, "medoids", NULL,"b1", "pam", fixedAsample=
 }
 \keyword{cluster}
 \keyword{multivariate}
+

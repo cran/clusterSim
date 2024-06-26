@@ -1,11 +1,20 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.51-3
-Date: 2023-06-09
-Author: Marek Walesiak <marek.walesiak@ue.wroc.pl>, Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
+Version: 0.51-4
+Date: 2024-06-27
+Authors@R: c(person(given = "Marek", 
+           family = "Walesiak", 
+           role = c("aut"),
+           email = "marek.walesiak@ue.wroc.pl",
+           comment=c(ORCID = "0000-0003-0922-2323")),
+           person(given = "Andrzej",
+           family = "Dudek",
+           role = c("aut","cre"),
+           email = "andrzej.dudek@ue.wroc.pl",
+           comment = c(ORCID = "0000-0002-4943-8703")))
 Maintainer: Andrzej Dudek <andrzej.dudek@ue.wroc.pl>
 Depends: R (>= 3.5.0), cluster, MASS
-Imports: ade4, e1071, R2HTML, grDevices, graphics, stats, utils
+Imports: ade4, e1071, grDevices, graphics, stats, utils
 Suggests: mlbench, testthat
 Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for symbolic interval-valued data), cluster quality indices (Calinski-Harabasz, Baker-Hubert, Hubert-Levine, Silhouette, Krzanowski-Lai, Hartigan, Gap,	Davies-Bouldin),	data normalization formulas (metric data, interval-valued symbolic data), data generation (typical and non-typical data), HINoV method,	replication analysis, linear ordering methods, spectral clustering, agreement indices between two partitions, plot functions (for categorical and symbolic interval-valued data). 
  (MILLIGAN, G.W., COOPER, M.C. (1985) <doi:10.1007/BF02294245>, 
@@ -21,9 +30,10 @@ Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for sym
  BRECKENRIDGE, J.N. (2000) <doi:10.1207/S15327906MBR3502_5>, 
  WALESIAK, M., DUDEK, A. (2008) <doi:10.1007/978-3-540-78246-9_11>).
 License: GPL (>= 2)
-URL: http://keii.ue.wroc.pl/clusterSim/
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2023-06-10 16:49:06 UTC; andrzej
+Packaged: 2024-06-26 14:08:54 UTC; andrzej
+Author: Marek Walesiak [aut] (<https://orcid.org/0000-0003-0922-2323>),
+  Andrzej Dudek [aut, cre] (<https://orcid.org/0000-0002-4943-8703>)
 Repository: CRAN
-Date/Publication: 2023-06-10 18:30:02 UTC
+Date/Publication: 2024-06-26 15:30:06 UTC

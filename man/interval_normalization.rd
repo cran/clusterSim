@@ -67,16 +67,16 @@ Normalized data
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under different measurement scales}, In: R. Decker, W. Gaul (Eds.), Classification and information processing at the turn of the millennium, Springer-Verlag, Berlin, Heidelberg, 105-112. Available at: \doi{10.1007/978-3-642-57280-7_11}.
 
 Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. Available at: \doi{10.1007/BF01897163}.
 
-Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2014_Walesiak_Przeglad_Statystyczny_z_4.pdf}.
+Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372.
 
-Walesiak, M., Dudek, A. (2017), \emph{Selecting the Optimal Multidimensional Scaling Procedure for Metric Data with R Environment}, „STATISTICS IN TRANSITION new series”, September, Vol. 18, No. 3, pp. 521-540. Available at: \url{http://stat.gov.pl/en/sit-en/issues-and-articles-sit/}.
+Walesiak, M., Dudek, A. (2017), \emph{Selecting the Optimal Multidimensional Scaling Procedure for Metric Data with R Environment}, „STATISTICS IN TRANSITION new series”, September, Vol. 18, No. 3, pp. 521-540. Available at: \url{https://stat.gov.pl/en/sit-en/issues-and-articles-sit/}.
 }
 \seealso{
 \code{\link{data.Normalization}}
@@ -90,3 +90,4 @@ plotInterval(n$simple)
 \keyword{interval-valued data}
 \keyword{normalization}
 \keyword{symbolic data analysis}
+

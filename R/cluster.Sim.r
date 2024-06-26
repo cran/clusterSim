@@ -54,7 +54,7 @@ initial.Centers<-function(x,k)
 
 
 
-cluster.Sim<-function(x,p=1,minClusterNo,maxClusterNo,icq="S",outputHtml="",outputCsv="",outputCsv2="",normalizations=NULL,distances=NULL,methods=NULL)
+cluster.Sim<-function(x,p=1,minClusterNo,maxClusterNo,icq="S",outputCsv="",outputCsv2="",normalizations=NULL,distances=NULL,methods=NULL)
 {
 #require("R2HTML")
 #require("e1071")
@@ -915,25 +915,6 @@ result<-as.data.frame(result)
 indexName<-switch(icq,"S"="Silhouette","G2"="G2 index","G3"="G3 index","C"="C index","G1"="Calinski-Harabasz index ","KL"="Krzanowski-Lai index")
 names(result)<-c(" No. "," No. of clusters "," Normalization formula "," Distance measure "," Clustering method ",indexName,"Rank")
 names(sorted)<-c(" Rank "," No. "," No. of clusters "," Normalization formula "," Distance measure "," Clustering method ",indexName)
-
-if (outputHtml!="")
-{
-	target <- HTMLInitFile(".",filename=outputHtml)
-	options("R2HTML.format.decimal.mark"=",")
-	HTMLChangeCSS("Pastel")
-	HTML.title("RESULTS OF CLASSIFICATIONS ",file=target,align="center",HR=3,color="00FF00",align="center")
-	HTML.title(paste("PATH = ",p," (",sciezka[p],")"),HR=4)
-	HTML.title(paste("INDEX = ",indexName),HR=4)
-	HTML.title(paste("NO. OF CLUSTERS = <",minClusterNo,";",maxClusterNo,">"),HR=4)
-	HTML.title("Unsorted results",HR=3)
-	HTML(result,file=target,innerborder=1,Border=1,align="center")
-	HTML.title("Sorted results",HR=3)
-	HTML(sorted,file=target,innerborder=1,Border=1,align="center")
-	HTML.title("Estimated calculation time :",HR=5)
-	HTML.title(czas2-czas1,HR=5)
-	#browseURL(target)
-	HTMLEndFile(target)
-}
 if (outputCsv!="")
 {	write.table(result,paste(outputCsv,".csv",sep=""),dec=".",sep=",",row.names=FALSE)
 }

@@ -67,21 +67,21 @@ See file \url{../doc/patternGDM2_details.pdf} for further details
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-epartment of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+epartment of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 
 Jajuga, K., Walesiak, M., Bak, A. (2003), \emph{On the general distance measure}, In: M. Schwaiger, O. Opitz (Eds.), Exploratory data analysis in empirical research, Springer-Verlag, Berlin, Heidelberg, 104-109. Available at: \doi{10.1007/978-3-642-55721-7_12}.
 
-Walesiak, M. (1993), \emph{Statystyczna analiza wielowymiarowa w badaniach marketingowych [Multivariate statistical analysis in marketing research]}. Wroclaw University of Economics, Research Papers no. 654. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/1993_Walesiak_SAW_w_badaniach_marketingowych_OCR.pdf}. 
+Walesiak, M. (1993), \emph{Statystyczna analiza wielowymiarowa w badaniach marketingowych [Multivariate statistical analysis in marketing research]}. Wroclaw University of Economics, Research Papers no. 654.
 
-Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/1999_Walesiak_Argumenta_Oeconomica_no_2.pdf}.
+Walesiak, M. (1999), \emph{Distance Measure for Ordinal Data}, "Argumenta Oeconomica", No. 2 (8), 167-173.
 
-Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2006_Walesiak_Uogolniona_miara_odleglosci.pdf}.
+Walesiak, M. (2006), \emph{Uogolniona miara odleglosci w statystycznej analizie wielowymiarowej [The Generalized Distance Measure in multivariate statistical analysis]}, Wydawnictwo AE, Wroclaw.
 
-Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2011_Walesiak_Uogolniona_miara_odleglosci_GDM_w_SAW_z_wykorzystaniem_programu_R_errata.pdf}.
+Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 
-Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2016_Walesiak_Uogolniona_miara_odleglosci_GDM.pdf}.
+Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 }
 
 \seealso{

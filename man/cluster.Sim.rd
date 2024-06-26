@@ -3,7 +3,7 @@
 \title{Determination of optimal clustering procedure for a data set }
 \description{Determination of optimal clustering procedure for a data set by varying all combinations of normalization formulas, distance measures, and clustering methods}
 \usage{
-cluster.Sim (x,p,minClusterNo,maxClusterNo,icq="S",outputHtml="",
+cluster.Sim (x,p,minClusterNo,maxClusterNo,icq="S",
 	outputCsv="",outputCsv2="",normalizations=NULL,
 	distances=NULL,methods=NULL)
 }
@@ -13,7 +13,6 @@ cluster.Sim (x,p,minClusterNo,maxClusterNo,icq="S",outputHtml="",
 \item{minClusterNo}{minimal number of clusters, between 2  and no. of objects - 1 (for G3 or C: no. of objects - 2)}
 \item{maxClusterNo}{maximal number of clusters, between 2 and no. of objects - 1 (for G3 or C: no. of objects - 2; for KL: no. of objects - 3), greater or equal minClusterNo}
 \item{icq}{Internal cluster quality index, "S" - Silhouette,"G1" - Calinski & Harabasz index, "G2" - Baker & Hubert index ,"G3" - G3 index,"C" - C index, "KL" - Krzanowski & Lai index }
-\item{outputHtml}{ optional, name of html file with results}
 \item{outputCsv}{ optional, name of csv file with results}
 \item{outputCsv2}{ optional, name of csv (comma as decimal point sign) file with results}
 \item{normalizations}{ optional, vector of normalization formulas that should be used in procedure}
@@ -75,12 +74,12 @@ See file \url{../doc/clusterSim_details.pdf} for further details
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, University of Economics, Wroclaw, Poland
 }
 \references{
 Everitt, B.S., Landau, E., Leese, M. (2001), \emph{Cluster analysis}, Arnold, London. ISBN 9780340761199.
 
-Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, p. 338. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2004_Gatnar_Walesiak_Metody_SAW_w_badaniach_marketingowych.pdf}.
+Gatnar, E., Walesiak, M. (Eds.) (2004), \emph{Metody statystycznej analizy wielowymiarowej w badaniach marketingowych [Multivariate statistical analysis methods in marketing research]}, Wydawnictwo AE, Wroclaw, p. 338. 
 
 Gordon, A.D. (1999), \emph{Classification}, Chapman & Hall/CRC, London. ISBN 9781584880134.
 
@@ -88,30 +87,32 @@ Milligan, G.W., Cooper, M.C. (1985), \emph{An examination of procedures of deter
 
 Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. Available at: \doi{10.1007/BF01897163}.
 
-Walesiak, M., Dudek, A. (2006), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - oprogramowanie komputerowe i wyniki badan}, Prace Naukowe AE we Wroclawiu, 1126, 120-129. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2006_Walesiak_Dudek_Taksonomia_13_PN_AE_1126.pdf}.
+Walesiak, M., Dudek, A. (2006), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - oprogramowanie komputerowe i wyniki badan}, Prace Naukowe AE we Wroclawiu, 1126, 120-129.
 
-Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego nr 450, 635-646. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2007_Walesiak_Dudek_Symulacyjna_optymalizacja_wyboru.pdf}.
+Walesiak, M., Dudek, A. (2007), \emph{Symulacyjna optymalizacja wyboru procedury klasyfikacyjnej dla danego typu danych - charakterystyka problemu}, Zeszyty Naukowe Uniwersytetu Szczecinskiego nr 450, 635-646.
 }
 \seealso{\code{\link{data.Normalization}}, \code{\link{dist.GDM}}, \code{\link{dist.BC}}, \code{\link{dist.SM}}, \code{\link{index.G1}}, \code{\link{index.G2}}, 
 
 \code{\link{index.G3}}, \code{\link{index.C}}, \code{\link{index.S}}, \code{\link{index.KL}}, \code{\link{hclust}}, \code{\link{dist}},
 }
 \examples{
-library(clusterSim)
-# Commented due to long execution time
+\donttest{
+#library(clusterSim)
 #data(data_ratio)
 #cluster.Sim(data_ratio, 1, 2, 3, "G1", outputCsv="results1")
 #data(data_interval)
-#cluster.Sim(data_interval, 2, 2, 4, "G1", outputHtml="results2")
+#cluster.Sim(data_interval, 2, 2, 4, "G1", outputCsv="results2")
 #data(data_ordinal)
 #cluster.Sim(data_ordinal, 3, 2, 4,"G2", outputCsv2="results3")
 #data(data_nominal)
-#cluster.Sim(data_nominal, p=4, 2, 4, icq="G3", outputHtml="results4", methods=c("m2","m3","m5"))
+#cluster.Sim(data_nominal, p=4, 2, 4, icq="G3", outputCsv="results4", methods=c("m2","m3","m5"))
 #data(data_binary)
-#cluster.Sim(data_binary, p=5, 2, 4, icq="S", outputHtml="results5", distances=c("b1","b3","b6"))
+#cluster.Sim(as.matrix(data_binary), p=5, 2, 4, icq="S", 
+#outputCsv="results5", distances=c("b1","b3","b6"))
 #data(data_ratio)
 #cluster.Sim(data_ratio, 1, 2, 4,"G1", outputCsv="results6",normalizations=c("n1","n3"),
 #distances=c("d2","d5"),methods=c("m5","m3","m1"))
+}
 }
 \keyword{cluster}
 \keyword{data}

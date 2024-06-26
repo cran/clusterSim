@@ -40,7 +40,7 @@ See file \url{../doc/speccl_details.pdf} for further details
 \author{
 Marek Walesiak \email{marek.walesiak@ue.wroc.pl}, Andrzej Dudek \email{andrzej.dudek@ue.wroc.pl} 
 
-Department of Econometrics and Computer Science, Wroclaw University of Economics, Poland \url{http://keii.ue.wroc.pl/clusterSim/}
+Department of Econometrics and Computer Science, Wroclaw University of Economics, Poland
 }
 \references{
 
@@ -50,15 +50,15 @@ Ng, A., Jordan, M., Weiss, Y. (2002), \emph{On spectral clustering: analysis and
 
 \url{https://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf}.
 
-Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2011_Walesiak_Uogolniona_miara_odleglosci_GDM_w_SAW_z_wykorzystaniem_programu_R_errata.pdf}.
+Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 
-Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2012_Walesiak_Przeglad_Statystyczny_z_1.pdf}.
+Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31.
 
-Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw. Available at: \url{http://keii.ue.wroc.pl/pracownicy/mw/2016_Walesiak_Uogolniona_miara_odleglosci_GDM.pdf}.
+Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 }
 
 \seealso{
-\code{\link{dist.GDM}},\code{\link{kmeans}},\code{\link{dist}},\code{\link{dist.binary}},\code{\link{dist.SM}},\code{\link{dist.BC}}
+\code{\link{dist.GDM}},\code{\link{kmeans}},\code{\link{dist}},\code{\link[ade4]{dist.binary}},\code{\link{dist.SM}},\code{\link{dist.BC}}
 }
 \examples{
 # Commented due to long execution time
