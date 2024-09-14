@@ -33,7 +33,7 @@ Hubert, L.J., Arabie, P. (1985), \emph{Comparing partitions}, "Journal of Classi
 
 Rand, W.M. (1971), \emph{Objective criteria for the evaluation of clustering methods}, "Journal of the American Statistical Association", no. 336, 846-850. Available at: \doi{10.1080/01621459.1971.10482356}.
 
-Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92. Available at: \doi{10.1007/978-3-540-78246-9_11}.
 }
 \seealso{
 \code{\link{hclust}}, \code{\link{kmeans}}, \code{\link{cluster.Sim}}

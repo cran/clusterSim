@@ -81,7 +81,7 @@ Qiu, W., Joe, H. (2006), \emph{Generation of random clusters with specified degr
 
 Steinley, D., Henson, R. (2005), \emph{OCLUS: an analytic method for generating clusters with known overlap}, "Journal of Classification", vol. 22, 221-250. Available at: \doi{10.1007/s00357-005-0015-6}.
 
-Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92.
+Walesiak, M., Dudek, A. (2008), \emph{Identification of noisy variables for nonmetric and symbolic data in cluster analysis}, In: C. Preisach, H. Burkhardt, L. Schmidt-Thieme, R. Decker (Eds.), Data analysis, machine learning and applications, Springer-Verlag, Berlin, Heidelberg, 85-92. Available at: \doi{10.1007/978-3-540-78246-9_11}.
 
 Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 }

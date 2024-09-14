@@ -52,7 +52,8 @@ Ng, A., Jordan, M., Weiss, Y. (2002), \emph{On spectral clustering: analysis and
 
 Walesiak, M. (2011), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 
-Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31.
+Walesiak, M. (2012), \emph{Klasyfikacja spektralna a skale pomiaru zmiennych [Spectral clustering and measurement scales of variables]}, Przeglad Statystyczny (Statistical Review), no. 1, 13-31. Spectral Clustering and Measurement Scales of Variables
+Marek Walesiak Przegląd Statystyczny. Statistical Review, vol. 59, 2012, 1, pages: 13-31. Available at: \doi{10.59139/ps.2012.01.2}.
 
 Walesiak, M. (2016), \emph{Uogólniona miara odległości GDM w statystycznej analizie wielowymiarowej z wykorzystaniem programu R. Wydanie 2 poprawione i rozszerzone [The Generalized Distance Measure GDM in multivariate statistical analysis with R]}, Wydawnictwo Uniwersytetu Ekonomicznego, Wroclaw.
 }

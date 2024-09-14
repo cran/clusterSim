@@ -73,7 +73,7 @@ Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variabl
 
 Mlodak, A. (2006), \emph{Analiza taksonomiczna w statystyce regionalnej}, Difin, Warszawa. ISBN 83-7251-605-7.
 
-Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372.
+Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372. Available at: \doi{10.5604/01.3001.0016.1740}.
 }
 \seealso{
 \code{\link{cluster.Sim}}

@@ -74,9 +74,9 @@ Jajuga, K., Walesiak, M. (2000), \emph{Standardisation of data set under differe
 
 Milligan, G.W., Cooper, M.C. (1988), \emph{A study of standardization of variables in cluster analysis}, "Journal of Classification", vol. 5, 181-204. Available at: \doi{10.1007/BF01897163}.
 
-Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372.
+Walesiak, M. (2014), \emph{Przeglad formul normalizacji wartosci zmiennych oraz ich wlasnosci w statystycznej analizie wielowymiarowej [Data normalization in multivariate data analysis. An overview and properties]}, "Przeglad Statystyczny" ("Statistical Review"), vol. 61, no. 4, 363-372. Available at: \doi{10.5604/01.3001.0016.1740}.
 
-Walesiak, M., Dudek, A. (2017), \emph{Selecting the Optimal Multidimensional Scaling Procedure for Metric Data with R Environment}, „STATISTICS IN TRANSITION new series”, September, Vol. 18, No. 3, pp. 521-540. Available at: \url{https://stat.gov.pl/en/sit-en/issues-and-articles-sit/}.
+Walesiak, M., Dudek, A. (2017), \emph{Selecting the Optimal Multidimensional Scaling Procedure for Metric Data with R Environment}, „STATISTICS IN TRANSITION new series”, September, Vol. 18, No. 3, pp. 521-540. Available at: \doi{10.59170/stattrans-2017-027}.
 }
 \seealso{
 \code{\link{data.Normalization}}

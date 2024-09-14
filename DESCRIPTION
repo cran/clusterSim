@@ -1,7 +1,7 @@
 Package: clusterSim
 Title: Searching for Optimal Clustering Procedure for a Data Set
-Version: 0.51-4
-Date: 2024-06-27
+Version: 0.51-5
+Date: 2024-09-14
 Authors@R: c(person(given = "Marek", 
            family = "Walesiak", 
            role = c("aut"),
@@ -32,8 +32,8 @@ Description: Distance measures (GDM1, GDM2,	Sokal-Michener, Bray-Curtis, for sym
 License: GPL (>= 2)
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2024-06-26 14:08:54 UTC; andrzej
+Packaged: 2024-09-14 13:31:50 UTC; andrzej
 Author: Marek Walesiak [aut] (<https://orcid.org/0000-0003-0922-2323>),
   Andrzej Dudek [aut, cre] (<https://orcid.org/0000-0002-4943-8703>)
 Repository: CRAN
-Date/Publication: 2024-06-26 15:30:06 UTC
+Date/Publication: 2024-09-14 14:50:01 UTC
