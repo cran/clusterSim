@@ -61,7 +61,7 @@ path 8: "m9"
 
 path 9: "m9"
 
-See file \url{../doc/clusterSim_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\clusterSim_details.pdf for further details
 }
 \value{
 \item{result}{optimal value of icq for all classifications}

@@ -53,7 +53,7 @@ Normalized data
 The numeric shifts and scalings used (if any) are returned as attributes "normalized:shift" and "normalized:scale"
 }
 \details{
-See file \url{../doc/dataNormalization_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\dataNormalization_details.pdf for further details
 
 Thanks Wolfgang Lederer (<wolfgang.lederer@gmail.com>) for reporting n4/vector error
 }

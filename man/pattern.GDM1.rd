@@ -58,7 +58,7 @@ real numbers
 }
 }
 \details{
-See file \url{../doc/patternGDM1_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\patternGDM1_details.pdf for further details
 }
 \value{
 \item{pdata}{raw (primary) data matrix}

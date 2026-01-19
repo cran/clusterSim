@@ -19,14 +19,14 @@ in lower triangle of distance matrix for other distances; sigma.interval=1000 - 
 \item{mod.sample}{proportion of data to use when estimating sigma (default: 0.75)}
 \item{R}{the number of intervals examined in each step of searching optimal value of sigma parameter algorithm 
 
-(See \url{../doc/speccl_details.pdf})}
+(See $R_LIBS_USER\\clusterSim\\pdf\\speccl_details.pdf)}
 \item{iterations}{the maximum number of iterations (rounds) allowed in algorithm of searching optimal value of sigma parameter}
 \item{na.action}{the action to perform on NA}
 \item{...}{arguments passed to kmeans procedure}
 
 }
 \details{
-See file \url{../doc/speccl_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\speccl_details.pdf for further details
 }
 \value{
 \item{scdist}{returns the lower triangle of the distance matrix} 

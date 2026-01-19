@@ -13,7 +13,7 @@ ordinalToMetric(data,scaleType="o",patternCoordinates)
  for ordinal variables - one of the categories for each ordinal variable (e.g. maximum category))}
 }
 \details{
-See file \url{../doc/ordinalToMetric_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\ordinalToMetric_details.pdf for further details
 }
 \value{
 \item{pdata}{raw (primary) data matrix}

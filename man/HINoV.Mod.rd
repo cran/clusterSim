@@ -25,7 +25,7 @@ clustering method: "kmeans" (default) , "single", "ward.D", "ward.D2", "complete
 \item{Index}{"cRAND" - corrected Rand index (default); "RAND" - Rand index}
 }
 \details{
-See file \url{../doc/HINoVMod_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\HINoVMod_details.pdf for further details
 }
 \value{
 \item{parim}{\emph{m} x \emph{m} symmetric matrix (\emph{m} - number of variables). Matrix contains pairwise corrected Rand (Rand) indices for partitions formed by the \emph{j}-th variable with partitions formed by the \emph{l}-th variable}

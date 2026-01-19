@@ -8,7 +8,7 @@
 \item{cl}{A vector of integers indicating the cluster to which each object is allocated}
 }
 \details{
-See file $R_HOME\\library\\clusterSim\\pdf\\indexG2_details.pdf for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\indexG2_details.pdf for further details
 }
 \value{
 calculated G2 index

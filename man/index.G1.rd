@@ -10,7 +10,7 @@
 \item{centrotypes}{"centroids" or "medoids"}
 }
 \details{
-See file \url{../doc/indexG1_details.pdf} for further details.
+See file $R_LIBS_USER\\clusterSim\\pdf\\indexG1_details.pdf for further details.
 
 thank to Nejc Ilc from University of Ljubljana for fixing error for one-element clusters.
 

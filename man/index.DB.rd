@@ -13,7 +13,7 @@
 of the r-th cluster; q=2 - the standard deviation of the distance of objects in the r-th cluster to the centroid or medoid of the r-th cluster}
 }
 \details{
-See file \url{../doc/indexDB_details.pdf} for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\indexDB_details.pdf for further details
 
 Thanks to prof. Christian Hennig \email{c.hennig@ucl.ac.uk} for finding and fixing the "immutable p" error  
 }

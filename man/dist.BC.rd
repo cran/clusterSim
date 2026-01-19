@@ -7,7 +7,7 @@
 \item{x}{matrix or dataset}
 }
 \details{
-See file $R_HOME\\library\\clusterSim\\pdf\\distBC_details.pdf for further details
+See file $R_LIBS_USER\\clusterSim\\pdf\\distBC_details.pdf for further details
 }
 \value{
 object with calculated distance
